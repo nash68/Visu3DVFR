@@ -1462,9 +1462,13 @@
             updateTelemetry();
             
             if (isPlaying) {
-                // Reset animation timing
-                lastFrameTime = 0;
+                // Update startTime to match new position
+                startTime = performance.now() - (currentIndex / trackPoints.length) * totalDuration * 1000;
+                lastFrameTime = performance.now();
+            } else {
+                // If not playing, just update position
                 startTime = null;
+                lastFrameTime = 0;
             }
         });
 
