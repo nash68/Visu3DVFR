@@ -615,6 +615,7 @@
         let trackLine = null;
         let startTime = null;
         let totalDuration = 0;
+        let isSeeking = false;
         let totalDistance = 0;
         let maxAltitude = 0;
         let maxSpeed = 0;
@@ -1301,45 +1302,34 @@
         function animate(timestamp) {
             if (!isPlaying || !trackPoints.length) return;
             
-            if (!lastFrameTime) {
-                lastFrameTime = timestamp;
+            if (startTime === null) {
                 startTime = timestamp;
             }
             
-            const elapsed = (timestamp - startTime) / 1000; // seconds
-            const frameTime = (timestamp - lastFrameTime) / 1000;
-            lastFrameTime = timestamp;
+            const elapsed = (timestamp - startTime) / 1000 * playSpeed; // seconds with speed
             
-            // Calculate target index based on elapsed time and speed
-            const totalTime = trackPoints.length > 1 ? 
-                (trackPoints[trackPoints.length - 1].time - trackPoints[0].time) / 1000 : 1;
+            // Calculate target index based on elapsed time
+            const totalTime = totalDuration > 0 ? totalDuration : 1;
             
-            let targetElapsed = elapsed * playSpeed;
-            if (targetElapsed > totalTime) {
-                targetElapsed = totalTime;
+            if (elapsed > totalTime) {
+                elapsed = totalTime;
                 isPlaying = false;
                 playBtn.disabled = true;
                 pauseBtn.disabled = true;
                 log('Fin de la lecture');
             }
             
-            // Find the corresponding point
-            let foundIndex = 0;
-            for (let i = 0; i < trackPoints.length; i++) {
-                if (trackPoints[i].time) {
-                    const pointTime = (trackPoints[i].time - trackPoints[0].time) / 1000;
-                    if (pointTime <= targetElapsed) {
-                        foundIndex = i;
-                    } else {
-                        break;
-                    }
-                }
-            }
+            // Calculate index based on elapsed time
+            const progress = elapsed / totalTime;
+            currentIndex = Math.min(
+                Math.floor(progress * (trackPoints.length - 1)),
+                trackPoints.length - 1
+            );
             
-            currentIndex = foundIndex;
             updateTelemetry();
             
             if (isPlaying) {
+                lastFrameTime = timestamp;
                 animationId = requestAnimationFrame(animate);
             }
         }
@@ -1353,9 +1343,10 @@
             stopBtn.disabled = false;
             speedSlider.disabled = false;
             
-            // Don't reset startTime when resuming from pause
+            // If startTime is null (first play or after stop), initialize it
             if (startTime === null) {
-                startTime = performance.now() - (currentIndex / trackPoints.length) * totalDuration * 1000;
+                const elapsedFromStart = (currentIndex / (trackPoints.length - 1)) * totalDuration * 1000;
+                startTime = performance.now() - elapsedFromStart;
             }
             lastFrameTime = performance.now();
             
@@ -1373,7 +1364,6 @@
                 animationId = null;
             }
             
-            // Keep startTime so we can resume from current position
             log('Lecture en pause');
         }
 
@@ -1461,15 +1451,10 @@
             progressValue.textContent = `${progress}%`;
             updateTelemetry();
             
-            if (isPlaying) {
-                // Update startTime to match new position
-                startTime = performance.now() - (currentIndex / trackPoints.length) * totalDuration * 1000;
-                lastFrameTime = performance.now();
-            } else {
-                // If not playing, just update position
-                startTime = null;
-                lastFrameTime = 0;
-            }
+            // Update startTime to match new position
+            const elapsedFromStart = (currentIndex / (trackPoints.length - 1)) * totalDuration * 1000;
+            startTime = performance.now() - elapsedFromStart;
+            lastFrameTime = performance.now();
         });
 
         mapStyleSelect.addEventListener('change', (e) => {
