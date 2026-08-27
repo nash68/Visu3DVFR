@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="VFR Flight Tracker" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <trk>
+    <name>Sample VFR Flight</name>
+    <trkseg>
+      <trkpt lat="48.8566" lon="2.3522">
+        <ele>100</ele>
+        <time>2024-01-01T10:00:00Z</time>
+      </trkpt>
+      <trkpt lat="48.8584" lon="2.3550">
+        <ele>120</ele>
+        <time>2024-01-01T10:00:10Z</time>
+      </trkpt>
+      <trkpt lat="48.8602" lon="2.3578">
+        <ele>140</ele>
+        <time>2024-01-01T10:00:20Z</time>
+      </trkpt>
+      <trkpt lat="48.8620" lon="2.3606">
+        <ele>160</ele>
+        <time>2024-01-01T10:00:30Z</time>
+      </trkpt>
+      <trkpt lat="48.8638" lon="2.3634">
+        <ele>180</ele>
+        <time>2024-01-01T10:00:40Z</time>
+      </trkpt>
+      <trkpt lat="48.8656" lon="2.3662">
+        <ele>200</ele>
+        <time>2024-01-01T10:00:50Z</time>
+      </trkpt>
+      <trkpt lat="48.8674" lon="2.3690">
+        <ele>220</ele>
+        <time>2024-01-01T10:01:00Z</time>
+      </trkpt>
+      <trkpt lat="48.8692" lon="2.3718">
+        <ele>240</ele>
+        <time>2024-01-01T10:01:10Z</time>
+      </trkpt>
+      <trkpt lat="48.8710" lon="2.3746">
+        <ele>260</ele>
+        <time>2024-01-01T10:01:20Z</time>
+      </trkpt>
+      <trkpt lat="48.8728" lon="2.3774">
+        <ele>280</ele>
+        <time>2024-01-01T10:01:30Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
