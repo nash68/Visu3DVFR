@@ -889,12 +889,12 @@
             
             // Create custom HTML for aircraft
             const el = document.createElement('div');
-            el.style.background = "url(\"data:image/svg+xml,%3Csvg xmlns=\\\"http://www.w3.org/2000/svg\\" viewBox=\\\"0 0 24 24\\" fill=\\\"%23e94560\\"%3E%3Cpath d=\\\"M23 12l-7-5v-2h-2v2l-7 5 7 7-2 1.41 4.59-4.58 4.58 4.58L21 19l-7-7z\\"%2F%3E%3C%2Fsvg%3E") no-repeat";
+            el.className = 'aircraft-marker';
             el.style.width = '30px';
             el.style.height = '30px';
-            el.style.backgroundSize = 'contain';
+            el.style.backgroundColor = '#e94560';
+            el.style.clipPath = 'polygon(50% 0%, 0% 100%, 100% 100%)';
             el.style.transform = `rotate(${point.bearing || 0}deg)`;
-            
             aircraftMarker = new maplibregl.Marker(el)
                 .setLngLat([point.lon, point.lat])
                 .addTo(map);
@@ -1532,10 +1532,10 @@
         
         async function checkForSampleGPX() {
             try {
-                const response = await fetch('sample.gpx');
+                const response = await fetch('20260509_0944_1055_LFGB_LFSG.gpx');
                 if (response.ok) {
                     const blob = await response.blob();
-                    const file = new File([blob], 'sample.gpx', { type: 'application/gpx+xml' });
+                    const file = new File([blob], '20260509_0944_1055_LFGB_LFSG.gpx', { type: 'application/gpx+xml' });
                     
                     // Create a custom event
                     const event = new Event('change', { bubbles: true });
@@ -1546,11 +1546,11 @@
                     // Trigger the change event
                     fileInput.dispatchEvent(event);
                     
-                    log('Fichier sample.gpx chargé automatiquement');
+                    log('Fichier 20260509_0944_1055_LFGB_LFSG.gpx chargé automatiquement');
                 }
             } catch (error) {
                 // No sample file, that's fine
-                log('Aucun fichier sample.gpx trouvé');
+                log('Aucun fichier 20260509_0944_1055_LFGB_LFSG.gpx trouvé');
             }
         }
 
