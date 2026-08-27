@@ -889,10 +889,9 @@
             
             // Create custom HTML for aircraft
             const el = document.createElement('div');
-            el.className = 'aircraft-marker';
+            el.style.background = "url(\"data:image/svg+xml,%3Csvg xmlns=\\\"http://www.w3.org/2000/svg\\" viewBox=\\\"0 0 24 24\\" fill=\\\"%23e94560\\"%3E%3Cpath d=\\\"M23 12l-7-5v-2h-2v2l-7 5 7 7-2 1.41 4.59-4.58 4.58 4.58L21 19l-7-7z\\"%2F%3E%3C%2Fsvg%3E") no-repeat";
             el.style.width = '30px';
             el.style.height = '30px';
-            el.style.background = 'url("data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"%23e94560\"%3E%3Cpath d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"/%3E%3C/svg%3E") no-repeat';
             el.style.backgroundSize = 'contain';
             el.style.transform = `rotate(${point.bearing || 0}deg)`;
             
@@ -912,8 +911,8 @@
                 aircraftMarker.getElement().style.transform = `rotate(${point.bearing}deg)`;
             }
             
-            // Center map on aircraft if following
-            // map.setCenter([point.lon, point.lat]);
+            // Center map on aircraft (follow mode)
+            map.setCenter([point.lon, point.lat]);
         }
 
         // ============================================
