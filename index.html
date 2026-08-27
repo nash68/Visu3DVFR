@@ -1343,11 +1343,11 @@
             stopBtn.disabled = false;
             speedSlider.disabled = false;
             
-            // If startTime is null (first play or after stop), initialize it
-            if (startTime === null) {
-                const elapsedFromStart = (currentIndex / (trackPoints.length - 1)) * totalDuration * 1000;
-                startTime = performance.now() - elapsedFromStart;
-            }
+            // Always recalculate startTime based on current position
+            // This allows proper resume from pause and seek from progress bar
+            const pointsCount = Math.max(trackPoints.length - 1, 1);
+            const elapsedFromStart = (currentIndex / pointsCount) * totalDuration * 1000;
+            startTime = performance.now() - elapsedFromStart;
             lastFrameTime = performance.now();
             
             log('Lecture démarrée');
