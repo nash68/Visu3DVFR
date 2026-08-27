@@ -1306,10 +1306,10 @@
                 startTime = timestamp;
             }
             
-            const elapsed = (timestamp - startTime) / 1000 * playSpeed; // seconds with speed
+            let elapsed = (timestamp - startTime) / 1000 * playSpeed; // seconds with speed
             
             // Calculate target index based on elapsed time
-            const totalTime = totalDuration > 0 ? totalDuration : 1;
+            let totalTime = totalDuration > 0 ? totalDuration : 1;
             
             if (elapsed > totalTime) {
                 elapsed = totalTime;
@@ -1320,7 +1320,7 @@
             }
             
             // Calculate index based on elapsed time
-            const progress = elapsed / totalTime;
+            let progress = elapsed / totalTime;
             currentIndex = Math.min(
                 Math.floor(progress * (trackPoints.length - 1)),
                 trackPoints.length - 1
