@@ -1,0 +1,3083 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" creator="SkyDreamSoft" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    <name>2026-05-09 LFGB - MULHOUSE HABSHEIM (07:44) LFSG - EPINAL MIRECOURT (08:55)</name>
+  </metadata>
+  <trk>
+    <trkseg>
+      <trkpt lat="47.74552163668" lon="7.433880167082">
+        <ele>240</ele>
+        <time>2026-05-09T07:44:44+00:00</time>
+        <magvar>2.85</magvar>
+        <name>Point #1</name>
+        <desc>{"spd":1.87,"crs":71,"alt":240,"ele":237}</desc>
+      </trkpt>
+      <trkpt lat="47.745490288362" lon="7.4342876952142">
+        <ele>239</ele>
+        <time>2026-05-09T07:44:55+00:00</time>
+        <magvar>2.85</magvar>
+        <name>Point #2</name>
+        <desc>{"spd":3.56,"crs":98,"alt":239,"ele":237}</desc>
+      </trkpt>
+      <trkpt lat="47.745288410224" lon="7.4345536530018">
+        <ele>235</ele>
+        <time>2026-05-09T07:45:11+00:00</time>
+        <magvar>2.86</magvar>
+        <name>Point #3</name>
+        <desc>{"spd":0.22,"crs":201,"alt":235,"ele":237}</desc>
+      </trkpt>
+      <trkpt lat="47.740917582996" lon="7.4318676721305">
+        <ele>248</ele>
+        <time>2026-05-09T07:45:53+00:00</time>
+        <magvar>2.83</magvar>
+        <name>Point #4</name>
+        <desc>{"spd":32.78,"crs":203,"alt":248,"ele":235}</desc>
+      </trkpt>
+      <trkpt lat="47.736917654984" lon="7.4294405244291">
+        <ele>280</ele>
+        <time>2026-05-09T07:46:07+00:00</time>
+        <magvar>2.77</magvar>
+        <name>Point #5</name>
+        <desc>{"spd":34.95,"crs":202,"alt":280,"ele":238}</desc>
+      </trkpt>
+      <trkpt lat="47.734861825593" lon="7.4282681476325">
+        <ele>296</ele>
+        <time>2026-05-09T07:46:14+00:00</time>
+        <magvar>2.74</magvar>
+        <name>Point #6</name>
+        <desc>{"spd":34.82,"crs":197,"alt":296,"ele":237}</desc>
+      </trkpt>
+      <trkpt lat="47.734256652184" lon="7.428044769913">
+        <ele>300</ele>
+        <time>2026-05-09T07:46:16+00:00</time>
+        <magvar>2.73</magvar>
+        <name>Point #7</name>
+        <desc>{"spd":35.05,"crs":191,"alt":300,"ele":237}</desc>
+      </trkpt>
+      <trkpt lat="47.733326302841" lon="7.4278592783958">
+        <ele>308</ele>
+        <time>2026-05-09T07:46:19+00:00</time>
+        <magvar>2.71</magvar>
+        <name>Point #8</name>
+        <desc>{"spd":35,"crs":185,"alt":308,"ele":239}</desc>
+      </trkpt>
+      <trkpt lat="47.73206952028" lon="7.4277683347464">
+        <ele>309</ele>
+        <time>2026-05-09T07:46:23+00:00</time>
+        <magvar>2.71</magvar>
+        <name>Point #9</name>
+        <desc>{"spd":36.5,"crs":180,"alt":309,"ele":238}</desc>
+      </trkpt>
+      <trkpt lat="47.731074546464" lon="7.4278343841434">
+        <ele>314</ele>
+        <time>2026-05-09T07:46:26+00:00</time>
+        <magvar>2.7</magvar>
+        <name>Point #10</name>
+        <desc>{"spd":36.9,"crs":172,"alt":314,"ele":238}</desc>
+      </trkpt>
+      <trkpt lat="47.730436432175" lon="7.4280434288085">
+        <ele>317</ele>
+        <time>2026-05-09T07:46:28+00:00</time>
+        <magvar>2.7</magvar>
+        <name>Point #11</name>
+        <desc>{"spd":36.7,"crs":164,"alt":317,"ele":241}</desc>
+      </trkpt>
+      <trkpt lat="47.729806238785" lon="7.4283809680492">
+        <ele>322</ele>
+        <time>2026-05-09T07:46:30+00:00</time>
+        <magvar>2.69</magvar>
+        <name>Point #12</name>
+        <desc>{"spd":37.07,"crs":157,"alt":322,"ele":241}</desc>
+      </trkpt>
+      <trkpt lat="47.727962723002" lon="7.4297163728625">
+        <ele>333</ele>
+        <time>2026-05-09T07:46:36+00:00</time>
+        <magvar>2.67</magvar>
+        <name>Point #13</name>
+        <desc>{"spd":38.24,"crs":152,"alt":333,"ele":241}</desc>
+      </trkpt>
+      <trkpt lat="47.725897086784" lon="7.4314959347248">
+        <ele>352</ele>
+        <time>2026-05-09T07:46:43+00:00</time>
+        <magvar>2.63</magvar>
+        <name>Point #14</name>
+        <desc>{"spd":38.52,"crs":146,"alt":352,"ele":239}</desc>
+      </trkpt>
+      <trkpt lat="47.72353250999" lon="7.4337680172175">
+        <ele>377</ele>
+        <time>2026-05-09T07:46:51+00:00</time>
+        <magvar>2.58</magvar>
+        <name>Point #15</name>
+        <desc>{"spd":39.38,"crs":154,"alt":377,"ele":249}</desc>
+      </trkpt>
+      <trkpt lat="47.722873608582" lon="7.4341461248696">
+        <ele>386</ele>
+        <time>2026-05-09T07:46:53+00:00</time>
+        <magvar>2.56</magvar>
+        <name>Point #16</name>
+        <desc>{"spd":38.87,"crs":164,"alt":386,"ele":249}</desc>
+      </trkpt>
+      <trkpt lat="47.7225266397" lon="7.4342638067901">
+        <ele>391</ele>
+        <time>2026-05-09T07:46:54+00:00</time>
+        <magvar>2.55</magvar>
+        <name>Point #17</name>
+        <desc>{"spd":38.92,"crs":170,"alt":391,"ele":249}</desc>
+      </trkpt>
+      <trkpt lat="47.72218122147" lon="7.4343290179968">
+        <ele>396</ele>
+        <time>2026-05-09T07:46:55+00:00</time>
+        <magvar>2.54</magvar>
+        <name>Point #18</name>
+        <desc>{"spd":35.1,"crs":178,"alt":396,"ele":246}</desc>
+      </trkpt>
+      <trkpt lat="47.721841293387" lon="7.4343395791948">
+        <ele>401</ele>
+        <time>2026-05-09T07:46:56+00:00</time>
+        <magvar>2.53</magvar>
+        <name>Point #19</name>
+        <desc>{"spd":37.84,"crs":184,"alt":401,"ele":246}</desc>
+      </trkpt>
+      <trkpt lat="47.72149302531" lon="7.4342680815607">
+        <ele>407</ele>
+        <time>2026-05-09T07:46:57+00:00</time>
+        <magvar>2.52</magvar>
+        <name>Point #20</name>
+        <desc>{"spd":37.52,"crs":191,"alt":407,"ele":246}</desc>
+      </trkpt>
+      <trkpt lat="47.721173129976" lon="7.4341526627541">
+        <ele>411</ele>
+        <time>2026-05-09T07:46:58+00:00</time>
+        <magvar>2.52</magvar>
+        <name>Point #21</name>
+        <desc>{"spd":37.49,"crs":197,"alt":411,"ele":246}</desc>
+      </trkpt>
+      <trkpt lat="47.720562173054" lon="7.4338017124683">
+        <ele>419</ele>
+        <time>2026-05-09T07:47:00+00:00</time>
+        <magvar>2.5</magvar>
+        <name>Point #22</name>
+        <desc>{"spd":36.59,"crs":207,"alt":419,"ele":241}</desc>
+      </trkpt>
+      <trkpt lat="47.719996562228" lon="7.4333124607801">
+        <ele>424</ele>
+        <time>2026-05-09T07:47:02+00:00</time>
+        <magvar>2.49</magvar>
+        <name>Point #23</name>
+        <desc>{"spd":36.62,"crs":214,"alt":424,"ele":241}</desc>
+      </trkpt>
+      <trkpt lat="47.719180793501" lon="7.4324183631688">
+        <ele>427</ele>
+        <time>2026-05-09T07:47:05+00:00</time>
+        <magvar>2.48</magvar>
+        <name>Point #24</name>
+        <desc>{"spd":38.05,"crs":220,"alt":427,"ele":241}</desc>
+      </trkpt>
+      <trkpt lat="47.716786251403" lon="7.4291135463864">
+        <ele>434</ele>
+        <time>2026-05-09T07:47:14+00:00</time>
+        <magvar>2.47</magvar>
+        <name>Point #25</name>
+        <desc>{"spd":41.85,"crs":225,"alt":434,"ele":242}</desc>
+      </trkpt>
+      <trkpt lat="47.713673547842" lon="7.4240129906684">
+        <ele>464</ele>
+        <time>2026-05-09T07:47:26+00:00</time>
+        <magvar>2.41</magvar>
+        <name>Point #26</name>
+        <desc>{"spd":43.65,"crs":228,"alt":464,"ele":246}</desc>
+      </trkpt>
+      <trkpt lat="47.711206879467" lon="7.4195701628923">
+        <ele>496</ele>
+        <time>2026-05-09T07:47:36+00:00</time>
+        <magvar>2.35</magvar>
+        <name>Point #27</name>
+        <desc>{"spd":42.55,"crs":234,"alt":496,"ele":242}</desc>
+      </trkpt>
+      <trkpt lat="47.708636107855" lon="7.4139176588506">
+        <ele>528</ele>
+        <time>2026-05-09T07:47:48+00:00</time>
+        <magvar>2.29</magvar>
+        <name>Point #28</name>
+        <desc>{"spd":43.17,"crs":238,"alt":528,"ele":242}</desc>
+      </trkpt>
+      <trkpt lat="47.706230208278" lon="7.4079137854278">
+        <ele>555</ele>
+        <time>2026-05-09T07:48:00+00:00</time>
+        <magvar>2.24</magvar>
+        <name>Point #29</name>
+        <desc>{"spd":44.94,"crs":241,"alt":555,"ele":242}</desc>
+      </trkpt>
+      <trkpt lat="47.703988594003" lon="7.4016934912652">
+        <ele>549</ele>
+        <time>2026-05-09T07:48:11+00:00</time>
+        <magvar>2.25</magvar>
+        <name>Point #30</name>
+        <desc>{"spd":50.04,"crs":243,"alt":549,"ele":256}</desc>
+      </trkpt>
+      <trkpt lat="47.701976140961" lon="7.3955878615379">
+        <ele>551</ele>
+        <time>2026-05-09T07:48:21+00:00</time>
+        <magvar>2.24</magvar>
+        <name>Point #31</name>
+        <desc>{"spd":51.83,"crs":244,"alt":551,"ele":274}</desc>
+      </trkpt>
+      <trkpt lat="47.700063809752" lon="7.3894700780511">
+        <ele>562</ele>
+        <time>2026-05-09T07:48:31+00:00</time>
+        <magvar>2.22</magvar>
+        <name>Point #32</name>
+        <desc>{"spd":49.52,"crs":246,"alt":562,"ele":291}</desc>
+      </trkpt>
+      <trkpt lat="47.698070593178" lon="7.3827575985342">
+        <ele>562</ele>
+        <time>2026-05-09T07:48:42+00:00</time>
+        <magvar>2.22</magvar>
+        <name>Point #33</name>
+        <desc>{"spd":50.64,"crs":247,"alt":562,"ele":302}</desc>
+      </trkpt>
+      <trkpt lat="47.696071048267" lon="7.3766133282334">
+        <ele>558</ele>
+        <time>2026-05-09T07:48:52+00:00</time>
+        <magvar>2.23</magvar>
+        <name>Point #34</name>
+        <desc>{"spd":51.45,"crs":245,"alt":558,"ele":278}</desc>
+      </trkpt>
+      <trkpt lat="47.694443785585" lon="7.3709998000413">
+        <ele>559</ele>
+        <time>2026-05-09T07:49:01+00:00</time>
+        <magvar>2.22</magvar>
+        <name>Point #35</name>
+        <desc>{"spd":49.47,"crs":251,"alt":559,"ele":320}</desc>
+      </trkpt>
+      <trkpt lat="47.694074101746" lon="7.3691045679152">
+        <ele>562</ele>
+        <time>2026-05-09T07:49:04+00:00</time>
+        <magvar>2.22</magvar>
+        <name>Point #36</name>
+        <desc>{"spd":49.3,"crs":257,"alt":562,"ele":337}</desc>
+      </trkpt>
+      <trkpt lat="47.693932908587" lon="7.3678179457784">
+        <ele>565</ele>
+        <time>2026-05-09T07:49:06+00:00</time>
+        <magvar>2.21</magvar>
+        <name>Point #37</name>
+        <desc>{"spd":48.8,"crs":264,"alt":565,"ele":342}</desc>
+      </trkpt>
+      <trkpt lat="47.693893513642" lon="7.3665102850646">
+        <ele>569</ele>
+        <time>2026-05-09T07:49:08+00:00</time>
+        <magvar>2.2</magvar>
+        <name>Point #38</name>
+        <desc>{"spd":49.47,"crs":270,"alt":569,"ele":339}</desc>
+      </trkpt>
+      <trkpt lat="47.693950971588" lon="7.3646166455001">
+        <ele>577</ele>
+        <time>2026-05-09T07:49:11+00:00</time>
+        <magvar>2.19</magvar>
+        <name>Point #39</name>
+        <desc>{"spd":47.3,"crs":275,"alt":577,"ele":344}</desc>
+      </trkpt>
+      <trkpt lat="47.694123848341" lon="7.3627652507275">
+        <ele>582</ele>
+        <time>2026-05-09T07:49:14+00:00</time>
+        <magvar>2.18</magvar>
+        <name>Point #40</name>
+        <desc>{"spd":46.88,"crs":280,"alt":582,"ele":345}</desc>
+      </trkpt>
+      <trkpt lat="47.694749138318" lon="7.3591052088886">
+        <ele>581</ele>
+        <time>2026-05-09T07:49:20+00:00</time>
+        <magvar>2.18</magvar>
+        <name>Point #41</name>
+        <desc>{"spd":47.35,"crs":287,"alt":581,"ele":355}</desc>
+      </trkpt>
+      <trkpt lat="47.695742980577" lon="7.3548830766231">
+        <ele>574</ele>
+        <time>2026-05-09T07:49:27+00:00</time>
+        <magvar>2.19</magvar>
+        <name>Point #42</name>
+        <desc>{"spd":49.48,"crs":292,"alt":574,"ele":367}</desc>
+      </trkpt>
+      <trkpt lat="47.697612228803" lon="7.3488075379282">
+        <ele>590</ele>
+        <time>2026-05-09T07:49:37+00:00</time>
+        <magvar>2.16</magvar>
+        <name>Point #43</name>
+        <desc>{"spd":47.89,"crs":296,"alt":590,"ele":334}</desc>
+      </trkpt>
+      <trkpt lat="47.699459013529" lon="7.3426750861108">
+        <ele>617</ele>
+        <time>2026-05-09T07:49:48+00:00</time>
+        <magvar>2.11</magvar>
+        <name>Point #44</name>
+        <desc>{"spd":45.48,"crs":293,"alt":617,"ele":348}</desc>
+      </trkpt>
+      <trkpt lat="47.701234468259" lon="7.3364990483969">
+        <ele>627</ele>
+        <time>2026-05-09T07:49:59+00:00</time>
+        <magvar>2.09</magvar>
+        <name>Point #45</name>
+        <desc>{"spd":45.63,"crs":293,"alt":627,"ele":334}</desc>
+      </trkpt>
+      <trkpt lat="47.702991943806" lon="7.3303649201989">
+        <ele>641</ele>
+        <time>2026-05-09T07:50:10+00:00</time>
+        <magvar>2.07</magvar>
+        <name>Point #46</name>
+        <desc>{"spd":45.2,"crs":293,"alt":641,"ele":331}</desc>
+      </trkpt>
+      <trkpt lat="47.704721507616" lon="7.3249518033117">
+        <ele>672</ele>
+        <time>2026-05-09T07:50:20+00:00</time>
+        <magvar>2.01</magvar>
+        <name>Point #47</name>
+        <desc>{"spd":43.89,"crs":294,"alt":672,"ele":327}</desc>
+      </trkpt>
+      <trkpt lat="47.706611249596" lon="7.3191323317587">
+        <ele>691</ele>
+        <time>2026-05-09T07:50:31+00:00</time>
+        <magvar>1.97</magvar>
+        <name>Point #48</name>
+        <desc>{"spd":44.78,"crs":301,"alt":691,"ele":314}</desc>
+      </trkpt>
+      <trkpt lat="47.709254482761" lon="7.313104569912">
+        <ele>718</ele>
+        <time>2026-05-09T07:50:43+00:00</time>
+        <magvar>1.93</magvar>
+        <name>Point #49</name>
+        <desc>{"spd":45.72,"crs":305,"alt":718,"ele":257}</desc>
+      </trkpt>
+      <trkpt lat="47.711895788088" lon="7.3075640480965">
+        <ele>741</ele>
+        <time>2026-05-09T07:50:54+00:00</time>
+        <magvar>1.88</magvar>
+        <name>Point #50</name>
+        <desc>{"spd":45.89,"crs":304,"alt":741,"ele":249}</desc>
+      </trkpt>
+      <trkpt lat="47.714663911611" lon="7.3015945404768">
+        <ele>772</ele>
+        <time>2026-05-09T07:51:06+00:00</time>
+        <magvar>1.83</magvar>
+        <name>Point #51</name>
+        <desc>{"spd":45.35,"crs":306,"alt":772,"ele":252}</desc>
+      </trkpt>
+      <trkpt lat="47.717603654601" lon="7.2958056628704">
+        <ele>803</ele>
+        <time>2026-05-09T07:51:18+00:00</time>
+        <magvar>1.77</magvar>
+        <name>Point #52</name>
+        <desc>{"spd":44.2,"crs":309,"alt":803,"ele":299}</desc>
+      </trkpt>
+      <trkpt lat="47.720066970214" lon="7.2911741584539">
+        <ele>825</ele>
+        <time>2026-05-09T07:51:28+00:00</time>
+        <magvar>1.73</magvar>
+        <name>Point #53</name>
+        <desc>{"spd":43.88,"crs":304,"alt":825,"ele":277}</desc>
+      </trkpt>
+      <trkpt lat="47.72263401188" lon="7.285277992487">
+        <ele>852</ele>
+        <time>2026-05-09T07:51:40+00:00</time>
+        <magvar>1.69</magvar>
+        <name>Point #54</name>
+        <desc>{"spd":44.64,"crs":302,"alt":852,"ele":274}</desc>
+      </trkpt>
+      <trkpt lat="47.725124359131" lon="7.2792057227343">
+        <ele>882</ele>
+        <time>2026-05-09T07:51:52+00:00</time>
+        <magvar>1.64</magvar>
+        <name>Point #55</name>
+        <desc>{"spd":43.85,"crs":301,"alt":882,"ele":277}</desc>
+      </trkpt>
+      <trkpt lat="47.727155419998" lon="7.2743308078498">
+        <ele>913</ele>
+        <time>2026-05-09T07:52:02+00:00</time>
+        <magvar>1.58</magvar>
+        <name>Point #56</name>
+        <desc>{"spd":41.56,"crs":302,"alt":913,"ele":280}</desc>
+      </trkpt>
+      <trkpt lat="47.728977310471" lon="7.2697182465345">
+        <ele>945</ele>
+        <time>2026-05-09T07:52:12+00:00</time>
+        <magvar>1.53</magvar>
+        <name>Point #57</name>
+        <desc>{"spd":39.49,"crs":299,"alt":945,"ele":280}</desc>
+      </trkpt>
+      <trkpt lat="47.731294655241" lon="7.2638111840934">
+        <ele>977</ele>
+        <time>2026-05-09T07:52:25+00:00</time>
+        <magvar>1.47</magvar>
+        <name>Point #58</name>
+        <desc>{"spd":39.34,"crs":302,"alt":977,"ele":284}</desc>
+      </trkpt>
+      <trkpt lat="47.733671930619" lon="7.2579629626125">
+        <ele>1004</ele>
+        <time>2026-05-09T07:52:38+00:00</time>
+        <magvar>1.43</magvar>
+        <name>Point #59</name>
+        <desc>{"spd":39.13,"crs":301,"alt":1004,"ele":277}</desc>
+      </trkpt>
+      <trkpt lat="47.736129672267" lon="7.2522819600999">
+        <ele>1034</ele>
+        <time>2026-05-09T07:52:51+00:00</time>
+        <magvar>1.38</magvar>
+        <name>Point #60</name>
+        <desc>{"spd":38.56,"crs":303,"alt":1034,"ele":260}</desc>
+      </trkpt>
+      <trkpt lat="47.738133575767" lon="7.2475833166391">
+        <ele>1065</ele>
+        <time>2026-05-09T07:53:02+00:00</time>
+        <magvar>1.33</magvar>
+        <name>Point #61</name>
+        <desc>{"spd":37.46,"crs":301,"alt":1065,"ele":273}</desc>
+      </trkpt>
+      <trkpt lat="47.740628323518" lon="7.241586484015">
+        <ele>1094</ele>
+        <time>2026-05-09T07:53:16+00:00</time>
+        <magvar>1.28</magvar>
+        <name>Point #62</name>
+        <desc>{"spd":37.89,"crs":303,"alt":1094,"ele":271}</desc>
+      </trkpt>
+      <trkpt lat="47.742925593629" lon="7.2365477029234">
+        <ele>1120</ele>
+        <time>2026-05-09T07:53:28+00:00</time>
+        <magvar>1.24</magvar>
+        <name>Point #63</name>
+        <desc>{"spd":38.3,"crs":309,"alt":1120,"ele":262}</desc>
+      </trkpt>
+      <trkpt lat="47.743410235271" lon="7.2358003724366">
+        <ele>1124</ele>
+        <time>2026-05-09T07:53:30+00:00</time>
+        <magvar>1.23</magvar>
+        <name>Point #64</name>
+        <desc>{"spd":38.7,"crs":317,"alt":1124,"ele":262}</desc>
+      </trkpt>
+      <trkpt lat="47.743948563002" lon="7.2351560555398">
+        <ele>1128</ele>
+        <time>2026-05-09T07:53:32+00:00</time>
+        <magvar>1.22</magvar>
+        <name>Point #65</name>
+        <desc>{"spd":38.82,"crs":324,"alt":1128,"ele":259}</desc>
+      </trkpt>
+      <trkpt lat="47.74569648318" lon="7.233462324366">
+        <ele>1143</ele>
+        <time>2026-05-09T07:53:38+00:00</time>
+        <magvar>1.2</magvar>
+        <name>Point #66</name>
+        <desc>{"spd":38.72,"crs":329,"alt":1143,"ele":260}</desc>
+      </trkpt>
+      <trkpt lat="47.749614687636" lon="7.2302580066025">
+        <ele>1174</ele>
+        <time>2026-05-09T07:53:51+00:00</time>
+        <magvar>1.15</magvar>
+        <name>Point #67</name>
+        <desc>{"spd":38.26,"crs":334,"alt":1174,"ele":264}</desc>
+      </trkpt>
+      <trkpt lat="47.753166477196" lon="7.2280307672918">
+        <ele>1198</ele>
+        <time>2026-05-09T07:54:02+00:00</time>
+        <magvar>1.11</magvar>
+        <name>Point #68</name>
+        <desc>{"spd":38.94,"crs":339,"alt":1198,"ele":267}</desc>
+      </trkpt>
+      <trkpt lat="47.756844623946" lon="7.2262539714575">
+        <ele>1222</ele>
+        <time>2026-05-09T07:54:13+00:00</time>
+        <magvar>1.07</magvar>
+        <name>Point #69</name>
+        <desc>{"spd":39.44,"crs":345,"alt":1222,"ele":276}</desc>
+      </trkpt>
+      <trkpt lat="47.759192981757" lon="7.2251640725881">
+        <ele>1236</ele>
+        <time>2026-05-09T07:54:20+00:00</time>
+        <magvar>1.05</magvar>
+        <name>Point #70</name>
+        <desc>{"spd":38.21,"crs":337,"alt":1236,"ele":270}</desc>
+      </trkpt>
+      <trkpt lat="47.759812991135" lon="7.2247293032706">
+        <ele>1242</ele>
+        <time>2026-05-09T07:54:22+00:00</time>
+        <magvar>1.04</magvar>
+        <name>Point #71</name>
+        <desc>{"spd":37.28,"crs":332,"alt":1242,"ele":270}</desc>
+      </trkpt>
+      <trkpt lat="47.760380906984" lon="7.2242412250489">
+        <ele>1248</ele>
+        <time>2026-05-09T07:54:24+00:00</time>
+        <magvar>1.03</magvar>
+        <name>Point #72</name>
+        <desc>{"spd":36.13,"crs":327,"alt":1248,"ele":270}</desc>
+      </trkpt>
+      <trkpt lat="47.760910056531" lon="7.2236937191337">
+        <ele>1252</ele>
+        <time>2026-05-09T07:54:26+00:00</time>
+        <magvar>1.03</magvar>
+        <name>Point #73</name>
+        <desc>{"spd":35.75,"crs":322,"alt":1252,"ele":270}</desc>
+      </trkpt>
+      <trkpt lat="47.761636138894" lon="7.2227783314884">
+        <ele>1259</ele>
+        <time>2026-05-09T07:54:29+00:00</time>
+        <magvar>1.01</magvar>
+        <name>Point #74</name>
+        <desc>{"spd":35.05,"crs":317,"alt":1259,"ele":270}</desc>
+      </trkpt>
+      <trkpt lat="47.762278360315" lon="7.2217740118504">
+        <ele>1265</ele>
+        <time>2026-05-09T07:54:32+00:00</time>
+        <magvar>1.01</magvar>
+        <name>Point #75</name>
+        <desc>{"spd":34.62,"crs":311,"alt":1265,"ele":270}</desc>
+      </trkpt>
+      <trkpt lat="47.765287505463" lon="7.2166468016803">
+        <ele>1276</ele>
+        <time>2026-05-09T07:54:46+00:00</time>
+        <magvar>0.99</magvar>
+        <name>Point #76</name>
+        <desc>{"spd":37.98,"crs":311,"alt":1276,"ele":274}</desc>
+      </trkpt>
+      <trkpt lat="47.76866025757" lon="7.2115324158221">
+        <ele>1307</ele>
+        <time>2026-05-09T07:55:00+00:00</time>
+        <magvar>0.94</magvar>
+        <name>Point #77</name>
+        <desc>{"spd":37.94,"crs":316,"alt":1307,"ele":270}</desc>
+      </trkpt>
+      <trkpt lat="47.771687339991" lon="7.2068836446851">
+        <ele>1338</ele>
+        <time>2026-05-09T07:55:13+00:00</time>
+        <magvar>0.89</magvar>
+        <name>Point #78</name>
+        <desc>{"spd":36.66,"crs":313,"alt":1338,"ele":277}</desc>
+      </trkpt>
+      <trkpt lat="47.774807796814" lon="7.20179842785">
+        <ele>1359</ele>
+        <time>2026-05-09T07:55:27+00:00</time>
+        <magvar>0.86</magvar>
+        <name>Point #79</name>
+        <desc>{"spd":38.1,"crs":314,"alt":1359,"ele":285}</desc>
+      </trkpt>
+      <trkpt lat="47.778145009652" lon="7.1970880497247">
+        <ele>1370</ele>
+        <time>2026-05-09T07:55:40+00:00</time>
+        <magvar>0.84</magvar>
+        <name>Point #80</name>
+        <desc>{"spd":40.18,"crs":319,"alt":1370,"ele":291}</desc>
+      </trkpt>
+      <trkpt lat="47.779713431373" lon="7.1948785800487">
+        <ele>1382</ele>
+        <time>2026-05-09T07:55:46+00:00</time>
+        <magvar>0.82</magvar>
+        <name>Point #81</name>
+        <desc>{"spd":39.23,"crs":313,"alt":1382,"ele":282}</desc>
+      </trkpt>
+      <trkpt lat="47.782688252628" lon="7.1897346060723">
+        <ele>1402</ele>
+        <time>2026-05-09T07:55:59+00:00</time>
+        <magvar>0.79</magvar>
+        <name>Point #82</name>
+        <desc>{"spd":39.82,"crs":312,"alt":1402,"ele":299}</desc>
+      </trkpt>
+      <trkpt lat="47.785865329206" lon="7.1849456056952">
+        <ele>1434</ele>
+        <time>2026-05-09T07:56:12+00:00</time>
+        <magvar>0.74</magvar>
+        <name>Point #83</name>
+        <desc>{"spd":37.87,"crs":314,"alt":1434,"ele":294}</desc>
+      </trkpt>
+      <trkpt lat="47.789000873454" lon="7.1796584688127">
+        <ele>1461</ele>
+        <time>2026-05-09T07:56:26+00:00</time>
+        <magvar>0.7</magvar>
+        <name>Point #84</name>
+        <desc>{"spd":37.93,"crs":313,"alt":1461,"ele":291}</desc>
+      </trkpt>
+      <trkpt lat="47.792405225337" lon="7.1746315062046">
+        <ele>1485</ele>
+        <time>2026-05-09T07:56:40+00:00</time>
+        <magvar>0.66</magvar>
+        <name>Point #85</name>
+        <desc>{"spd":38.36,"crs":316,"alt":1485,"ele":295}</desc>
+      </trkpt>
+      <trkpt lat="47.795845367946" lon="7.1696860156953">
+        <ele>1512</ele>
+        <time>2026-05-09T07:56:54+00:00</time>
+        <magvar>0.62</magvar>
+        <name>Point #86</name>
+        <desc>{"spd":37.18,"crs":313,"alt":1512,"ele":302}</desc>
+      </trkpt>
+      <trkpt lat="47.798970183358" lon="7.1644713822752">
+        <ele>1534</ele>
+        <time>2026-05-09T07:57:08+00:00</time>
+        <magvar>0.59</magvar>
+        <name>Point #87</name>
+        <desc>{"spd":37.83,"crs":312,"alt":1534,"ele":303}</desc>
+      </trkpt>
+      <trkpt lat="47.802136866376" lon="7.1596975531429">
+        <ele>1554</ele>
+        <time>2026-05-09T07:57:21+00:00</time>
+        <magvar>0.56</magvar>
+        <name>Point #88</name>
+        <desc>{"spd":38.77,"crs":316,"alt":1554,"ele":306}</desc>
+      </trkpt>
+      <trkpt lat="47.80533762183" lon="7.1552347764373">
+        <ele>1586</ele>
+        <time>2026-05-09T07:57:34+00:00</time>
+        <magvar>0.51</magvar>
+        <name>Point #89</name>
+        <desc>{"spd":36.92,"crs":317,"alt":1586,"ele":309}</desc>
+      </trkpt>
+      <trkpt lat="47.80879419297" lon="7.1508094668388">
+        <ele>1614</ele>
+        <time>2026-05-09T07:57:48+00:00</time>
+        <magvar>0.47</magvar>
+        <name>Point #90</name>
+        <desc>{"spd":36.73,"crs":320,"alt":1614,"ele":309}</desc>
+      </trkpt>
+      <trkpt lat="47.81246194616" lon="7.1464310120791">
+        <ele>1637</ele>
+        <time>2026-05-09T07:58:02+00:00</time>
+        <magvar>0.44</magvar>
+        <name>Point #91</name>
+        <desc>{"spd":37.32,"crs":321,"alt":1637,"ele":344}</desc>
+      </trkpt>
+      <trkpt lat="47.813936197199" lon="7.1444710716605">
+        <ele>1651</ele>
+        <time>2026-05-09T07:58:08+00:00</time>
+        <magvar>0.42</magvar>
+        <name>Point #92</name>
+        <desc>{"spd":35.86,"crs":316,"alt":1651,"ele":356}</desc>
+      </trkpt>
+      <trkpt lat="47.817108496092" lon="7.1396480407566">
+        <ele>1663</ele>
+        <time>2026-05-09T07:58:22+00:00</time>
+        <magvar>0.4</magvar>
+        <name>Point #93</name>
+        <desc>{"spd":38.74,"crs":314,"alt":1663,"ele":452}</desc>
+      </trkpt>
+      <trkpt lat="47.820415408351" lon="7.1345633268356">
+        <ele>1659</ele>
+        <time>2026-05-09T07:58:35+00:00</time>
+        <magvar>0.4</magvar>
+        <name>Point #94</name>
+        <desc>{"spd":41.93,"crs":315,"alt":1659,"ele":481}</desc>
+      </trkpt>
+      <trkpt lat="47.823553048074" lon="7.1296652778983">
+        <ele>1668</ele>
+        <time>2026-05-09T07:58:47+00:00</time>
+        <magvar>0.39</magvar>
+        <name>Point #95</name>
+        <desc>{"spd":42.4,"crs":311,"alt":1668,"ele":512}</desc>
+      </trkpt>
+      <trkpt lat="47.826531431638" lon="7.1245270874351">
+        <ele>1679</ele>
+        <time>2026-05-09T07:58:59+00:00</time>
+        <magvar>0.37</magvar>
+        <name>Point #96</name>
+        <desc>{"spd":42.47,"crs":311,"alt":1679,"ele":626}</desc>
+      </trkpt>
+      <trkpt lat="47.829519119114" lon="7.1192750707269">
+        <ele>1685</ele>
+        <time>2026-05-09T07:59:11+00:00</time>
+        <magvar>0.36</magvar>
+        <name>Point #97</name>
+        <desc>{"spd":43.8,"crs":310,"alt":1685,"ele":747}</desc>
+      </trkpt>
+      <trkpt lat="47.832628050819" lon="7.1138158533722">
+        <ele>1684</ele>
+        <time>2026-05-09T07:59:23+00:00</time>
+        <magvar>0.36</magvar>
+        <name>Point #98</name>
+        <desc>{"spd":44.89,"crs":310,"alt":1684,"ele":612}</desc>
+      </trkpt>
+      <trkpt lat="47.835715357214" lon="7.1084479149431">
+        <ele>1685</ele>
+        <time>2026-05-09T07:59:35+00:00</time>
+        <magvar>0.36</magvar>
+        <name>Point #99</name>
+        <desc>{"spd":43.62,"crs":311,"alt":1685,"ele":598}</desc>
+      </trkpt>
+      <trkpt lat="47.838867246173" lon="7.103402512148">
+        <ele>1690</ele>
+        <time>2026-05-09T07:59:47+00:00</time>
+        <magvar>0.35</magvar>
+        <name>Point #100</name>
+        <desc>{"spd":42.89,"crs":315,"alt":1690,"ele":722}</desc>
+      </trkpt>
+      <trkpt lat="47.842227844521" lon="7.098552910611">
+        <ele>1684</ele>
+        <time>2026-05-09T07:59:59+00:00</time>
+        <magvar>0.36</magvar>
+        <name>Point #101</name>
+        <desc>{"spd":43.78,"crs":317,"alt":1684,"ele":534}</desc>
+      </trkpt>
+      <trkpt lat="47.84574422054" lon="7.0936496648937">
+        <ele>1674</ele>
+        <time>2026-05-09T08:00:11+00:00</time>
+        <magvar>0.37</magvar>
+        <name>Point #102</name>
+        <desc>{"spd":45,"crs":317,"alt":1674,"ele":477}</desc>
+      </trkpt>
+      <trkpt lat="47.849200582132" lon="7.0887041743845">
+        <ele>1674</ele>
+        <time>2026-05-09T08:00:23+00:00</time>
+        <magvar>0.37</magvar>
+        <name>Point #103</name>
+        <desc>{"spd":44.02,"crs":316,"alt":1674,"ele":641}</desc>
+      </trkpt>
+      <trkpt lat="47.851598937996" lon="7.0855725277215">
+        <ele>1670</ele>
+        <time>2026-05-09T08:00:31+00:00</time>
+        <magvar>0.38</magvar>
+        <name>Point #104</name>
+        <desc>{"spd":45.43,"crs":321,"alt":1670,"ele":577}</desc>
+      </trkpt>
+      <trkpt lat="47.855308013968" lon="7.0808497443795">
+        <ele>1668</ele>
+        <time>2026-05-09T08:00:43+00:00</time>
+        <magvar>0.38</magvar>
+        <name>Point #105</name>
+        <desc>{"spd":44.85,"crs":319,"alt":1668,"ele":440}</desc>
+      </trkpt>
+      <trkpt lat="47.85906474106" lon="7.0762902405113">
+        <ele>1666</ele>
+        <time>2026-05-09T08:00:55+00:00</time>
+        <magvar>0.38</magvar>
+        <name>Point #106</name>
+        <desc>{"spd":45.47,"crs":321,"alt":1666,"ele":512}</desc>
+      </trkpt>
+      <trkpt lat="47.862556097098" lon="7.0720374304801">
+        <ele>1660</ele>
+        <time>2026-05-09T08:01:06+00:00</time>
+        <magvar>0.39</magvar>
+        <name>Point #107</name>
+        <desc>{"spd":45.39,"crs":320,"alt":1660,"ele":670}</desc>
+      </trkpt>
+      <trkpt lat="47.866317601874" lon="7.0673657767475">
+        <ele>1656</ele>
+        <time>2026-05-09T08:01:18+00:00</time>
+        <magvar>0.39</magvar>
+        <name>Point #108</name>
+        <desc>{"spd":45.55,"crs":321,"alt":1656,"ele":748}</desc>
+      </trkpt>
+      <trkpt lat="47.870109658688" lon="7.0629331748933">
+        <ele>1653</ele>
+        <time>2026-05-09T08:01:30+00:00</time>
+        <magvar>0.4</magvar>
+        <name>Point #109</name>
+        <desc>{"spd":43.35,"crs":323,"alt":1653,"ele":662}</desc>
+      </trkpt>
+      <trkpt lat="47.873788601719" lon="7.0587340928614">
+        <ele>1647</ele>
+        <time>2026-05-09T08:01:42+00:00</time>
+        <magvar>0.4</magvar>
+        <name>Point #110</name>
+        <desc>{"spd":42.68,"crs":322,"alt":1647,"ele":517}</desc>
+      </trkpt>
+      <trkpt lat="47.877556099556" lon="7.0545312389731">
+        <ele>1639</ele>
+        <time>2026-05-09T08:01:54+00:00</time>
+        <magvar>0.41</magvar>
+        <name>Point #111</name>
+        <desc>{"spd":43.66,"crs":323,"alt":1639,"ele":580}</desc>
+      </trkpt>
+      <trkpt lat="47.881265636533" lon="7.0503341685981">
+        <ele>1637</ele>
+        <time>2026-05-09T08:02:06+00:00</time>
+        <magvar>0.42</magvar>
+        <name>Point #112</name>
+        <desc>{"spd":42.99,"crs":322,"alt":1637,"ele":712}</desc>
+      </trkpt>
+      <trkpt lat="47.885008282028" lon="7.0461464859545">
+        <ele>1627</ele>
+        <time>2026-05-09T08:02:18+00:00</time>
+        <magvar>0.43</magvar>
+        <name>Point #113</name>
+        <desc>{"spd":44.61,"crs":325,"alt":1627,"ele":722}</desc>
+      </trkpt>
+      <trkpt lat="47.888742880896" lon="7.0419181510806">
+        <ele>1632</ele>
+        <time>2026-05-09T08:02:30+00:00</time>
+        <magvar>0.42</magvar>
+        <name>Point #114</name>
+        <desc>{"spd":41.58,"crs":323,"alt":1632,"ele":523}</desc>
+      </trkpt>
+      <trkpt lat="47.892498685978" lon="7.0375407859683">
+        <ele>1645</ele>
+        <time>2026-05-09T08:02:43+00:00</time>
+        <magvar>0.4</magvar>
+        <name>Point #115</name>
+        <desc>{"spd":40.84,"crs":322,"alt":1645,"ele":620}</desc>
+      </trkpt>
+      <trkpt lat="47.893575592898" lon="7.0361130125821">
+        <ele>1651</ele>
+        <time>2026-05-09T08:02:47+00:00</time>
+        <magvar>0.39</magvar>
+        <name>Point #116</name>
+        <desc>{"spd":39.66,"crs":316,"alt":1651,"ele":665}</desc>
+      </trkpt>
+      <trkpt lat="47.896590814926" lon="7.0311156380922">
+        <ele>1667</ele>
+        <time>2026-05-09T08:03:00+00:00</time>
+        <magvar>0.37</magvar>
+        <name>Point #117</name>
+        <desc>{"spd":38.45,"crs":312,"alt":1667,"ele":889}</desc>
+      </trkpt>
+      <trkpt lat="47.899822457694" lon="7.0259015914053">
+        <ele>1660</ele>
+        <time>2026-05-09T08:03:13+00:00</time>
+        <magvar>0.38</magvar>
+        <name>Point #118</name>
+        <desc>{"spd":42.44,"crs":313,"alt":1660,"ele":715}</desc>
+      </trkpt>
+      <trkpt lat="47.902922756039" lon="7.020911257714">
+        <ele>1668</ele>
+        <time>2026-05-09T08:03:25+00:00</time>
+        <magvar>0.37</magvar>
+        <name>Point #119</name>
+        <desc>{"spd":41.85,"crs":312,"alt":1668,"ele":572}</desc>
+      </trkpt>
+      <trkpt lat="47.905869204551" lon="7.0158222690225">
+        <ele>1670</ele>
+        <time>2026-05-09T08:03:37+00:00</time>
+        <magvar>0.36</magvar>
+        <name>Point #120</name>
+        <desc>{"spd":41.86,"crs":310,"alt":1670,"ele":588}</desc>
+      </trkpt>
+      <trkpt lat="47.908910200931" lon="7.0108030177653">
+        <ele>1671</ele>
+        <time>2026-05-09T08:03:49+00:00</time>
+        <magvar>0.36</magvar>
+        <name>Point #121</name>
+        <desc>{"spd":42.03,"crs":314,"alt":1671,"ele":829}</desc>
+      </trkpt>
+      <trkpt lat="47.912191883661" lon="7.005958026275">
+        <ele>1670</ele>
+        <time>2026-05-09T08:04:01+00:00</time>
+        <magvar>0.36</magvar>
+        <name>Point #122</name>
+        <desc>{"spd":43.71,"crs":316,"alt":1670,"ele":1053}</desc>
+      </trkpt>
+      <trkpt lat="47.91558529716" lon="7.0010571274906">
+        <ele>1676</ele>
+        <time>2026-05-09T08:04:13+00:00</time>
+        <magvar>0.35</magvar>
+        <name>Point #123</name>
+        <desc>{"spd":43.35,"crs":314,"alt":1676,"ele":942}</desc>
+      </trkpt>
+      <trkpt lat="47.91888248641" lon="6.9960693921894">
+        <ele>1674</ele>
+        <time>2026-05-09T08:04:25+00:00</time>
+        <magvar>0.35</magvar>
+        <name>Point #124</name>
+        <desc>{"spd":44.05,"crs":315,"alt":1674,"ele":804}</desc>
+      </trkpt>
+      <trkpt lat="47.922206246294" lon="6.9909797329456">
+        <ele>1674</ele>
+        <time>2026-05-09T08:04:37+00:00</time>
+        <magvar>0.35</magvar>
+        <name>Point #125</name>
+        <desc>{"spd":44.45,"crs":314,"alt":1674,"ele":755}</desc>
+      </trkpt>
+      <trkpt lat="47.925648065284" lon="6.9859995413572">
+        <ele>1677</ele>
+        <time>2026-05-09T08:04:49+00:00</time>
+        <magvar>0.35</magvar>
+        <name>Point #126</name>
+        <desc>{"spd":44.4,"crs":317,"alt":1677,"ele":790}</desc>
+      </trkpt>
+      <trkpt lat="47.929091351107" lon="6.9810998160392">
+        <ele>1683</ele>
+        <time>2026-05-09T08:05:01+00:00</time>
+        <magvar>0.34</magvar>
+        <name>Point #127</name>
+        <desc>{"spd":44.18,"crs":316,"alt":1683,"ele":811}</desc>
+      </trkpt>
+      <trkpt lat="47.932528769597" lon="6.9761580135673">
+        <ele>1688</ele>
+        <time>2026-05-09T08:05:13+00:00</time>
+        <magvar>0.33</magvar>
+        <name>Point #128</name>
+        <desc>{"spd":44.52,"crs":316,"alt":1688,"ele":657}</desc>
+      </trkpt>
+      <trkpt lat="47.935938443989" lon="6.9711442105472">
+        <ele>1697</ele>
+        <time>2026-05-09T08:05:25+00:00</time>
+        <magvar>0.31</magvar>
+        <name>Point #129</name>
+        <desc>{"spd":43.68,"crs":315,"alt":1697,"ele":526}</desc>
+      </trkpt>
+      <trkpt lat="47.939207092859" lon="6.9661283120513">
+        <ele>1700</ele>
+        <time>2026-05-09T08:05:37+00:00</time>
+        <magvar>0.31</magvar>
+        <name>Point #130</name>
+        <desc>{"spd":43.42,"crs":314,"alt":1700,"ele":541}</desc>
+      </trkpt>
+      <trkpt lat="47.942212047055" lon="6.9610232301056">
+        <ele>1714</ele>
+        <time>2026-05-09T08:05:49+00:00</time>
+        <magvar>0.29</magvar>
+        <name>Point #131</name>
+        <desc>{"spd":40.29,"crs":311,"alt":1714,"ele":502}</desc>
+      </trkpt>
+      <trkpt lat="47.945184647106" lon="6.955780852586">
+        <ele>1731</ele>
+        <time>2026-05-09T08:06:02+00:00</time>
+        <magvar>0.26</magvar>
+        <name>Point #132</name>
+        <desc>{"spd":39.02,"crs":310,"alt":1731,"ele":515}</desc>
+      </trkpt>
+      <trkpt lat="47.948331926018" lon="6.9505455996841">
+        <ele>1726</ele>
+        <time>2026-05-09T08:06:15+00:00</time>
+        <magvar>0.27</magvar>
+        <name>Point #133</name>
+        <desc>{"spd":40.3,"crs":313,"alt":1726,"ele":636}</desc>
+      </trkpt>
+      <trkpt lat="47.950476184487" lon="6.9470499269664">
+        <ele>1736</ele>
+        <time>2026-05-09T08:06:24+00:00</time>
+        <magvar>0.26</magvar>
+        <name>Point #134</name>
+        <desc>{"spd":37.7,"crs":306,"alt":1736,"ele":761}</desc>
+      </trkpt>
+      <trkpt lat="47.951930444688" lon="6.943676630035">
+        <ele>1736</ele>
+        <time>2026-05-09T08:06:32+00:00</time>
+        <magvar>0.25</magvar>
+        <name>Point #135</name>
+        <desc>{"spd":37.42,"crs":300,"alt":1736,"ele":832}</desc>
+      </trkpt>
+      <trkpt lat="47.954032961279" lon="6.9373268354684">
+        <ele>1734</ele>
+        <time>2026-05-09T08:06:46+00:00</time>
+        <magvar>0.26</magvar>
+        <name>Point #136</name>
+        <desc>{"spd":38.5,"crs":296,"alt":1734,"ele":903}</desc>
+      </trkpt>
+      <trkpt lat="47.956074457616" lon="6.9311562459916">
+        <ele>1733</ele>
+        <time>2026-05-09T08:06:59+00:00</time>
+        <magvar>0.26</magvar>
+        <name>Point #137</name>
+        <desc>{"spd":40.45,"crs":297,"alt":1733,"ele":1050}</desc>
+      </trkpt>
+      <trkpt lat="47.956960927695" lon="6.9287830777466">
+        <ele>1735</ele>
+        <time>2026-05-09T08:07:04+00:00</time>
+        <magvar>0.25</magvar>
+        <name>Point #138</name>
+        <desc>{"spd":40.64,"crs":303,"alt":1735,"ele":1065}</desc>
+      </trkpt>
+      <trkpt lat="47.95811184682" lon="6.9260481465608">
+        <ele>1741</ele>
+        <time>2026-05-09T08:07:10+00:00</time>
+        <magvar>0.24</magvar>
+        <name>Point #139</name>
+        <desc>{"spd":39.47,"crs":297,"alt":1741,"ele":1168}</desc>
+      </trkpt>
+      <trkpt lat="47.958688060753" lon="6.9241706002504">
+        <ele>1746</ele>
+        <time>2026-05-09T08:07:14+00:00</time>
+        <magvar>0.24</magvar>
+        <name>Point #140</name>
+        <desc>{"spd":38.18,"crs":291,"alt":1746,"ele":1167}</desc>
+      </trkpt>
+      <trkpt lat="47.960191438906" lon="6.9174010399729">
+        <ele>1749</ele>
+        <time>2026-05-09T08:07:28+00:00</time>
+        <magvar>0.23</magvar>
+        <name>Point #141</name>
+        <desc>{"spd":39.15,"crs":287,"alt":1749,"ele":1081}</desc>
+      </trkpt>
+      <trkpt lat="47.961663175374" lon="6.9107797555625">
+        <ele>1751</ele>
+        <time>2026-05-09T08:07:41+00:00</time>
+        <magvar>0.23</magvar>
+        <name>Point #142</name>
+        <desc>{"spd":41.14,"crs":290,"alt":1751,"ele":1142}</desc>
+      </trkpt>
+      <trkpt lat="47.963513731956" lon="6.9040739815682">
+        <ele>1754</ele>
+        <time>2026-05-09T08:07:54+00:00</time>
+        <magvar>0.22</magvar>
+        <name>Point #143</name>
+        <desc>{"spd":42.62,"crs":291,"alt":1754,"ele":1065}</desc>
+      </trkpt>
+      <trkpt lat="47.964736819267" lon="6.8992942851037">
+        <ele>1767</ele>
+        <time>2026-05-09T08:08:03+00:00</time>
+        <magvar>0.2</magvar>
+        <name>Point #144</name>
+        <desc>{"spd":41.48,"crs":298,"alt":1767,"ele":912}</desc>
+      </trkpt>
+      <trkpt lat="47.965121171437" lon="6.8983472976834">
+        <ele>1774</ele>
+        <time>2026-05-09T08:08:05+00:00</time>
+        <magvar>0.19</magvar>
+        <name>Point #145</name>
+        <desc>{"spd":41.33,"crs":304,"alt":1774,"ele":932}</desc>
+      </trkpt>
+      <trkpt lat="47.967783766799" lon="6.8925186898559">
+        <ele>1780</ele>
+        <time>2026-05-09T08:08:18+00:00</time>
+        <magvar>0.18</magvar>
+        <name>Point #146</name>
+        <desc>{"spd":41.15,"crs":307,"alt":1780,"ele":993}</desc>
+      </trkpt>
+      <trkpt lat="47.968511148356" lon="6.8912388570607">
+        <ele>1778</ele>
+        <time>2026-05-09T08:08:21+00:00</time>
+        <magvar>0.19</magvar>
+        <name>Point #147</name>
+        <desc>{"spd":42.18,"crs":313,"alt":1778,"ele":976}</desc>
+      </trkpt>
+      <trkpt lat="47.971893455833" lon="6.8864449113607">
+        <ele>1773</ele>
+        <time>2026-05-09T08:08:33+00:00</time>
+        <magvar>0.19</magvar>
+        <name>Point #148</name>
+        <desc>{"spd":44.35,"crs":318,"alt":1773,"ele":829}</desc>
+      </trkpt>
+      <trkpt lat="47.975302794948" lon="6.8814750295132">
+        <ele>1773</ele>
+        <time>2026-05-09T08:08:45+00:00</time>
+        <magvar>0.19</magvar>
+        <name>Point #149</name>
+        <desc>{"spd":43.7,"crs":313,"alt":1773,"ele":725}</desc>
+      </trkpt>
+      <trkpt lat="47.978480751626" lon="6.8762579653412">
+        <ele>1774</ele>
+        <time>2026-05-09T08:08:57+00:00</time>
+        <magvar>0.19</magvar>
+        <name>Point #150</name>
+        <desc>{"spd":45.15,"crs":313,"alt":1774,"ele":684}</desc>
+      </trkpt>
+      <trkpt lat="47.981534069404" lon="6.8713280651718">
+        <ele>1768</ele>
+        <time>2026-05-09T08:09:08+00:00</time>
+        <magvar>0.19</magvar>
+        <name>Point #151</name>
+        <desc>{"spd":45.66,"crs":313,"alt":1768,"ele":740}</desc>
+      </trkpt>
+      <trkpt lat="47.984589524567" lon="6.866367906332">
+        <ele>1758</ele>
+        <time>2026-05-09T08:09:19+00:00</time>
+        <magvar>0.21</magvar>
+        <name>Point #152</name>
+        <desc>{"spd":45.66,"crs":313,"alt":1758,"ele":879}</desc>
+      </trkpt>
+      <trkpt lat="47.987789777108" lon="6.861497014761">
+        <ele>1751</ele>
+        <time>2026-05-09T08:09:30+00:00</time>
+        <magvar>0.22</magvar>
+        <name>Point #153</name>
+        <desc>{"spd":46.91,"crs":316,"alt":1751,"ele":960}</desc>
+      </trkpt>
+      <trkpt lat="47.991191614419" lon="6.8566806055605">
+        <ele>1742</ele>
+        <time>2026-05-09T08:09:41+00:00</time>
+        <magvar>0.23</magvar>
+        <name>Point #154</name>
+        <desc>{"spd":47.99,"crs":318,"alt":1742,"ele":858}</desc>
+      </trkpt>
+      <trkpt lat="47.994791558012" lon="6.8520961236209">
+        <ele>1739</ele>
+        <time>2026-05-09T08:09:52+00:00</time>
+        <magvar>0.23</magvar>
+        <name>Point #155</name>
+        <desc>{"spd":46.61,"crs":319,"alt":1739,"ele":600}</desc>
+      </trkpt>
+      <trkpt lat="47.998460191302" lon="6.8472668901086">
+        <ele>1739</ele>
+        <time>2026-05-09T08:10:04+00:00</time>
+        <magvar>0.23</magvar>
+        <name>Point #156</name>
+        <desc>{"spd":45.78,"crs":321,"alt":1739,"ele":729}</desc>
+      </trkpt>
+      <trkpt lat="48.002077988349" lon="6.8429395649582">
+        <ele>1728</ele>
+        <time>2026-05-09T08:10:15+00:00</time>
+        <magvar>0.24</magvar>
+        <name>Point #157</name>
+        <desc>{"spd":47.53,"crs":322,"alt":1728,"ele":879}</desc>
+      </trkpt>
+      <trkpt lat="48.004438709468" lon="6.840309239924">
+        <ele>1737</ele>
+        <time>2026-05-09T08:10:22+00:00</time>
+        <magvar>0.23</magvar>
+        <name>Point #158</name>
+        <desc>{"spd":46.28,"crs":330,"alt":1737,"ele":1025}</desc>
+      </trkpt>
+      <trkpt lat="48.005467588082" lon="6.8392833787948">
+        <ele>1741</ele>
+        <time>2026-05-09T08:10:25+00:00</time>
+        <magvar>0.23</magvar>
+        <name>Point #159</name>
+        <desc>{"spd":44.89,"crs":324,"alt":1741,"ele":1025}</desc>
+      </trkpt>
+      <trkpt lat="48.006412438117" lon="6.8381723575294">
+        <ele>1745</ele>
+        <time>2026-05-09T08:10:28+00:00</time>
+        <magvar>0.22</magvar>
+        <name>Point #160</name>
+        <desc>{"spd":43.91,"crs":318,"alt":1745,"ele":1050}</desc>
+      </trkpt>
+      <trkpt lat="48.010041592643" lon="6.8332514259964">
+        <ele>1736</ele>
+        <time>2026-05-09T08:10:40+00:00</time>
+        <magvar>0.23</magvar>
+        <name>Point #161</name>
+        <desc>{"spd":46.99,"crs":317,"alt":1736,"ele":1044}</desc>
+      </trkpt>
+      <trkpt lat="48.010614202358" lon="6.8323115631938">
+        <ele>1733</ele>
+        <time>2026-05-09T08:10:42+00:00</time>
+        <magvar>0.24</magvar>
+        <name>Point #162</name>
+        <desc>{"spd":46.39,"crs":310,"alt":1733,"ele":1044}</desc>
+      </trkpt>
+      <trkpt lat="48.011379931122" lon="6.8308246973902">
+        <ele>1732</ele>
+        <time>2026-05-09T08:10:45+00:00</time>
+        <magvar>0.24</magvar>
+        <name>Point #163</name>
+        <desc>{"spd":46.33,"crs":303,"alt":1732,"ele":1033}</desc>
+      </trkpt>
+      <trkpt lat="48.012823546305" lon="6.8270882964134">
+        <ele>1725</ele>
+        <time>2026-05-09T08:10:52+00:00</time>
+        <magvar>0.25</magvar>
+        <name>Point #164</name>
+        <desc>{"spd":45.73,"crs":298,"alt":1725,"ele":1012}</desc>
+      </trkpt>
+      <trkpt lat="48.014974007383" lon="6.8210537452251">
+        <ele>1712</ele>
+        <time>2026-05-09T08:11:03+00:00</time>
+        <magvar>0.26</magvar>
+        <name>Point #165</name>
+        <desc>{"spd":46.7,"crs":298,"alt":1712,"ele":897}</desc>
+      </trkpt>
+      <trkpt lat="48.017218681052" lon="6.8150077108294">
+        <ele>1705</ele>
+        <time>2026-05-09T08:11:14+00:00</time>
+        <magvar>0.27</magvar>
+        <name>Point #166</name>
+        <desc>{"spd":46.55,"crs":299,"alt":1705,"ele":855}</desc>
+      </trkpt>
+      <trkpt lat="48.019410381094" lon="6.8089956231415">
+        <ele>1695</ele>
+        <time>2026-05-09T08:11:25+00:00</time>
+        <magvar>0.28</magvar>
+        <name>Point #167</name>
+        <desc>{"spd":46.05,"crs":299,"alt":1695,"ele":910}</desc>
+      </trkpt>
+      <trkpt lat="48.021762468852" lon="6.8026353511959">
+        <ele>1700</ele>
+        <time>2026-05-09T08:11:37+00:00</time>
+        <magvar>0.28</magvar>
+        <name>Point #168</name>
+        <desc>{"spd":44.5,"crs":299,"alt":1700,"ele":747}</desc>
+      </trkpt>
+      <trkpt lat="48.024103743955" lon="6.7964691203088">
+        <ele>1705</ele>
+        <time>2026-05-09T08:11:49+00:00</time>
+        <magvar>0.27</magvar>
+        <name>Point #169</name>
+        <desc>{"spd":43.99,"crs":300,"alt":1705,"ele":559}</desc>
+      </trkpt>
+      <trkpt lat="48.026251061819" lon="6.7902101017535">
+        <ele>1703</ele>
+        <time>2026-05-09T08:12:01+00:00</time>
+        <magvar>0.27</magvar>
+        <name>Point #170</name>
+        <desc>{"spd":44.4,"crs":297,"alt":1703,"ele":611}</desc>
+      </trkpt>
+      <trkpt lat="48.028545314446" lon="6.7838294617832">
+        <ele>1697</ele>
+        <time>2026-05-09T08:12:13+00:00</time>
+        <magvar>0.28</magvar>
+        <name>Point #171</name>
+        <desc>{"spd":45.38,"crs":298,"alt":1697,"ele":595}</desc>
+      </trkpt>
+      <trkpt lat="48.030899791047" lon="6.7779793962836">
+        <ele>1694</ele>
+        <time>2026-05-09T08:12:24+00:00</time>
+        <magvar>0.28</magvar>
+        <name>Point #172</name>
+        <desc>{"spd":46.59,"crs":303,"alt":1694,"ele":569}</desc>
+      </trkpt>
+      <trkpt lat="48.033567918465" lon="6.7718979064375">
+        <ele>1706</ele>
+        <time>2026-05-09T08:12:36+00:00</time>
+        <magvar>0.26</magvar>
+        <name>Point #173</name>
+        <desc>{"spd":44.81,"crs":304,"alt":1706,"ele":682}</desc>
+      </trkpt>
+      <trkpt lat="48.03613751661" lon="6.7663852125406">
+        <ele>1698</ele>
+        <time>2026-05-09T08:12:47+00:00</time>
+        <magvar>0.27</magvar>
+        <name>Point #174</name>
+        <desc>{"spd":46.31,"crs":306,"alt":1698,"ele":855}</desc>
+      </trkpt>
+      <trkpt lat="48.03904348053" lon="6.76100528799">
+        <ele>1690</ele>
+        <time>2026-05-09T08:12:58+00:00</time>
+        <magvar>0.28</magvar>
+        <name>Point #175</name>
+        <desc>{"spd":47.56,"crs":311,"alt":1690,"ele":832}</desc>
+      </trkpt>
+      <trkpt lat="48.042138749734" lon="6.7557604797184">
+        <ele>1693</ele>
+        <time>2026-05-09T08:13:09+00:00</time>
+        <magvar>0.27</magvar>
+        <name>Point #176</name>
+        <desc>{"spd":46.83,"crs":312,"alt":1693,"ele":811}</desc>
+      </trkpt>
+      <trkpt lat="48.04533585906" lon="6.7507382947952">
+        <ele>1689</ele>
+        <time>2026-05-09T08:13:20+00:00</time>
+        <magvar>0.28</magvar>
+        <name>Point #177</name>
+        <desc>{"spd":47.2,"crs":315,"alt":1689,"ele":794}</desc>
+      </trkpt>
+      <trkpt lat="48.048716993071" lon="6.7458219733089">
+        <ele>1680</ele>
+        <time>2026-05-09T08:13:31+00:00</time>
+        <magvar>0.29</magvar>
+        <name>Point #178</name>
+        <desc>{"spd":47.55,"crs":315,"alt":1680,"ele":794}</desc>
+      </trkpt>
+      <trkpt lat="48.051768844016" lon="6.7406412027776">
+        <ele>1682</ele>
+        <time>2026-05-09T08:13:42+00:00</time>
+        <magvar>0.29</magvar>
+        <name>Point #179</name>
+        <desc>{"spd":45.73,"crs":309,"alt":1682,"ele":794}</desc>
+      </trkpt>
+      <trkpt lat="48.054470540956" lon="6.735256081447">
+        <ele>1680</ele>
+        <time>2026-05-09T08:13:53+00:00</time>
+        <magvar>0.29</magvar>
+        <name>Point #180</name>
+        <desc>{"spd":46.07,"crs":306,"alt":1680,"ele":821}</desc>
+      </trkpt>
+      <trkpt lat="48.057270934805" lon="6.7297333292663">
+        <ele>1669</ele>
+        <time>2026-05-09T08:14:04+00:00</time>
+        <magvar>0.3</magvar>
+        <name>Point #181</name>
+        <desc>{"spd":47.77,"crs":307,"alt":1669,"ele":740}</desc>
+      </trkpt>
+      <trkpt lat="48.060125936754" lon="6.7240701802075">
+        <ele>1662</ele>
+        <time>2026-05-09T08:14:15+00:00</time>
+        <magvar>0.31</magvar>
+        <name>Point #182</name>
+        <desc>{"spd":47.54,"crs":307,"alt":1662,"ele":650}</desc>
+      </trkpt>
+      <trkpt lat="48.062947830185" lon="6.7185863200575">
+        <ele>1665</ele>
+        <time>2026-05-09T08:14:26+00:00</time>
+        <magvar>0.31</magvar>
+        <name>Point #183</name>
+        <desc>{"spd":46.33,"crs":308,"alt":1665,"ele":480}</desc>
+      </trkpt>
+      <trkpt lat="48.065843945369" lon="6.7133048828691">
+        <ele>1663</ele>
+        <time>2026-05-09T08:14:37+00:00</time>
+        <magvar>0.31</magvar>
+        <name>Point #184</name>
+        <desc>{"spd":46.22,"crs":310,"alt":1663,"ele":508}</desc>
+      </trkpt>
+      <trkpt lat="48.068820275366" lon="6.7081075161695">
+        <ele>1662</ele>
+        <time>2026-05-09T08:14:48+00:00</time>
+        <magvar>0.31</magvar>
+        <name>Point #185</name>
+        <desc>{"spd":46.24,"crs":310,"alt":1662,"ele":602}</desc>
+      </trkpt>
+      <trkpt lat="48.071738812141" lon="6.7029863409698">
+        <ele>1667</ele>
+        <time>2026-05-09T08:14:59+00:00</time>
+        <magvar>0.3</magvar>
+        <name>Point #186</name>
+        <desc>{"spd":44.27,"crs":309,"alt":1667,"ele":775}</desc>
+      </trkpt>
+      <trkpt lat="48.074739952572" lon="6.6974720545113">
+        <ele>1662</ele>
+        <time>2026-05-09T08:15:11+00:00</time>
+        <magvar>0.31</magvar>
+        <name>Point #187</name>
+        <desc>{"spd":43.93,"crs":310,"alt":1662,"ele":812}</desc>
+      </trkpt>
+      <trkpt lat="48.07788408827" lon="6.6921866778284">
+        <ele>1657</ele>
+        <time>2026-05-09T08:15:23+00:00</time>
+        <magvar>0.31</magvar>
+        <name>Point #188</name>
+        <desc>{"spd":44.33,"crs":312,"alt":1657,"ele":808}</desc>
+      </trkpt>
+      <trkpt lat="48.081046203151" lon="6.6867552883923">
+        <ele>1641</ele>
+        <time>2026-05-09T08:15:35+00:00</time>
+        <magvar>0.33</magvar>
+        <name>Point #189</name>
+        <desc>{"spd":45.51,"crs":312,"alt":1641,"ele":812}</desc>
+      </trkpt>
+      <trkpt lat="48.084085984156" lon="6.6817434132099">
+        <ele>1642</ele>
+        <time>2026-05-09T08:15:46+00:00</time>
+        <magvar>0.33</magvar>
+        <name>Point #190</name>
+        <desc>{"spd":46.46,"crs":313,"alt":1642,"ele":779}</desc>
+      </trkpt>
+      <trkpt lat="48.087236448191" lon="6.6766414325684">
+        <ele>1637</ele>
+        <time>2026-05-09T08:15:57+00:00</time>
+        <magvar>0.34</magvar>
+        <name>Point #191</name>
+        <desc>{"spd":47.32,"crs":312,"alt":1637,"ele":747}</desc>
+      </trkpt>
+      <trkpt lat="48.090263111517" lon="6.6713642701507">
+        <ele>1642</ele>
+        <time>2026-05-09T08:16:08+00:00</time>
+        <magvar>0.33</magvar>
+        <name>Point #192</name>
+        <desc>{"spd":46.55,"crs":311,"alt":1642,"ele":729}</desc>
+      </trkpt>
+      <trkpt lat="48.093304946087" lon="6.6661993414164">
+        <ele>1649</ele>
+        <time>2026-05-09T08:16:19+00:00</time>
+        <magvar>0.32</magvar>
+        <name>Point #193</name>
+        <desc>{"spd":46.44,"crs":311,"alt":1649,"ele":715}</desc>
+      </trkpt>
+      <trkpt lat="48.096301853657" lon="6.6610065847635">
+        <ele>1652</ele>
+        <time>2026-05-09T08:16:30+00:00</time>
+        <magvar>0.31</magvar>
+        <name>Point #194</name>
+        <desc>{"spd":46.83,"crs":311,"alt":1652,"ele":720}</desc>
+      </trkpt>
+      <trkpt lat="48.099311836995" lon="6.6557329427451">
+        <ele>1653</ele>
+        <time>2026-05-09T08:16:41+00:00</time>
+        <magvar>0.31</magvar>
+        <name>Point #195</name>
+        <desc>{"spd":46.63,"crs":312,"alt":1653,"ele":771}</desc>
+      </trkpt>
+      <trkpt lat="48.102081553079" lon="6.6510540805757">
+        <ele>1652</ele>
+        <time>2026-05-09T08:16:51+00:00</time>
+        <magvar>0.31</magvar>
+        <name>Point #196</name>
+        <desc>{"spd":45.89,"crs":307,"alt":1652,"ele":732}</desc>
+      </trkpt>
+      <trkpt lat="48.102986505255" lon="6.6490345448256">
+        <ele>1651</ele>
+        <time>2026-05-09T08:16:55+00:00</time>
+        <magvar>0.31</magvar>
+        <name>Point #197</name>
+        <desc>{"spd":45.43,"crs":301,"alt":1651,"ele":737}</desc>
+      </trkpt>
+      <trkpt lat="48.105409629643" lon="6.6426622867584">
+        <ele>1645</ele>
+        <time>2026-05-09T08:17:07+00:00</time>
+        <magvar>0.32</magvar>
+        <name>Point #198</name>
+        <desc>{"spd":45.91,"crs":299,"alt":1645,"ele":729}</desc>
+      </trkpt>
+      <trkpt lat="48.107790886424" lon="6.6367765143514">
+        <ele>1637</ele>
+        <time>2026-05-09T08:17:18+00:00</time>
+        <magvar>0.33</magvar>
+        <name>Point #199</name>
+        <desc>{"spd":46.77,"crs":302,"alt":1637,"ele":618}</desc>
+      </trkpt>
+      <trkpt lat="48.110362747684" lon="6.6308876406401">
+        <ele>1627</ele>
+        <time>2026-05-09T08:17:29+00:00</time>
+        <magvar>0.34</magvar>
+        <name>Point #200</name>
+        <desc>{"spd":47.84,"crs":304,"alt":1627,"ele":676}</desc>
+      </trkpt>
+      <trkpt lat="48.112975889817" lon="6.625062385574">
+        <ele>1621</ele>
+        <time>2026-05-09T08:17:40+00:00</time>
+        <magvar>0.35</magvar>
+        <name>Point #201</name>
+        <desc>{"spd":47.77,"crs":304,"alt":1621,"ele":640}</desc>
+      </trkpt>
+      <trkpt lat="48.115640580654" lon="6.6191619448364">
+        <ele>1611</ele>
+        <time>2026-05-09T08:17:51+00:00</time>
+        <magvar>0.36</magvar>
+        <name>Point #202</name>
+        <desc>{"spd":48.41,"crs":304,"alt":1611,"ele":605}</desc>
+      </trkpt>
+      <trkpt lat="48.118205904029" lon="6.6132090333849">
+        <ele>1605</ele>
+        <time>2026-05-09T08:18:02+00:00</time>
+        <magvar>0.37</magvar>
+        <name>Point #203</name>
+        <desc>{"spd":47.9,"crs":303,"alt":1605,"ele":530}</desc>
+      </trkpt>
+      <trkpt lat="48.120909947902" lon="6.60724170506">
+        <ele>1587</ele>
+        <time>2026-05-09T08:18:13+00:00</time>
+        <magvar>0.39</magvar>
+        <name>Point #204</name>
+        <desc>{"spd":49.49,"crs":305,"alt":1587,"ele":523}</desc>
+      </trkpt>
+      <trkpt lat="48.123771781102" lon="6.6013333015144">
+        <ele>1578</ele>
+        <time>2026-05-09T08:18:24+00:00</time>
+        <magvar>0.41</magvar>
+        <name>Point #205</name>
+        <desc>{"spd":49.36,"crs":306,"alt":1578,"ele":474}</desc>
+      </trkpt>
+      <trkpt lat="48.12666404061" lon="6.5953940525651">
+        <ele>1565</ele>
+        <time>2026-05-09T08:18:35+00:00</time>
+        <magvar>0.42</magvar>
+        <name>Point #206</name>
+        <desc>{"spd":50.01,"crs":306,"alt":1565,"ele":392}</desc>
+      </trkpt>
+      <trkpt lat="48.129545026459" lon="6.589420856908">
+        <ele>1558</ele>
+        <time>2026-05-09T08:18:46+00:00</time>
+        <magvar>0.43</magvar>
+        <name>Point #207</name>
+        <desc>{"spd":49.38,"crs":305,"alt":1558,"ele":427}</desc>
+      </trkpt>
+      <trkpt lat="48.131235153414" lon="6.5855899918824">
+        <ele>1558</ele>
+        <time>2026-05-09T08:18:53+00:00</time>
+        <magvar>0.43</magvar>
+        <name>Point #208</name>
+        <desc>{"spd":48.02,"crs":300,"alt":1558,"ele":416}</desc>
+      </trkpt>
+      <trkpt lat="48.131811241619" lon="6.583876144141">
+        <ele>1558</ele>
+        <time>2026-05-09T08:18:56+00:00</time>
+        <magvar>0.43</magvar>
+        <name>Point #209</name>
+        <desc>{"spd":47.16,"crs":294,"alt":1558,"ele":409}</desc>
+      </trkpt>
+      <trkpt lat="48.132256488316" lon="6.5821251645684">
+        <ele>1557</ele>
+        <time>2026-05-09T08:18:59+00:00</time>
+        <magvar>0.43</magvar>
+        <name>Point #210</name>
+        <desc>{"spd":46.53,"crs":288,"alt":1557,"ele":416}</desc>
+      </trkpt>
+      <trkpt lat="48.133410760202" lon="6.5755190514028">
+        <ele>1551</ele>
+        <time>2026-05-09T08:19:10+00:00</time>
+        <magvar>0.44</magvar>
+        <name>Point #211</name>
+        <desc>{"spd":46.3,"crs":284,"alt":1551,"ele":416}</desc>
+      </trkpt>
+      <trkpt lat="48.134501790628" lon="6.5687611419708">
+        <ele>1538</ele>
+        <time>2026-05-09T08:19:21+00:00</time>
+        <magvar>0.46</magvar>
+        <name>Point #212</name>
+        <desc>{"spd":47.2,"crs":282,"alt":1538,"ele":445}</desc>
+      </trkpt>
+      <trkpt lat="48.135396516882" lon="6.5620809327811">
+        <ele>1544</ele>
+        <time>2026-05-09T08:19:32+00:00</time>
+        <magvar>0.45</magvar>
+        <name>Point #213</name>
+        <desc>{"spd":45.38,"crs":282,"alt":1544,"ele":441}</desc>
+      </trkpt>
+      <trkpt lat="48.136380342767" lon="6.555507844314">
+        <ele>1535</ele>
+        <time>2026-05-09T08:19:43+00:00</time>
+        <magvar>0.46</magvar>
+        <name>Point #214</name>
+        <desc>{"spd":46.8,"crs":283,"alt":1535,"ele":413}</desc>
+      </trkpt>
+      <trkpt lat="48.137293509208" lon="6.5492371749133">
+        <ele>1518</ele>
+        <time>2026-05-09T08:19:53+00:00</time>
+        <magvar>0.48</magvar>
+        <name>Point #215</name>
+        <desc>{"spd":47.51,"crs":278,"alt":1518,"ele":391}</desc>
+      </trkpt>
+      <trkpt lat="48.137769559398" lon="6.5423257090151">
+        <ele>1510</ele>
+        <time>2026-05-09T08:20:04+00:00</time>
+        <magvar>0.49</magvar>
+        <name>Point #216</name>
+        <desc>{"spd":46.98,"crs":275,"alt":1510,"ele":395}</desc>
+      </trkpt>
+      <trkpt lat="48.138322178274" lon="6.5353716630489">
+        <ele>1497</ele>
+        <time>2026-05-09T08:20:15+00:00</time>
+        <magvar>0.51</magvar>
+        <name>Point #217</name>
+        <desc>{"spd":47.9,"crs":279,"alt":1497,"ele":388}</desc>
+      </trkpt>
+      <trkpt lat="48.139215270057" lon="6.5285253245384">
+        <ele>1505</ele>
+        <time>2026-05-09T08:20:26+00:00</time>
+        <magvar>0.5</magvar>
+        <name>Point #218</name>
+        <desc>{"spd":45.51,"crs":282,"alt":1505,"ele":452}</desc>
+      </trkpt>
+      <trkpt lat="48.140364051796" lon="6.5219659823924">
+        <ele>1500</ele>
+        <time>2026-05-09T08:20:37+00:00</time>
+        <magvar>0.5</magvar>
+        <name>Point #219</name>
+        <desc>{"spd":47.06,"crs":287,"alt":1500,"ele":466}</desc>
+      </trkpt>
+      <trkpt lat="48.141611907631" lon="6.5152103360742">
+        <ele>1495</ele>
+        <time>2026-05-09T08:20:48+00:00</time>
+        <magvar>0.51</magvar>
+        <name>Point #220</name>
+        <desc>{"spd":46.84,"crs":282,"alt":1495,"ele":391}</desc>
+      </trkpt>
+      <trkpt lat="48.142554787919" lon="6.5085199847817">
+        <ele>1495</ele>
+        <time>2026-05-09T08:20:59+00:00</time>
+        <magvar>0.51</magvar>
+        <name>Point #221</name>
+        <desc>{"spd":46.14,"crs":283,"alt":1495,"ele":349}</desc>
+      </trkpt>
+      <trkpt lat="48.143629389815" lon="6.5019665937871">
+        <ele>1492</ele>
+        <time>2026-05-09T08:21:10+00:00</time>
+        <magvar>0.51</magvar>
+        <name>Point #222</name>
+        <desc>{"spd":45.92,"crs":285,"alt":1492,"ele":385}</desc>
+      </trkpt>
+      <trkpt lat="48.143803356215" lon="6.5007658861578">
+        <ele>1492</ele>
+        <time>2026-05-09T08:21:12+00:00</time>
+        <magvar>0.51</magvar>
+        <name>Point #223</name>
+        <desc>{"spd":45.08,"crs":279,"alt":1492,"ele":385}</desc>
+      </trkpt>
+      <trkpt lat="48.143873428926" lon="6.499556042254">
+        <ele>1493</ele>
+        <time>2026-05-09T08:21:14+00:00</time>
+        <magvar>0.51</magvar>
+        <name>Point #224</name>
+        <desc>{"spd":44.57,"crs":271,"alt":1493,"ele":387}</desc>
+      </trkpt>
+      <trkpt lat="48.143825526349" lon="6.4977967645973">
+        <ele>1496</ele>
+        <time>2026-05-09T08:21:17+00:00</time>
+        <magvar>0.5</magvar>
+        <name>Point #225</name>
+        <desc>{"spd":42.24,"crs":266,"alt":1496,"ele":391}</desc>
+      </trkpt>
+      <trkpt lat="48.143442054279" lon="6.4907971210778">
+        <ele>1508</ele>
+        <time>2026-05-09T08:21:29+00:00</time>
+        <magvar>0.48</magvar>
+        <name>Point #226</name>
+        <desc>{"spd":43.24,"crs":265,"alt":1508,"ele":377}</desc>
+      </trkpt>
+      <trkpt lat="48.143223915249" lon="6.485533118248">
+        <ele>1515</ele>
+        <time>2026-05-09T08:21:38+00:00</time>
+        <magvar>0.47</magvar>
+        <name>Point #227</name>
+        <desc>{"spd":44.31,"crs":270,"alt":1515,"ele":365}</desc>
+      </trkpt>
+      <trkpt lat="48.143150154501" lon="6.4820133894682">
+        <ele>1523</ele>
+        <time>2026-05-09T08:21:44+00:00</time>
+        <magvar>0.46</magvar>
+        <name>Point #228</name>
+        <desc>{"spd":42.94,"crs":265,"alt":1523,"ele":339}</desc>
+      </trkpt>
+      <trkpt lat="48.14259275794" lon="6.4750812202692">
+        <ele>1524</ele>
+        <time>2026-05-09T08:21:56+00:00</time>
+        <magvar>0.46</magvar>
+        <name>Point #229</name>
+        <desc>{"spd":43.76,"crs":262,"alt":1524,"ele":341}</desc>
+      </trkpt>
+      <trkpt lat="48.142036241479" lon="6.4680764637887">
+        <ele>1526</ele>
+        <time>2026-05-09T08:22:08+00:00</time>
+        <magvar>0.45</magvar>
+        <name>Point #230</name>
+        <desc>{"spd":43.74,"crs":263,"alt":1526,"ele":430}</desc>
+      </trkpt>
+      <trkpt lat="48.141458560713" lon="6.4610377606004">
+        <ele>1526</ele>
+        <time>2026-05-09T08:22:20+00:00</time>
+        <magvar>0.45</magvar>
+        <name>Point #231</name>
+        <desc>{"spd":45.03,"crs":264,"alt":1526,"ele":419}</desc>
+      </trkpt>
+      <trkpt lat="48.14123979304" lon="6.4539856463671">
+        <ele>1530</ele>
+        <time>2026-05-09T08:22:32+00:00</time>
+        <magvar>0.44</magvar>
+        <name>Point #232</name>
+        <desc>{"spd":44.21,"crs":269,"alt":1530,"ele":391}</desc>
+      </trkpt>
+      <trkpt lat="48.141283798032" lon="6.4485448691994">
+        <ele>1524</ele>
+        <time>2026-05-09T08:22:41+00:00</time>
+        <magvar>0.45</magvar>
+        <name>Point #233</name>
+        <desc>{"spd":45.81,"crs":276,"alt":1524,"ele":394}</desc>
+      </trkpt>
+      <trkpt lat="48.141482239589" lon="6.4467015210539">
+        <ele>1522</ele>
+        <time>2026-05-09T08:22:44+00:00</time>
+        <magvar>0.45</magvar>
+        <name>Point #234</name>
+        <desc>{"spd":46.3,"crs":282,"alt":1522,"ele":406}</desc>
+      </trkpt>
+      <trkpt lat="48.141802512109" lon="6.4448777027428">
+        <ele>1521</ele>
+        <time>2026-05-09T08:22:47+00:00</time>
+        <magvar>0.45</magvar>
+        <name>Point #235</name>
+        <desc>{"spd":46.87,"crs":287,"alt":1521,"ele":441}</desc>
+      </trkpt>
+      <trkpt lat="48.142395070754" lon="6.4424907043576">
+        <ele>1518</ele>
+        <time>2026-05-09T08:22:51+00:00</time>
+        <magvar>0.46</magvar>
+        <name>Point #236</name>
+        <desc>{"spd":47.33,"crs":293,"alt":1518,"ele":459}</desc>
+      </trkpt>
+      <trkpt lat="48.143505421467" lon="6.4390424732119">
+        <ele>1514</ele>
+        <time>2026-05-09T08:22:57+00:00</time>
+        <magvar>0.46</magvar>
+        <name>Point #237</name>
+        <desc>{"spd":48.16,"crs":298,"alt":1514,"ele":445}</desc>
+      </trkpt>
+      <trkpt lat="48.145895730704" lon="6.4328650943935">
+        <ele>1512</ele>
+        <time>2026-05-09T08:23:08+00:00</time>
+        <magvar>0.46</magvar>
+        <name>Point #238</name>
+        <desc>{"spd":48.14,"crs":303,"alt":1512,"ele":377}</desc>
+      </trkpt>
+      <trkpt lat="48.148540053517" lon="6.4270087424666">
+        <ele>1511</ele>
+        <time>2026-05-09T08:23:19+00:00</time>
+        <magvar>0.46</magvar>
+        <name>Point #239</name>
+        <desc>{"spd":47.29,"crs":305,"alt":1511,"ele":394}</desc>
+      </trkpt>
+      <trkpt lat="48.151317145675" lon="6.4212271571159">
+        <ele>1498</ele>
+        <time>2026-05-09T08:23:30+00:00</time>
+        <magvar>0.48</magvar>
+        <name>Point #240</name>
+        <desc>{"spd":49.4,"crs":307,"alt":1498,"ele":473}</desc>
+      </trkpt>
+      <trkpt lat="48.15412659198" lon="6.4152980502695">
+        <ele>1496</ele>
+        <time>2026-05-09T08:23:41+00:00</time>
+        <magvar>0.48</magvar>
+        <name>Point #241</name>
+        <desc>{"spd":48.54,"crs":304,"alt":1496,"ele":480}</desc>
+      </trkpt>
+      <trkpt lat="48.156616394408" lon="6.4092346653342">
+        <ele>1495</ele>
+        <time>2026-05-09T08:23:52+00:00</time>
+        <magvar>0.48</magvar>
+        <name>Point #242</name>
+        <desc>{"spd":48.43,"crs":302,"alt":1495,"ele":463}</desc>
+      </trkpt>
+      <trkpt lat="48.159365993924" lon="6.4031877927482">
+        <ele>1483</ele>
+        <time>2026-05-09T08:24:03+00:00</time>
+        <magvar>0.5</magvar>
+        <name>Point #243</name>
+        <desc>{"spd":50.21,"crs":305,"alt":1483,"ele":412}</desc>
+      </trkpt>
+      <trkpt lat="48.161989864893" lon="6.3976695667952">
+        <ele>1471</ele>
+        <time>2026-05-09T08:24:13+00:00</time>
+        <magvar>0.52</magvar>
+        <name>Point #244</name>
+        <desc>{"spd":50.74,"crs":306,"alt":1471,"ele":454}</desc>
+      </trkpt>
+      <trkpt lat="48.164789252914" lon="6.3921658415347">
+        <ele>1451</ele>
+        <time>2026-05-09T08:24:23+00:00</time>
+        <magvar>0.54</magvar>
+        <name>Point #245</name>
+        <desc>{"spd":51.06,"crs":308,"alt":1451,"ele":437}</desc>
+      </trkpt>
+      <trkpt lat="48.167885611765" lon="6.3864652253687">
+        <ele>1446</ele>
+        <time>2026-05-09T08:24:34+00:00</time>
+        <magvar>0.55</magvar>
+        <name>Point #246</name>
+        <desc>{"spd":49.1,"crs":308,"alt":1446,"ele":405}</desc>
+      </trkpt>
+      <trkpt lat="48.170869443566" lon="6.3806682173163">
+        <ele>1432</ele>
+        <time>2026-05-09T08:24:45+00:00</time>
+        <magvar>0.57</magvar>
+        <name>Point #247</name>
+        <desc>{"spd":49.6,"crs":308,"alt":1432,"ele":398}</desc>
+      </trkpt>
+      <trkpt lat="48.173835296184" lon="6.3747676089406">
+        <ele>1416</ele>
+        <time>2026-05-09T08:24:56+00:00</time>
+        <magvar>0.59</magvar>
+        <name>Point #248</name>
+        <desc>{"spd":50.14,"crs":307,"alt":1416,"ele":388}</desc>
+      </trkpt>
+      <trkpt lat="48.176606646739" lon="6.3694072142243">
+        <ele>1404</ele>
+        <time>2026-05-09T08:25:06+00:00</time>
+        <magvar>0.61</magvar>
+        <name>Point #249</name>
+        <desc>{"spd":50.29,"crs":309,"alt":1404,"ele":383}</desc>
+      </trkpt>
+      <trkpt lat="48.179464498535" lon="6.3641541916877">
+        <ele>1391</ele>
+        <time>2026-05-09T08:25:16+00:00</time>
+        <magvar>0.63</magvar>
+        <name>Point #250</name>
+        <desc>{"spd":51.2,"crs":310,"alt":1391,"ele":359}</desc>
+      </trkpt>
+      <trkpt lat="48.182653016411" lon="6.3589983992279">
+        <ele>1373</ele>
+        <time>2026-05-09T08:25:26+00:00</time>
+        <magvar>0.65</magvar>
+        <name>Point #251</name>
+        <desc>{"spd":52.84,"crs":315,"alt":1373,"ele":351}</desc>
+      </trkpt>
+      <trkpt lat="48.185247257352" lon="6.3548927754164">
+        <ele>1366</ele>
+        <time>2026-05-09T08:25:34+00:00</time>
+        <magvar>0.66</magvar>
+        <name>Point #252</name>
+        <desc>{"spd":51.83,"crs":310,"alt":1366,"ele":346}</desc>
+      </trkpt>
+      <trkpt lat="48.188029169105" lon="6.3493930734694">
+        <ele>1360</ele>
+        <time>2026-05-09T08:25:44+00:00</time>
+        <magvar>0.67</magvar>
+        <name>Point #253</name>
+        <desc>{"spd":50.93,"crs":307,"alt":1360,"ele":356}</desc>
+      </trkpt>
+      <trkpt lat="48.19081179332" lon="6.3439639471471">
+        <ele>1349</ele>
+        <time>2026-05-09T08:25:54+00:00</time>
+        <magvar>0.69</magvar>
+        <name>Point #254</name>
+        <desc>{"spd":51.04,"crs":307,"alt":1349,"ele":345}</desc>
+      </trkpt>
+      <trkpt lat="48.193622035906" lon="6.3384406920522">
+        <ele>1325</ele>
+        <time>2026-05-09T08:26:04+00:00</time>
+        <magvar>0.72</magvar>
+        <name>Point #255</name>
+        <desc>{"spd":52.11,"crs":307,"alt":1325,"ele":356}</desc>
+      </trkpt>
+      <trkpt lat="48.19636572618" lon="6.3327573426068">
+        <ele>1310</ele>
+        <time>2026-05-09T08:26:14+00:00</time>
+        <magvar>0.74</magvar>
+        <name>Point #256</name>
+        <desc>{"spd":52.09,"crs":306,"alt":1310,"ele":353}</desc>
+      </trkpt>
+      <trkpt lat="48.19914357271" lon="6.3270873203874">
+        <ele>1288</ele>
+        <time>2026-05-09T08:26:24+00:00</time>
+        <magvar>0.77</magvar>
+        <name>Point #257</name>
+        <desc>{"spd":52.4,"crs":306,"alt":1288,"ele":377}</desc>
+      </trkpt>
+      <trkpt lat="48.201976278797" lon="6.3214716129005">
+        <ele>1268</ele>
+        <time>2026-05-09T08:26:34+00:00</time>
+        <magvar>0.8</magvar>
+        <name>Point #258</name>
+        <desc>{"spd":52.64,"crs":307,"alt":1268,"ele":380}</desc>
+      </trkpt>
+      <trkpt lat="48.204779438674" lon="6.3157342839986">
+        <ele>1248</ele>
+        <time>2026-05-09T08:26:44+00:00</time>
+        <magvar>0.83</magvar>
+        <name>Point #259</name>
+        <desc>{"spd":53.1,"crs":306,"alt":1248,"ele":377}</desc>
+      </trkpt>
+      <trkpt lat="48.207668261603" lon="6.3100280519575">
+        <ele>1225</ele>
+        <time>2026-05-09T08:26:54+00:00</time>
+        <magvar>0.87</magvar>
+        <name>Point #260</name>
+        <desc>{"spd":53.43,"crs":307,"alt":1225,"ele":383}</desc>
+      </trkpt>
+      <trkpt lat="48.210548073985" lon="6.3043214008212">
+        <ele>1200</ele>
+        <time>2026-05-09T08:27:04+00:00</time>
+        <magvar>0.9</magvar>
+        <name>Point #261</name>
+        <desc>{"spd":53.32,"crs":307,"alt":1200,"ele":363}</desc>
+      </trkpt>
+      <trkpt lat="48.213511160575" lon="6.298543503508">
+        <ele>1168</ele>
+        <time>2026-05-09T08:27:14+00:00</time>
+        <magvar>0.95</magvar>
+        <name>Point #262</name>
+        <desc>{"spd":54.68,"crs":308,"alt":1168,"ele":363}</desc>
+      </trkpt>
+      <trkpt lat="48.216370898299" lon="6.292750518769">
+        <ele>1157</ele>
+        <time>2026-05-09T08:27:24+00:00</time>
+        <magvar>0.97</magvar>
+        <name>Point #263</name>
+        <desc>{"spd":52.33,"crs":307,"alt":1157,"ele":348}</desc>
+      </trkpt>
+      <trkpt lat="48.219240987673" lon="6.2871515750885">
+        <ele>1136</ele>
+        <time>2026-05-09T08:27:34+00:00</time>
+        <magvar>1</magvar>
+        <name>Point #264</name>
+        <desc>{"spd":52.76,"crs":308,"alt":1136,"ele":333}</desc>
+      </trkpt>
+      <trkpt lat="48.222185131162" lon="6.281576603651">
+        <ele>1119</ele>
+        <time>2026-05-09T08:27:44+00:00</time>
+        <magvar>1.03</magvar>
+        <name>Point #265</name>
+        <desc>{"spd":52.64,"crs":308,"alt":1119,"ele":331}</desc>
+      </trkpt>
+      <trkpt lat="48.225118797272" lon="6.276121661067">
+        <ele>1113</ele>
+        <time>2026-05-09T08:27:54+00:00</time>
+        <magvar>1.03</magvar>
+        <name>Point #266</name>
+        <desc>{"spd":51.23,"crs":311,"alt":1113,"ele":334}</desc>
+      </trkpt>
+      <trkpt lat="48.22807601653" lon="6.2710494361818">
+        <ele>1107</ele>
+        <time>2026-05-09T08:28:04+00:00</time>
+        <magvar>1.04</magvar>
+        <name>Point #267</name>
+        <desc>{"spd":50.08,"crs":310,"alt":1107,"ele":346}</desc>
+      </trkpt>
+      <trkpt lat="48.231097105891" lon="6.2658586911857">
+        <ele>1087</ele>
+        <time>2026-05-09T08:28:14+00:00</time>
+        <magvar>1.07</magvar>
+        <name>Point #268</name>
+        <desc>{"spd":51.89,"crs":312,"alt":1087,"ele":338}</desc>
+      </trkpt>
+      <trkpt lat="48.234224100597" lon="6.2605957780033">
+        <ele>1065</ele>
+        <time>2026-05-09T08:28:24+00:00</time>
+        <magvar>1.11</magvar>
+        <name>Point #269</name>
+        <desc>{"spd":52.28,"crs":311,"alt":1065,"ele":344}</desc>
+      </trkpt>
+      <trkpt lat="48.237226624042" lon="6.2552655581385">
+        <ele>1052</ele>
+        <time>2026-05-09T08:28:34+00:00</time>
+        <magvar>1.13</magvar>
+        <name>Point #270</name>
+        <desc>{"spd":51.26,"crs":309,"alt":1052,"ele":359}</desc>
+      </trkpt>
+      <trkpt lat="48.240086948499" lon="6.249896613881">
+        <ele>1036</ele>
+        <time>2026-05-09T08:28:44+00:00</time>
+        <magvar>1.15</magvar>
+        <name>Point #271</name>
+        <desc>{"spd":51.25,"crs":308,"alt":1036,"ele":338}</desc>
+      </trkpt>
+      <trkpt lat="48.242898741737" lon="6.2444995902479">
+        <ele>1023</ele>
+        <time>2026-05-09T08:28:54+00:00</time>
+        <magvar>1.17</magvar>
+        <name>Point #272</name>
+        <desc>{"spd":50.8,"crs":307,"alt":1023,"ele":335}</desc>
+      </trkpt>
+      <trkpt lat="48.245645114221" lon="6.2390494253486">
+        <ele>1013</ele>
+        <time>2026-05-09T08:29:04+00:00</time>
+        <magvar>1.19</magvar>
+        <name>Point #273</name>
+        <desc>{"spd":49.71,"crs":304,"alt":1013,"ele":313}</desc>
+      </trkpt>
+      <trkpt lat="48.24633423239" lon="6.2373266089708">
+        <ele>1011</ele>
+        <time>2026-05-09T08:29:07+00:00</time>
+        <magvar>1.19</magvar>
+        <name>Point #274</name>
+        <desc>{"spd":49.01,"crs":298,"alt":1011,"ele":310}</desc>
+      </trkpt>
+      <trkpt lat="48.248547557741" lon="6.2309273611754">
+        <ele>1002</ele>
+        <time>2026-05-09T08:29:18+00:00</time>
+        <magvar>1.2</magvar>
+        <name>Point #275</name>
+        <desc>{"spd":48.4,"crs":301,"alt":1002,"ele":327}</desc>
+      </trkpt>
+      <trkpt lat="48.250984093174" lon="6.2247993517667">
+        <ele>991</ele>
+        <time>2026-05-09T08:29:29+00:00</time>
+        <magvar>1.22</magvar>
+        <name>Point #276</name>
+        <desc>{"spd":48.55,"crs":300,"alt":991,"ele":334}</desc>
+      </trkpt>
+      <trkpt lat="48.251975965686" lon="6.2218894064426">
+        <ele>985</ele>
+        <time>2026-05-09T08:29:34+00:00</time>
+        <magvar>1.23</magvar>
+        <name>Point #277</name>
+        <desc>{"spd":48.54,"crs":294,"alt":985,"ele":326}</desc>
+      </trkpt>
+      <trkpt lat="48.252598405816" lon="6.2194362748414">
+        <ele>978</ele>
+        <time>2026-05-09T08:29:38+00:00</time>
+        <magvar>1.24</magvar>
+        <name>Point #278</name>
+        <desc>{"spd":48.54,"crs":288,"alt":978,"ele":344}</desc>
+      </trkpt>
+      <trkpt lat="48.254229985178" lon="6.2127164192498">
+        <ele>970</ele>
+        <time>2026-05-09T08:29:49+00:00</time>
+        <magvar>1.25</magvar>
+        <name>Point #279</name>
+        <desc>{"spd":47.73,"crs":293,"alt":970,"ele":301}</desc>
+      </trkpt>
+      <trkpt lat="48.256166749634" lon="6.2061673868448">
+        <ele>953</ele>
+        <time>2026-05-09T08:30:00+00:00</time>
+        <magvar>1.28</magvar>
+        <name>Point #280</name>
+        <desc>{"spd":49.03,"crs":295,"alt":953,"ele":281}</desc>
+      </trkpt>
+      <trkpt lat="48.258321234025" lon="6.1997120641172">
+        <ele>945</ele>
+        <time>2026-05-09T08:30:11+00:00</time>
+        <magvar>1.29</magvar>
+        <name>Point #281</name>
+        <desc>{"spd":48.64,"crs":298,"alt":945,"ele":302}</desc>
+      </trkpt>
+      <trkpt lat="48.260550065897" lon="6.1934134829789">
+        <ele>938</ele>
+        <time>2026-05-09T08:30:22+00:00</time>
+        <magvar>1.3</magvar>
+        <name>Point #282</name>
+        <desc>{"spd":47.92,"crs":297,"alt":938,"ele":302}</desc>
+      </trkpt>
+      <trkpt lat="48.262755009346" lon="6.187052372843">
+        <ele>921</ele>
+        <time>2026-05-09T08:30:33+00:00</time>
+        <magvar>1.32</magvar>
+        <name>Point #283</name>
+        <desc>{"spd":48.43,"crs":298,"alt":921,"ele":338}</desc>
+      </trkpt>
+      <trkpt lat="48.264828817919" lon="6.1805601697415">
+        <ele>904</ele>
+        <time>2026-05-09T08:30:44+00:00</time>
+        <magvar>1.35</magvar>
+        <name>Point #284</name>
+        <desc>{"spd":49.12,"crs":294,"alt":904,"ele":327}</desc>
+      </trkpt>
+      <trkpt lat="48.266858160496" lon="6.1738187726587">
+        <ele>882</ele>
+        <time>2026-05-09T08:30:55+00:00</time>
+        <magvar>1.39</magvar>
+        <name>Point #285</name>
+        <desc>{"spd":50.61,"crs":295,"alt":882,"ele":309}</desc>
+      </trkpt>
+      <trkpt lat="48.268737006001" lon="6.1675782781094">
+        <ele>866</ele>
+        <time>2026-05-09T08:31:05+00:00</time>
+        <magvar>1.41</magvar>
+        <name>Point #286</name>
+        <desc>{"spd":50.52,"crs":294,"alt":866,"ele":321}</desc>
+      </trkpt>
+      <trkpt lat="48.270684038289" lon="6.1614937707782">
+        <ele>856</ele>
+        <time>2026-05-09T08:31:15+00:00</time>
+        <magvar>1.43</magvar>
+        <name>Point #287</name>
+        <desc>{"spd":50.2,"crs":297,"alt":856,"ele":288}</desc>
+      </trkpt>
+      <trkpt lat="48.272765055299" lon="6.1554760672152">
+        <ele>841</ele>
+        <time>2026-05-09T08:31:25+00:00</time>
+        <magvar>1.45</magvar>
+        <name>Point #288</name>
+        <desc>{"spd":50.57,"crs":298,"alt":841,"ele":276}</desc>
+      </trkpt>
+      <trkpt lat="48.275010818616" lon="6.1495445296168">
+        <ele>828</ele>
+        <time>2026-05-09T08:31:35+00:00</time>
+        <magvar>1.47</magvar>
+        <name>Point #289</name>
+        <desc>{"spd":50.88,"crs":301,"alt":828,"ele":270}</desc>
+      </trkpt>
+      <trkpt lat="48.277470194735" lon="6.1437225434929">
+        <ele>811</ele>
+        <time>2026-05-09T08:31:45+00:00</time>
+        <magvar>1.5</magvar>
+        <name>Point #290</name>
+        <desc>{"spd":51.63,"crs":303,"alt":811,"ele":294}</desc>
+      </trkpt>
+      <trkpt lat="48.280113050714" lon="6.1380307283252">
+        <ele>800</ele>
+        <time>2026-05-09T08:31:55+00:00</time>
+        <magvar>1.52</magvar>
+        <name>Point #291</name>
+        <desc>{"spd":51.59,"crs":306,"alt":800,"ele":274}</desc>
+      </trkpt>
+      <trkpt lat="48.282790440135" lon="6.1325121670961">
+        <ele>801</ele>
+        <time>2026-05-09T08:32:05+00:00</time>
+        <magvar>1.51</magvar>
+        <name>Point #292</name>
+        <desc>{"spd":49.45,"crs":307,"alt":801,"ele":282}</desc>
+      </trkpt>
+      <trkpt lat="48.285793676041" lon="6.1267877463251">
+        <ele>795</ele>
+        <time>2026-05-09T08:32:16+00:00</time>
+        <magvar>1.52</magvar>
+        <name>Point #293</name>
+        <desc>{"spd":49.18,"crs":309,"alt":795,"ele":281}</desc>
+      </trkpt>
+      <trkpt lat="48.288861368783" lon="6.1210566200316">
+        <ele>785</ele>
+        <time>2026-05-09T08:32:27+00:00</time>
+        <magvar>1.54</magvar>
+        <name>Point #294</name>
+        <desc>{"spd":49.47,"crs":310,"alt":785,"ele":289}</desc>
+      </trkpt>
+      <trkpt lat="48.292026040144" lon="6.1154523957521">
+        <ele>777</ele>
+        <time>2026-05-09T08:32:38+00:00</time>
+        <magvar>1.55</magvar>
+        <name>Point #295</name>
+        <desc>{"spd":49.5,"crs":311,"alt":777,"ele":296}</desc>
+      </trkpt>
+      <trkpt lat="48.295320798643" lon="6.1101854592562">
+        <ele>778</ele>
+        <time>2026-05-09T08:32:49+00:00</time>
+        <magvar>1.55</magvar>
+        <name>Point #296</name>
+        <desc>{"spd":48.11,"crs":316,"alt":778,"ele":302}</desc>
+      </trkpt>
+      <trkpt lat="48.297945968807" lon="6.1068315245211">
+        <ele>773</ele>
+        <time>2026-05-09T08:32:57+00:00</time>
+        <magvar>1.56</magvar>
+        <name>Point #297</name>
+        <desc>{"spd":48.42,"crs":322,"alt":773,"ele":299}</desc>
+      </trkpt>
+      <trkpt lat="48.301747497171" lon="6.102525992319">
+        <ele>770</ele>
+        <time>2026-05-09T08:33:08+00:00</time>
+        <magvar>1.56</magvar>
+        <name>Point #298</name>
+        <desc>{"spd":48.11,"crs":323,"alt":770,"ele":321}</desc>
+      </trkpt>
+      <trkpt lat="48.30550623592" lon="6.0983753576875">
+        <ele>776</ele>
+        <time>2026-05-09T08:33:19+00:00</time>
+        <magvar>1.55</magvar>
+        <name>Point #299</name>
+        <desc>{"spd":46.58,"crs":323,"alt":776,"ele":298}</desc>
+      </trkpt>
+      <trkpt lat="48.309213216417" lon="6.0943795368075">
+        <ele>778</ele>
+        <time>2026-05-09T08:33:30+00:00</time>
+        <magvar>1.54</magvar>
+        <name>Point #300</name>
+        <desc>{"spd":45.71,"crs":326,"alt":778,"ele":296}</desc>
+      </trkpt>
+      <trkpt lat="48.313103257678" lon="6.0907591413707">
+        <ele>774</ele>
+        <time>2026-05-09T08:33:41+00:00</time>
+        <magvar>1.55</magvar>
+        <name>Point #301</name>
+        <desc>{"spd":46.93,"crs":328,"alt":774,"ele":281}</desc>
+      </trkpt>
+      <trkpt lat="48.316901726648" lon="6.0866769868881">
+        <ele>766</ele>
+        <time>2026-05-09T08:33:52+00:00</time>
+        <magvar>1.56</magvar>
+        <name>Point #302</name>
+        <desc>{"spd":47.85,"crs":323,"alt":766,"ele":339}</desc>
+      </trkpt>
+      <trkpt lat="48.320127292536" lon="6.0834952164441">
+        <ele>763</ele>
+        <time>2026-05-09T08:34:01+00:00</time>
+        <magvar>1.57</magvar>
+        <name>Point #303</name>
+        <desc>{"spd":48.03,"crs":328,"alt":763,"ele":342}</desc>
+      </trkpt>
+      <trkpt lat="48.324117790908" lon="6.0797422192991">
+        <ele>765</ele>
+        <time>2026-05-09T08:34:12+00:00</time>
+        <magvar>1.56</magvar>
+        <name>Point #304</name>
+        <desc>{"spd":47.27,"crs":329,"alt":765,"ele":327}</desc>
+      </trkpt>
+      <trkpt lat="48.326600594446" lon="6.0773802828044">
+        <ele>770</ele>
+        <time>2026-05-09T08:34:19+00:00</time>
+        <magvar>1.55</magvar>
+        <name>Point #305</name>
+        <desc>{"spd":45.58,"crs":322,"alt":770,"ele":320}</desc>
+      </trkpt>
+      <trkpt lat="48.327204091474" lon="6.0765772964805">
+        <ele>776</ele>
+        <time>2026-05-09T08:34:21+00:00</time>
+        <magvar>1.54</magvar>
+        <name>Point #306</name>
+        <desc>{"spd":44.48,"crs":316,"alt":776,"ele":320}</desc>
+      </trkpt>
+      <trkpt lat="48.327744514681" lon="6.0757052432746">
+        <ele>780</ele>
+        <time>2026-05-09T08:34:23+00:00</time>
+        <magvar>1.54</magvar>
+        <name>Point #307</name>
+        <desc>{"spd":43.52,"crs":310,"alt":780,"ele":316}</desc>
+      </trkpt>
+      <trkpt lat="48.328193156049" lon="6.0747606866062">
+        <ele>784</ele>
+        <time>2026-05-09T08:34:25+00:00</time>
+        <magvar>1.53</magvar>
+        <name>Point #308</name>
+        <desc>{"spd":42.79,"crs":303,"alt":784,"ele":314}</desc>
+      </trkpt>
+      <trkpt lat="48.328578765504" lon="6.0737603064626">
+        <ele>787</ele>
+        <time>2026-05-09T08:34:27+00:00</time>
+        <magvar>1.52</magvar>
+        <name>Point #309</name>
+        <desc>{"spd":42.13,"crs":297,"alt":787,"ele":313}</desc>
+      </trkpt>
+      <trkpt lat="48.328878041357" lon="6.0727421566844">
+        <ele>790</ele>
+        <time>2026-05-09T08:34:29+00:00</time>
+        <magvar>1.52</magvar>
+        <name>Point #310</name>
+        <desc>{"spd":41.35,"crs":291,"alt":790,"ele":313}</desc>
+      </trkpt>
+      <trkpt lat="48.329117679968" lon="6.0716948378831">
+        <ele>793</ele>
+        <time>2026-05-09T08:34:31+00:00</time>
+        <magvar>1.51</magvar>
+        <name>Point #311</name>
+        <desc>{"spd":41.13,"crs":286,"alt":793,"ele":313}</desc>
+      </trkpt>
+      <trkpt lat="48.329360252246" lon="6.0700749512762">
+        <ele>794</ele>
+        <time>2026-05-09T08:34:34+00:00</time>
+        <magvar>1.51</magvar>
+        <name>Point #312</name>
+        <desc>{"spd":40.92,"crs":279,"alt":794,"ele":316}</desc>
+      </trkpt>
+      <trkpt lat="48.329489459284" lon="6.0684362053871">
+        <ele>797</ele>
+        <time>2026-05-09T08:34:37+00:00</time>
+        <magvar>1.51</magvar>
+        <name>Point #313</name>
+        <desc>{"spd":40.26,"crs":273,"alt":797,"ele":314}</desc>
+      </trkpt>
+      <trkpt lat="48.329491093755" lon="6.0673642437905">
+        <ele>801</ele>
+        <time>2026-05-09T08:34:39+00:00</time>
+        <magvar>1.5</magvar>
+        <name>Point #314</name>
+        <desc>{"spd":38.7,"crs":266,"alt":801,"ele":314}</desc>
+      </trkpt>
+      <trkpt lat="48.329401155934" lon="6.0663450043648">
+        <ele>806</ele>
+        <time>2026-05-09T08:34:41+00:00</time>
+        <magvar>1.49</magvar>
+        <name>Point #315</name>
+        <desc>{"spd":37.84,"crs":259,"alt":806,"ele":316}</desc>
+      </trkpt>
+      <trkpt lat="48.329216376878" lon="6.0653680935502">
+        <ele>808</ele>
+        <time>2026-05-09T08:34:43+00:00</time>
+        <magvar>1.49</magvar>
+        <name>Point #316</name>
+        <desc>{"spd":37.48,"crs":252,"alt":808,"ele":314}</desc>
+      </trkpt>
+      <trkpt lat="48.328959471546" lon="6.0644495207816">
+        <ele>811</ele>
+        <time>2026-05-09T08:34:45+00:00</time>
+        <magvar>1.48</magvar>
+        <name>Point #317</name>
+        <desc>{"spd":37.2,"crs":243,"alt":811,"ele":320}</desc>
+      </trkpt>
+      <trkpt lat="48.328614681959" lon="6.0635975003242">
+        <ele>814</ele>
+        <time>2026-05-09T08:34:47+00:00</time>
+        <magvar>1.48</magvar>
+        <name>Point #318</name>
+        <desc>{"spd":36.89,"crs":235,"alt":814,"ele":319}</desc>
+      </trkpt>
+      <trkpt lat="48.32819474861" lon="6.0628288798034">
+        <ele>816</ele>
+        <time>2026-05-09T08:34:49+00:00</time>
+        <magvar>1.47</magvar>
+        <name>Point #319</name>
+        <desc>{"spd":36.92,"crs":228,"alt":816,"ele":319}</desc>
+      </trkpt>
+      <trkpt lat="48.327717692591" lon="6.0621473472565">
+        <ele>817</ele>
+        <time>2026-05-09T08:34:51+00:00</time>
+        <magvar>1.47</magvar>
+        <name>Point #320</name>
+        <desc>{"spd":36.67,"crs":219,"alt":817,"ele":317}</desc>
+      </trkpt>
+      <trkpt lat="48.327191183344" lon="6.0615832451731">
+        <ele>819</ele>
+        <time>2026-05-09T08:34:53+00:00</time>
+        <magvar>1.47</magvar>
+        <name>Point #321</name>
+        <desc>{"spd":36.35,"crs":212,"alt":819,"ele":324}</desc>
+      </trkpt>
+      <trkpt lat="48.326616436243" lon="6.0611228272319">
+        <ele>821</ele>
+        <time>2026-05-09T08:34:55+00:00</time>
+        <magvar>1.46</magvar>
+        <name>Point #322</name>
+        <desc>{"spd":36.12,"crs":204,"alt":821,"ele":324}</desc>
+      </trkpt>
+      <trkpt lat="48.326007658616" lon="6.060782102868">
+        <ele>824</ele>
+        <time>2026-05-09T08:34:57+00:00</time>
+        <magvar>1.46</magvar>
+        <name>Point #323</name>
+        <desc>{"spd":35.88,"crs":197,"alt":824,"ele":324}</desc>
+      </trkpt>
+      <trkpt lat="48.325382201001" lon="6.0605584736913">
+        <ele>825</ele>
+        <time>2026-05-09T08:34:59+00:00</time>
+        <magvar>1.46</magvar>
+        <name>Point #324</name>
+        <desc>{"spd":36.13,"crs":190,"alt":825,"ele":330}</desc>
+      </trkpt>
+      <trkpt lat="48.324735872447" lon="6.0604557115585">
+        <ele>828</ele>
+        <time>2026-05-09T08:35:01+00:00</time>
+        <magvar>1.45</magvar>
+        <name>Point #325</name>
+        <desc>{"spd":36.11,"crs":181,"alt":828,"ele":334}</desc>
+      </trkpt>
+      <trkpt lat="48.324087909423" lon="6.0604999680072">
+        <ele>831</ele>
+        <time>2026-05-09T08:35:03+00:00</time>
+        <magvar>1.45</magvar>
+        <name>Point #326</name>
+        <desc>{"spd":35.8,"crs":173,"alt":831,"ele":334}</desc>
+      </trkpt>
+      <trkpt lat="48.323449837044" lon="6.0606840346009">
+        <ele>834</ele>
+        <time>2026-05-09T08:35:05+00:00</time>
+        <magvar>1.44</magvar>
+        <name>Point #327</name>
+        <desc>{"spd":35.58,"crs":165,"alt":834,"ele":334}</desc>
+      </trkpt>
+      <trkpt lat="48.322845250368" lon="6.0609868727624">
+        <ele>837</ele>
+        <time>2026-05-09T08:35:07+00:00</time>
+        <magvar>1.44</magvar>
+        <name>Point #328</name>
+        <desc>{"spd":36.08,"crs":157,"alt":837,"ele":334}</desc>
+      </trkpt>
+      <trkpt lat="48.322253027" lon="6.0614295210689">
+        <ele>839</ele>
+        <time>2026-05-09T08:35:09+00:00</time>
+        <magvar>1.43</magvar>
+        <name>Point #329</name>
+        <desc>{"spd":37.1,"crs":149,"alt":839,"ele":341}</desc>
+      </trkpt>
+      <trkpt lat="48.321433528326" lon="6.0623201820999">
+        <ele>836</ele>
+        <time>2026-05-09T08:35:12+00:00</time>
+        <magvar>1.44</magvar>
+        <name>Point #330</name>
+        <desc>{"spd":39.38,"crs":144,"alt":836,"ele":338}</desc>
+      </trkpt>
+      <trkpt lat="48.320897212252" lon="6.0630186460912">
+        <ele>835</ele>
+        <time>2026-05-09T08:35:14+00:00</time>
+        <magvar>1.44</magvar>
+        <name>Point #331</name>
+        <desc>{"spd":40.19,"crs":136,"alt":835,"ele":338}</desc>
+      </trkpt>
+      <trkpt lat="48.320426023565" lon="6.0638281702995">
+        <ele>836</ele>
+        <time>2026-05-09T08:35:16+00:00</time>
+        <magvar>1.44</magvar>
+        <name>Point #332</name>
+        <desc>{"spd":40.8,"crs":127,"alt":836,"ele":338}</desc>
+      </trkpt>
+      <trkpt lat="48.320019920357" lon="6.0647468268871">
+        <ele>836</ele>
+        <time>2026-05-09T08:35:18+00:00</time>
+        <magvar>1.44</magvar>
+        <name>Point #333</name>
+        <desc>{"spd":41.32,"crs":120,"alt":836,"ele":331}</desc>
+      </trkpt>
+      <trkpt lat="48.319851737469" lon="6.065243287012">
+        <ele>837</ele>
+        <time>2026-05-09T08:35:19+00:00</time>
+        <magvar>1.44</magvar>
+        <name>Point #334</name>
+        <desc>{"spd":41.56,"crs":115,"alt":837,"ele":331}</desc>
+      </trkpt>
+      <trkpt lat="48.319587958977" lon="6.0662942938507">
+        <ele>839</ele>
+        <time>2026-05-09T08:35:21+00:00</time>
+        <magvar>1.43</magvar>
+        <name>Point #335</name>
+        <desc>{"spd":42.16,"crs":106,"alt":839,"ele":330}</desc>
+      </trkpt>
+      <trkpt lat="48.319415543228" lon="6.0673970170319">
+        <ele>842</ele>
+        <time>2026-05-09T08:35:23+00:00</time>
+        <magvar>1.43</magvar>
+        <name>Point #336</name>
+        <desc>{"spd":42.78,"crs":101,"alt":842,"ele":328}</desc>
+      </trkpt>
+      <trkpt lat="48.319365712814" lon="6.067962711677">
+        <ele>843</ele>
+        <time>2026-05-09T08:35:24+00:00</time>
+        <magvar>1.43</magvar>
+        <name>Point #337</name>
+        <desc>{"spd":42.27,"crs":95,"alt":843,"ele":328}</desc>
+      </trkpt>
+      <trkpt lat="48.319322420284" lon="6.0696897190064">
+        <ele>845</ele>
+        <time>2026-05-09T08:35:27+00:00</time>
+        <magvar>1.42</magvar>
+        <name>Point #338</name>
+        <desc>{"spd":43.27,"crs":89,"alt":845,"ele":327}</desc>
+      </trkpt>
+      <trkpt lat="48.319439850748" lon="6.072056600824">
+        <ele>843</ele>
+        <time>2026-05-09T08:35:31+00:00</time>
+        <magvar>1.43</magvar>
+        <name>Point #339</name>
+        <desc>{"spd":45.24,"crs":84,"alt":843,"ele":328}</desc>
+      </trkpt>
+      <trkpt lat="48.320043766871" lon="6.0789176076651">
+        <ele>843</ele>
+        <time>2026-05-09T08:35:42+00:00</time>
+        <magvar>1.43</magvar>
+        <name>Point #340</name>
+        <desc>{"spd":46.96,"crs":83,"alt":843,"ele":338}</desc>
+      </trkpt>
+      <trkpt lat="48.320645671338" lon="6.0857156664133">
+        <ele>856</ele>
+        <time>2026-05-09T08:35:53+00:00</time>
+        <magvar>1.41</magvar>
+        <name>Point #341</name>
+        <desc>{"spd":46.29,"crs":82,"alt":856,"ele":348}</desc>
+      </trkpt>
+      <trkpt lat="48.321236344054" lon="6.0926982946694">
+        <ele>847</ele>
+        <time>2026-05-09T08:36:04+00:00</time>
+        <magvar>1.43</magvar>
+        <name>Point #342</name>
+        <desc>{"spd":48.32,"crs":86,"alt":847,"ele":326}</desc>
+      </trkpt>
+      <trkpt lat="48.321539894678" lon="6.1000165343285">
+        <ele>827</ele>
+        <time>2026-05-09T08:36:15+00:00</time>
+        <magvar>1.46</magvar>
+        <name>Point #343</name>
+        <desc>{"spd":49.88,"crs":87,"alt":827,"ele":313}</desc>
+      </trkpt>
+      <trkpt lat="48.321678363718" lon="6.1072953790426">
+        <ele>798</ele>
+        <time>2026-05-09T08:36:26+00:00</time>
+        <magvar>1.51</magvar>
+        <name>Point #344</name>
+        <desc>{"spd":48.3,"crs":91,"alt":798,"ele":301}</desc>
+      </trkpt>
+      <trkpt lat="48.321700952947" lon="6.109849344939">
+        <ele>794</ele>
+        <time>2026-05-09T08:36:30+00:00</time>
+        <magvar>1.52</magvar>
+        <name>Point #345</name>
+        <desc>{"spd":45.56,"crs":85,"alt":794,"ele":299}</desc>
+      </trkpt>
+      <trkpt lat="48.321837075055" lon="6.1110995896161">
+        <ele>793</ele>
+        <time>2026-05-09T08:36:32+00:00</time>
+        <magvar>1.52</magvar>
+        <name>Point #346</name>
+        <desc>{"spd":47.09,"crs":78,"alt":793,"ele":302}</desc>
+      </trkpt>
+      <trkpt lat="48.322061751969" lon="6.112294094637">
+        <ele>791</ele>
+        <time>2026-05-09T08:36:34+00:00</time>
+        <magvar>1.53</magvar>
+        <name>Point #347</name>
+        <desc>{"spd":45.56,"crs":71,"alt":791,"ele":295}</desc>
+      </trkpt>
+      <trkpt lat="48.322390113026" lon="6.113419784233">
+        <ele>789</ele>
+        <time>2026-05-09T08:36:36+00:00</time>
+        <magvar>1.53</magvar>
+        <name>Point #348</name>
+        <desc>{"spd":45.61,"crs":63,"alt":789,"ele":295}</desc>
+      </trkpt>
+      <trkpt lat="48.322824505158" lon="6.1144703719765">
+        <ele>783</ele>
+        <time>2026-05-09T08:36:38+00:00</time>
+        <magvar>1.54</magvar>
+        <name>Point #349</name>
+        <desc>{"spd":46.19,"crs":55,"alt":783,"ele":295}</desc>
+      </trkpt>
+      <trkpt lat="48.323350385763" lon="6.1154467798769">
+        <ele>776</ele>
+        <time>2026-05-09T08:36:40+00:00</time>
+        <magvar>1.55</magvar>
+        <name>Point #350</name>
+        <desc>{"spd":46.51,"crs":48,"alt":776,"ele":295}</desc>
+      </trkpt>
+      <trkpt lat="48.323970981874" lon="6.116319000721">
+        <ele>771</ele>
+        <time>2026-05-09T08:36:42+00:00</time>
+        <magvar>1.56</magvar>
+        <name>Point #351</name>
+        <desc>{"spd":47.51,"crs":39,"alt":771,"ele":295}</desc>
+      </trkpt>
+      <trkpt lat="48.324664207175" lon="6.1170655768365">
+        <ele>766</ele>
+        <time>2026-05-09T08:36:44+00:00</time>
+        <magvar>1.57</magvar>
+        <name>Point #352</name>
+        <desc>{"spd":47.19,"crs":33,"alt":766,"ele":294}</desc>
+      </trkpt>
+      <trkpt lat="48.325406634249" lon="6.1176768690348">
+        <ele>763</ele>
+        <time>2026-05-09T08:36:46+00:00</time>
+        <magvar>1.58</magvar>
+        <name>Point #353</name>
+        <desc>{"spd":46.83,"crs":26,"alt":763,"ele":294}</desc>
+      </trkpt>
+      <trkpt lat="48.326182840392" lon="6.1181501951069">
+        <ele>759</ele>
+        <time>2026-05-09T08:36:48+00:00</time>
+        <magvar>1.58</magvar>
+        <name>Point #354</name>
+        <desc>{"spd":46.87,"crs":19,"alt":759,"ele":289}</desc>
+      </trkpt>
+      <trkpt lat="48.326995172538" lon="6.118462337181">
+        <ele>754</ele>
+        <time>2026-05-09T08:36:50+00:00</time>
+        <magvar>1.59</magvar>
+        <name>Point #355</name>
+        <desc>{"spd":47.29,"crs":12,"alt":754,"ele":289}</desc>
+      </trkpt>
+      <trkpt lat="48.32865013741" lon="6.1188285425305">
+        <ele>748</ele>
+        <time>2026-05-09T08:36:54+00:00</time>
+        <magvar>1.6</magvar>
+        <name>Point #356</name>
+        <desc>{"spd":46.31,"crs":5,"alt":748,"ele":287}</desc>
+      </trkpt>
+      <trkpt lat="48.329480364919" lon="6.1188822705299">
+        <ele>746</ele>
+        <time>2026-05-09T08:36:56+00:00</time>
+        <magvar>1.61</magvar>
+        <name>Point #357</name>
+        <desc>{"spd":46.26,"crs":360,"alt":746,"ele":280}</desc>
+      </trkpt>
+      <trkpt lat="48.334004790522" lon="6.1187710426748">
+        <ele>725</ele>
+        <time>2026-05-09T08:37:07+00:00</time>
+        <magvar>1.64</magvar>
+        <name>Point #358</name>
+        <desc>{"spd":45.39,"crs":360,"alt":725,"ele":270}</desc>
+      </trkpt>
+      <trkpt lat="48.338119173422" lon="6.1187009699643">
+        <ele>696</ele>
+        <time>2026-05-09T08:37:17+00:00</time>
+        <magvar>1.69</magvar>
+        <name>Point #359</name>
+        <desc>{"spd":45.97,"crs":0,"alt":696,"ele":281}</desc>
+      </trkpt>
+      <trkpt lat="48.338533909991" lon="6.1186999641359">
+        <ele>694</ele>
+        <time>2026-05-09T08:37:18+00:00</time>
+        <magvar>1.7</magvar>
+        <name>Point #360</name>
+        <desc>{"spd":46.18,"crs":360,"alt":694,"ele":281}</desc>
+      </trkpt>
+      <trkpt lat="48.338951747864" lon="6.1186990421265">
+        <ele>691</ele>
+        <time>2026-05-09T08:37:19+00:00</time>
+        <magvar>1.7</magvar>
+        <name>Point #361</name>
+        <desc>{"spd":46.4,"crs":0,"alt":691,"ele":281}</desc>
+      </trkpt>
+      <trkpt lat="48.341856286861" lon="6.1187704559416">
+        <ele>675</ele>
+        <time>2026-05-09T08:37:26+00:00</time>
+        <magvar>1.73</magvar>
+        <name>Point #362</name>
+        <desc>{"spd":46.24,"crs":358,"alt":675,"ele":287}</desc>
+      </trkpt>
+      <trkpt lat="48.342666439712" lon="6.118615726009">
+        <ele>673</ele>
+        <time>2026-05-09T08:37:28+00:00</time>
+        <magvar>1.73</magvar>
+        <name>Point #363</name>
+        <desc>{"spd":44.77,"crs":351,"alt":673,"ele":302}</desc>
+      </trkpt>
+      <trkpt lat="48.343454590067" lon="6.1183319147676">
+        <ele>671</ele>
+        <time>2026-05-09T08:37:30+00:00</time>
+        <magvar>1.74</magvar>
+        <name>Point #364</name>
+        <desc>{"spd":44.6,"crs":342,"alt":671,"ele":302}</desc>
+      </trkpt>
+      <trkpt lat="48.344207620248" lon="6.1179063655436">
+        <ele>667</ele>
+        <time>2026-05-09T08:37:32+00:00</time>
+        <magvar>1.74</magvar>
+        <name>Point #365</name>
+        <desc>{"spd":44.52,"crs":336,"alt":667,"ele":302}</desc>
+      </trkpt>
+      <trkpt lat="48.344913166948" lon="6.1173436045647">
+        <ele>662</ele>
+        <time>2026-05-09T08:37:34+00:00</time>
+        <magvar>1.75</magvar>
+        <name>Point #366</name>
+        <desc>{"spd":44.49,"crs":328,"alt":662,"ele":302}</desc>
+      </trkpt>
+      <trkpt lat="48.345557316206" lon="6.1166281253099">
+        <ele>655</ele>
+        <time>2026-05-09T08:37:36+00:00</time>
+        <magvar>1.76</magvar>
+        <name>Point #367</name>
+        <desc>{"spd":45.17,"crs":319,"alt":655,"ele":291}</desc>
+      </trkpt>
+      <trkpt lat="48.346112407744" lon="6.1157794576138">
+        <ele>650</ele>
+        <time>2026-05-09T08:37:38+00:00</time>
+        <magvar>1.77</magvar>
+        <name>Point #368</name>
+        <desc>{"spd":44.89,"crs":311,"alt":650,"ele":295}</desc>
+      </trkpt>
+      <trkpt lat="48.346359170973" lon="6.115309400484">
+        <ele>648</ele>
+        <time>2026-05-09T08:37:39+00:00</time>
+        <magvar>1.78</magvar>
+        <name>Point #369</name>
+        <desc>{"spd":44.35,"crs":306,"alt":648,"ele":295}</desc>
+      </trkpt>
+      <trkpt lat="48.346784678288" lon="6.1143065895885">
+        <ele>643</ele>
+        <time>2026-05-09T08:37:41+00:00</time>
+        <magvar>1.78</magvar>
+        <name>Point #370</name>
+        <desc>{"spd":44.21,"crs":299,"alt":643,"ele":295}</desc>
+      </trkpt>
+      <trkpt lat="48.347121840343" lon="6.1132394894958">
+        <ele>641</ele>
+        <time>2026-05-09T08:37:43+00:00</time>
+        <magvar>1.79</magvar>
+        <name>Point #371</name>
+        <desc>{"spd":43.72,"crs":292,"alt":641,"ele":301}</desc>
+      </trkpt>
+      <trkpt lat="48.347369944677" lon="6.1121320724487">
+        <ele>638</ele>
+        <time>2026-05-09T08:37:45+00:00</time>
+        <magvar>1.79</magvar>
+        <name>Point #372</name>
+        <desc>{"spd":43.28,"crs":285,"alt":638,"ele":299}</desc>
+      </trkpt>
+      <trkpt lat="48.347615282983" lon="6.1104163806885">
+        <ele>632</ele>
+        <time>2026-05-09T08:37:48+00:00</time>
+        <magvar>1.8</magvar>
+        <name>Point #373</name>
+        <desc>{"spd":43.56,"crs":280,"alt":632,"ele":296}</desc>
+      </trkpt>
+      <trkpt lat="48.347692312673" lon="6.1092565767467">
+        <ele>627</ele>
+        <time>2026-05-09T08:37:50+00:00</time>
+        <magvar>1.81</magvar>
+        <name>Point #374</name>
+        <desc>{"spd":43.17,"crs":273,"alt":627,"ele":296}</desc>
+      </trkpt>
+      <trkpt lat="48.347808402032" lon="6.1022755410522">
+        <ele>608</ele>
+        <time>2026-05-09T08:38:02+00:00</time>
+        <magvar>1.84</magvar>
+        <name>Point #375</name>
+        <desc>{"spd":43.49,"crs":272,"alt":608,"ele":288}</desc>
+      </trkpt>
+      <trkpt lat="48.347986266017" lon="6.0954403504729">
+        <ele>618</ele>
+        <time>2026-05-09T08:38:15+00:00</time>
+        <magvar>1.82</magvar>
+        <name>Point #376</name>
+        <desc>{"spd":37.21,"crs":275,"alt":618,"ele":289}</desc>
+      </trkpt>
+      <trkpt lat="48.348342119716" lon="6.0883389506489">
+        <ele>616</ele>
+        <time>2026-05-09T08:38:29+00:00</time>
+        <magvar>1.83</magvar>
+        <name>Point #377</name>
+        <desc>{"spd":37.96,"crs":274,"alt":616,"ele":294}</desc>
+      </trkpt>
+      <trkpt lat="48.348681586795" lon="6.0811323579401">
+        <ele>608</ele>
+        <time>2026-05-09T08:38:43+00:00</time>
+        <magvar>1.84</magvar>
+        <name>Point #378</name>
+        <desc>{"spd":38.85,"crs":273,"alt":608,"ele":295}</desc>
+      </trkpt>
+      <trkpt lat="48.349028388038" lon="6.0743839200586">
+        <ele>611</ele>
+        <time>2026-05-09T08:38:56+00:00</time>
+        <magvar>1.83</magvar>
+        <name>Point #379</name>
+        <desc>{"spd":38.52,"crs":275,"alt":611,"ele":302}</desc>
+      </trkpt>
+      <trkpt lat="48.349577109329" lon="6.0673405230045">
+        <ele>614</ele>
+        <time>2026-05-09T08:39:10+00:00</time>
+        <magvar>1.82</magvar>
+        <name>Point #380</name>
+        <desc>{"spd":37.44,"crs":278,"alt":614,"ele":299}</desc>
+      </trkpt>
+      <trkpt lat="48.3502851706" lon="6.0603765025735">
+        <ele>617</ele>
+        <time>2026-05-09T08:39:24+00:00</time>
+        <magvar>1.82</magvar>
+        <name>Point #381</name>
+        <desc>{"spd":38.54,"crs":280,"alt":617,"ele":299}</desc>
+      </trkpt>
+      <trkpt lat="48.351070135832" lon="6.0536656994373">
+        <ele>613</ele>
+        <time>2026-05-09T08:39:37+00:00</time>
+        <magvar>1.82</magvar>
+        <name>Point #382</name>
+        <desc>{"spd":38.85,"crs":281,"alt":613,"ele":303}</desc>
+      </trkpt>
+      <trkpt lat="48.351521962322" lon="6.0495413839817">
+        <ele>611</ele>
+        <time>2026-05-09T08:39:45+00:00</time>
+        <magvar>1.83</magvar>
+        <name>Point #383</name>
+        <desc>{"spd":38.09,"crs":274,"alt":611,"ele":307}</desc>
+      </trkpt>
+      <trkpt lat="48.351581138559" lon="6.0464947298169">
+        <ele>609</ele>
+        <time>2026-05-09T08:39:51+00:00</time>
+        <magvar>1.83</magvar>
+        <name>Point #384</name>
+        <desc>{"spd":37.05,"crs":268,"alt":609,"ele":313}</desc>
+      </trkpt>
+      <trkpt lat="48.351400173269" lon="6.042995955795">
+        <ele>603</ele>
+        <time>2026-05-09T08:39:58+00:00</time>
+        <magvar>1.84</magvar>
+        <name>Point #385</name>
+        <desc>{"spd":36.84,"crs":262,"alt":603,"ele":310}</desc>
+      </trkpt>
+      <trkpt lat="48.350576651283" lon="6.0359569173306">
+        <ele>593</ele>
+        <time>2026-05-09T08:40:12+00:00</time>
+        <magvar>1.85</magvar>
+        <name>Point #386</name>
+        <desc>{"spd":37.56,"crs":258,"alt":593,"ele":314}</desc>
+      </trkpt>
+      <trkpt lat="48.349719978869" lon="6.0288818366826">
+        <ele>592</ele>
+        <time>2026-05-09T08:40:26+00:00</time>
+        <magvar>1.85</magvar>
+        <name>Point #387</name>
+        <desc>{"spd":37.66,"crs":261,"alt":592,"ele":348}</desc>
+      </trkpt>
+      <trkpt lat="48.348906263709" lon="6.0219893138856">
+        <ele>593</ele>
+        <time>2026-05-09T08:40:40+00:00</time>
+        <magvar>1.85</magvar>
+        <name>Point #388</name>
+        <desc>{"spd":36.72,"crs":258,"alt":593,"ele":381}</desc>
+      </trkpt>
+      <trkpt lat="48.347899219953" lon="6.0155940894037">
+        <ele>596</ele>
+        <time>2026-05-09T08:40:53+00:00</time>
+        <magvar>1.84</magvar>
+        <name>Point #389</name>
+        <desc>{"spd":36.74,"crs":250,"alt":596,"ele":362}</desc>
+      </trkpt>
+      <trkpt lat="48.347634687088" lon="6.0146918613464">
+        <ele>597</ele>
+        <time>2026-05-09T08:40:55+00:00</time>
+        <magvar>1.84</magvar>
+        <name>Point #390</name>
+        <desc>{"spd":36.44,"crs":242,"alt":597,"ele":359}</desc>
+      </trkpt>
+      <trkpt lat="48.347457787022" lon="6.0142761189491">
+        <ele>597</ele>
+        <time>2026-05-09T08:40:56+00:00</time>
+        <magvar>1.84</magvar>
+        <name>Point #391</name>
+        <desc>{"spd":36.46,"crs":235,"alt":597,"ele":359}</desc>
+      </trkpt>
+      <trkpt lat="48.347270577215" lon="6.0138791520149">
+        <ele>597</ele>
+        <time>2026-05-09T08:40:57+00:00</time>
+        <magvar>1.84</magvar>
+        <name>Point #392</name>
+        <desc>{"spd":36.09,"crs":230,"alt":597,"ele":344}</desc>
+      </trkpt>
+      <trkpt lat="48.346849805675" lon="6.0131434723735">
+        <ele>595</ele>
+        <time>2026-05-09T08:40:59+00:00</time>
+        <magvar>1.85</magvar>
+        <name>Point #393</name>
+        <desc>{"spd":35.67,"crs":224,"alt":595,"ele":348}</desc>
+      </trkpt>
+      <trkpt lat="48.346120622009" lon="6.0121717583388">
+        <ele>593</ele>
+        <time>2026-05-09T08:41:02+00:00</time>
+        <magvar>1.85</magvar>
+        <name>Point #394</name>
+        <desc>{"spd":36.24,"crs":215,"alt":593,"ele":363}</desc>
+      </trkpt>
+      <trkpt lat="48.345042290166" lon="6.0111120343208">
+        <ele>592</ele>
+        <time>2026-05-09T08:41:06+00:00</time>
+        <magvar>1.85</magvar>
+        <name>Point #395</name>
+        <desc>{"spd":35.5,"crs":210,"alt":592,"ele":342}</desc>
+      </trkpt>
+      <trkpt lat="48.343557142653" lon="6.0099789686501">
+        <ele>589</ele>
+        <time>2026-05-09T08:41:11+00:00</time>
+        <magvar>1.86</magvar>
+        <name>Point #396</name>
+        <desc>{"spd":38.56,"crs":204,"alt":589,"ele":348}</desc>
+      </trkpt>
+      <trkpt lat="48.342328062281" lon="6.0092934966087">
+        <ele>587</ele>
+        <time>2026-05-09T08:41:15+00:00</time>
+        <magvar>1.86</magvar>
+        <name>Point #397</name>
+        <desc>{"spd":35.99,"crs":197,"alt":587,"ele":335}</desc>
+      </trkpt>
+      <trkpt lat="48.341692462564" lon="6.0090252757072">
+        <ele>588</ele>
+        <time>2026-05-09T08:41:17+00:00</time>
+        <magvar>1.86</magvar>
+        <name>Point #398</name>
+        <desc>{"spd":36.19,"crs":190,"alt":588,"ele":335}</desc>
+      </trkpt>
+      <trkpt lat="48.341361000203" lon="6.00899560377">
+        <ele>588</ele>
+        <time>2026-05-09T08:41:18+00:00</time>
+        <magvar>1.86</magvar>
+        <name>Point #399</name>
+        <desc>{"spd":36.14,"crs":184,"alt":588,"ele":335}</desc>
+      </trkpt>
+      <trkpt lat="48.340376922861" lon="6.0089630819857">
+        <ele>589</ele>
+        <time>2026-05-09T08:41:21+00:00</time>
+        <magvar>1.86</magvar>
+        <name>Point #400</name>
+        <desc>{"spd":36.48,"crs":173,"alt":589,"ele":327}</desc>
+      </trkpt>
+      <trkpt lat="48.335841097869" lon="6.009851815179">
+        <ele>576</ele>
+        <time>2026-05-09T08:41:35+00:00</time>
+        <magvar>1.88</magvar>
+        <name>Point #401</name>
+        <desc>{"spd":37.54,"crs":170,"alt":576,"ele":324}</desc>
+      </trkpt>
+      <trkpt lat="48.331384859048" lon="6.0111339949071">
+        <ele>551</ele>
+        <time>2026-05-09T08:41:48+00:00</time>
+        <magvar>1.92</magvar>
+        <name>Point #402</name>
+        <desc>{"spd":38.31,"crs":168,"alt":551,"ele":328}</desc>
+      </trkpt>
+      <trkpt lat="48.326867013238" lon="6.0128656122833">
+        <ele>534</ele>
+        <time>2026-05-09T08:42:02+00:00</time>
+        <magvar>1.96</magvar>
+        <name>Point #403</name>
+        <desc>{"spd":35.85,"crs":165,"alt":534,"ele":339}</desc>
+      </trkpt>
+      <trkpt lat="48.325327844359" lon="6.0135913174599">
+        <ele>528</ele>
+        <time>2026-05-09T08:42:07+00:00</time>
+        <magvar>1.97</magvar>
+        <name>Point #404</name>
+        <desc>{"spd":35.67,"crs":153,"alt":528,"ele":333}</desc>
+      </trkpt>
+      <trkpt lat="48.324811770581" lon="6.0141145996749">
+        <ele>529</ele>
+        <time>2026-05-09T08:42:09+00:00</time>
+        <magvar>1.96</magvar>
+        <name>Point #405</name>
+        <desc>{"spd":34.61,"crs":141,"alt":529,"ele":333}</desc>
+      </trkpt>
+      <trkpt lat="48.324337690137" lon="6.0147354472429">
+        <ele>529</ele>
+        <time>2026-05-09T08:42:11+00:00</time>
+        <magvar>1.97</magvar>
+        <name>Point #406</name>
+        <desc>{"spd":35.17,"crs":133,"alt":529,"ele":333}</desc>
+      </trkpt>
+      <trkpt lat="48.323503187858" lon="6.0161311179399">
+        <ele>520</ele>
+        <time>2026-05-09T08:42:15+00:00</time>
+        <magvar>1.98</magvar>
+        <name>Point #407</name>
+        <desc>{"spd":34.81,"crs":126,"alt":520,"ele":327}</desc>
+      </trkpt>
+      <trkpt lat="48.322972864844" lon="6.0173398721963">
+        <ele>510</ele>
+        <time>2026-05-09T08:42:18+00:00</time>
+        <magvar>2</magvar>
+        <name>Point #408</name>
+        <desc>{"spd":36.33,"crs":120,"alt":510,"ele":327}</desc>
+      </trkpt>
+      <trkpt lat="48.322689640336" lon="6.0182224027812">
+        <ele>505</ele>
+        <time>2026-05-09T08:42:20+00:00</time>
+        <magvar>2.01</magvar>
+        <name>Point #409</name>
+        <desc>{"spd":36.62,"crs":112,"alt":505,"ele":327}</desc>
+      </trkpt>
+      <trkpt lat="48.322478123009" lon="6.0191571526229">
+        <ele>500</ele>
+        <time>2026-05-09T08:42:22+00:00</time>
+        <magvar>2.02</magvar>
+        <name>Point #410</name>
+        <desc>{"spd":36.85,"crs":106,"alt":500,"ele":333}</desc>
+      </trkpt>
+      <trkpt lat="48.322352939285" lon="6.020129788667">
+        <ele>495</ele>
+        <time>2026-05-09T08:42:24+00:00</time>
+        <magvar>2.03</magvar>
+        <name>Point #411</name>
+        <desc>{"spd":36.75,"crs":97,"alt":495,"ele":327}</desc>
+      </trkpt>
+      <trkpt lat="48.32232741639" lon="6.0211318451911">
+        <ele>490</ele>
+        <time>2026-05-09T08:42:26+00:00</time>
+        <magvar>2.04</magvar>
+        <name>Point #412</name>
+        <desc>{"spd":37.12,"crs":88,"alt":490,"ele":331}</desc>
+      </trkpt>
+      <trkpt lat="48.322447948158" lon="6.0231320187449">
+        <ele>478</ele>
+        <time>2026-05-09T08:42:30+00:00</time>
+        <magvar>2.06</magvar>
+        <name>Point #413</name>
+        <desc>{"spd":37.49,"crs":82,"alt":478,"ele":338}</desc>
+      </trkpt>
+      <trkpt lat="48.322636289522" lon="6.0266273561865">
+        <ele>460</ele>
+        <time>2026-05-09T08:42:37+00:00</time>
+        <magvar>2.1</magvar>
+        <name>Point #414</name>
+        <desc>{"spd":36.03,"crs":88,"alt":460,"ele":334}</desc>
+      </trkpt>
+      <trkpt lat="48.322884812951" lon="6.0319860745221">
+        <ele>428</ele>
+        <time>2026-05-09T08:42:49+00:00</time>
+        <magvar>2.16</magvar>
+        <name>Point #415</name>
+        <desc>{"spd":32.02,"crs":85,"alt":428,"ele":334}</desc>
+      </trkpt>
+      <trkpt lat="48.323310026899" lon="6.0380425024778">
+        <ele>396</ele>
+        <time>2026-05-09T08:43:03+00:00</time>
+        <magvar>2.22</magvar>
+        <name>Point #416</name>
+        <desc>{"spd":32.18,"crs":85,"alt":396,"ele":338}</desc>
+      </trkpt>
+      <trkpt lat="48.323763865046" lon="6.0448208637536">
+        <ele>364</ele>
+        <time>2026-05-09T08:43:19+00:00</time>
+        <magvar>2.28</magvar>
+        <name>Point #417</name>
+        <desc>{"spd":31.9,"crs":85,"alt":364,"ele":324}</desc>
+      </trkpt>
+      <trkpt lat="48.32417562604" lon="6.0519055835903">
+        <ele>335</ele>
+        <time>2026-05-09T08:43:36+00:00</time>
+        <magvar>2.34</magvar>
+        <name>Point #418</name>
+        <desc>{"spd":29.88,"crs":85,"alt":335,"ele":333}</desc>
+      </trkpt>
+      <trkpt lat="48.324566558003" lon="6.0587848629802">
+        <ele>330</ele>
+        <time>2026-05-09T08:43:56+00:00</time>
+        <magvar>2.35</magvar>
+        <name>Point #419</name>
+        <desc>{"spd":20.1,"crs":84,"alt":330,"ele":331}</desc>
+      </trkpt>
+      <trkpt lat="48.324645683169" lon="6.0611084103584">
+        <ele>332</ele>
+        <time>2026-05-09T08:44:08+00:00</time>
+        <magvar>2.35</magvar>
+        <name>Point #420</name>
+        <desc>{"spd":8.48,"crs":96,"alt":332,"ele":330}</desc>
+      </trkpt>
+      <trkpt lat="48.324531437829" lon="6.0615472029895">
+        <ele>332</ele>
+        <time>2026-05-09T08:44:13+00:00</time>
+        <magvar>2.35</magvar>
+        <name>Point #421</name>
+        <desc>{"spd":6.62,"crs":131,"alt":332,"ele":330}</desc>
+      </trkpt>
+      <trkpt lat="48.324274364859" lon="6.0617980733514">
+        <ele>333</ele>
+        <time>2026-05-09T08:44:19+00:00</time>
+        <magvar>2.35</magvar>
+        <name>Point #422</name>
+        <desc>{"spd":5.26,"crs":165,"alt":333,"ele":330}</desc>
+      </trkpt>
+      <trkpt lat="48.323965533637" lon="6.0618802998215">
+        <ele>332</ele>
+        <time>2026-05-09T08:44:26+00:00</time>
+        <magvar>2.35</magvar>
+        <name>Point #423</name>
+        <desc>{"spd":5.7,"crs":172,"alt":332,"ele":334}</desc>
+      </trkpt>
+      <trkpt lat="48.323673172854" lon="6.061892202124">
+        <ele>329</ele>
+        <time>2026-05-09T08:44:48+00:00</time>
+        <magvar>2.35</magvar>
+        <name>Point #424</name>
+        <desc>{"spd":0.23,"crs":171,"alt":329,"ele":334}</desc>
+      </trkpt>
+      <trkpt lat="48.323391540907" lon="6.0619420744479">
+        <ele>330</ele>
+        <time>2026-05-09T08:45:01+00:00</time>
+        <magvar>2.35</magvar>
+        <name>Point #425</name>
+        <desc>{"spd":5.23,"crs":173,"alt":330,"ele":334}</desc>
+      </trkpt>
+      <trkpt lat="48.323096330278" lon="6.0619548149407">
+        <ele>331</ele>
+        <time>2026-05-09T08:45:07+00:00</time>
+        <magvar>2.35</magvar>
+        <name>Point #426</name>
+        <desc>{"spd":5.85,"crs":178,"alt":331,"ele":334}</desc>
+      </trkpt>
+      <trkpt lat="48.322825888172" lon="6.061950456351">
+        <ele>331</ele>
+        <time>2026-05-09T08:45:12+00:00</time>
+        <magvar>2.35</magvar>
+        <name>Point #427</name>
+        <desc>{"spd":6.44,"crs":180,"alt":331,"ele":334}</desc>
+      </trkpt>
+      <trkpt lat="48.322544214316" lon="6.0619572456926">
+        <ele>332</ele>
+        <time>2026-05-09T08:45:17+00:00</time>
+        <magvar>2.35</magvar>
+        <name>Point #428</name>
+        <desc>{"spd":6.27,"crs":172,"alt":332,"ele":334}</desc>
+      </trkpt>
+      <trkpt lat="48.322266731411" lon="6.0619936231524">
+        <ele>333</ele>
+        <time>2026-05-09T08:45:22+00:00</time>
+        <magvar>2.35</magvar>
+        <name>Point #429</name>
+        <desc>{"spd":6.03,"crs":174,"alt":333,"ele":341}</desc>
+      </trkpt>
+      <trkpt lat="48.321954882704" lon="6.0620384663343">
+        <ele>335</ele>
+        <time>2026-05-09T08:45:28+00:00</time>
+        <magvar>2.34</magvar>
+        <name>Point #430</name>
+        <desc>{"spd":5.71,"crs":174,"alt":335,"ele":341}</desc>
+      </trkpt>
+      <trkpt lat="48.321651080623" lon="6.0620660427958">
+        <ele>335</ele>
+        <time>2026-05-09T08:45:34+00:00</time>
+        <magvar>2.34</magvar>
+        <name>Point #431</name>
+        <desc>{"spd":5.49,"crs":176,"alt":335,"ele":341}</desc>
+      </trkpt>
+      <trkpt lat="48.32135968376" lon="6.0620859917253">
+        <ele>336</ele>
+        <time>2026-05-09T08:45:40+00:00</time>
+        <magvar>2.34</magvar>
+        <name>Point #432</name>
+        <desc>{"spd":5.31,"crs":179,"alt":336,"ele":341}</desc>
+      </trkpt>
+      <trkpt lat="48.32105231937" lon="6.0620371252298">
+        <ele>337</ele>
+        <time>2026-05-09T08:45:47+00:00</time>
+        <magvar>2.34</magvar>
+        <name>Point #433</name>
+        <desc>{"spd":4.45,"crs":190,"alt":337,"ele":341}</desc>
+      </trkpt>
+      <trkpt lat="48.320785607211" lon="6.061952970922">
+        <ele>338</ele>
+        <time>2026-05-09T08:45:54+00:00</time>
+        <magvar>2.34</magvar>
+        <name>Point #434</name>
+        <desc>{"spd":4.7,"crs":168,"alt":338,"ele":341}</desc>
+      </trkpt>
+      <trkpt lat="48.320618178695" lon="6.0623125545681">
+        <ele>340</ele>
+        <time>2026-05-09T08:46:05+00:00</time>
+        <magvar>2.33</magvar>
+        <name>Point #435</name>
+        <desc>{"spd":2.71,"crs":110,"alt":340,"ele":338}</desc>
+      </trkpt>
+      <trkpt lat="48.32041261252" lon="6.0625790990889">
+        <ele>341</ele>
+        <time>2026-05-09T08:49:39+00:00</time>
+        <magvar>2.33</magvar>
+        <name>Point #436</name>
+        <desc>{"spd":1.9,"crs":48,"alt":341,"ele":338}</desc>
+      </trkpt>
+      <trkpt lat="48.320627817884" lon="6.0628370940685">
+        <ele>343</ele>
+        <time>2026-05-09T08:51:11+00:00</time>
+        <magvar>2.33</magvar>
+        <name>Point #437</name>
+        <desc>{"spd":0.75,"crs":349,"alt":343,"ele":338}</desc>
+      </trkpt>
+      <trkpt lat="48.320897505619" lon="6.0628101881593">
+        <ele>341</ele>
+        <time>2026-05-09T08:51:50+00:00</time>
+        <magvar>2.33</magvar>
+        <name>Point #438</name>
+        <desc>{"spd":1.03,"crs":14,"alt":341,"ele":338}</desc>
+      </trkpt>
+      <trkpt lat="48.320619938895" lon="6.0627779178321">
+        <ele>344</ele>
+        <time>2026-05-09T08:55:13+00:00</time>
+        <magvar>2.32</magvar>
+        <name>Point #439</name>
+        <desc>{"spd":1.39,"crs":213,"alt":344,"ele":338}</desc>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
