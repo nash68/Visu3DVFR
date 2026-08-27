@@ -1353,8 +1353,11 @@
             stopBtn.disabled = false;
             speedSlider.disabled = false;
             
-            lastFrameTime = 0;
-            startTime = null;
+            // Don't reset startTime when resuming from pause
+            if (startTime === null) {
+                startTime = performance.now() - (currentIndex / trackPoints.length) * totalDuration * 1000;
+            }
+            lastFrameTime = performance.now();
             
             log('Lecture démarrée');
             animationId = requestAnimationFrame(animate);
@@ -1370,6 +1373,7 @@
                 animationId = null;
             }
             
+            // Keep startTime so we can resume from current position
             log('Lecture en pause');
         }
 
@@ -1379,14 +1383,14 @@
             pauseBtn.disabled = true;
             stopBtn.disabled = true;
             
+            // Reset to beginning
+            currentIndex = 0;
+            startTime = null;
+            lastFrameTime = 0;
             if (animationId) {
                 cancelAnimationFrame(animationId);
                 animationId = null;
             }
-            
-            currentIndex = 0;
-            lastFrameTime = 0;
-            startTime = null;
             
             updateTelemetry();
             log('Lecture arrêtée');
