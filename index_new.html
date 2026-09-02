@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replay de Vol Cockpit - Cessna 152</title>
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+    <style>
+        body {
+            margin: 0; padding: 0;
+            font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+            background-color: #0f0f0f; color: #fff;
+            display: flex; flex-direction: column; height: 100vh;
+            overflow: hidden;
+        }
+        #header {
+            background-color: #161616; padding: 10px 20px;
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid #282828;
+            height: 30px;
+        }
+        #header h1 { margin: 0; font-size: 1.1rem; font-weight: 500; letter-spacing: 0.2px; }
+        #main-container { display: flex; flex: 1; overflow: hidden; position: relative; }
+        #map { flex: 1; height: 100%; background-color: #1a1a1a; }
+        #map-overlay-controls {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 10;
+            display: flex;
+            gap: 8px;
+        }
+        #map-overlay-controls button {
+            background-color: rgba(22, 22, 22, 0.9);
+            color: #fff;
+            border: 1px solid #282828;
+            border-radius: 6px;
+            padding: 8px 16px;
+            font-family: inherit;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+        }
+        #map-overlay-controls button:hover {
+            background-color: #282828;
+            border-color: #ff00ff;
+            transform: translateY(-1px);
+        }
+        #map-overlay-controls button.active {
+            background-color: #ff00ff;
+            color: #fff;
+            border-color: #ff00ff;
+            box-shadow: 0 0 10px rgba(255, 0, 255, 0.4);
+        }
+        
+        #dashboard {
+            width: 330px; background-color: #0f0f0f;
+            display: flex; flex-direction: column; align-items: center;
+            padding: 12px 5px; border-left: 1px solid #282828;
+            overflow-y: auto;
+        }
+        .instrument-container {
+            margin-bottom: 14px; text-align: center; width: 100%;
+        }
+        .instrument-title {
+            font-size: 0.72rem; font-weight: 500; text-transform: uppercase;
+            letter-spacing: 1px; margin-bottom: 4px; color: #aaa;
+        }
+        /* MapLibre controls */
+        canvas {
+            background-color: #141416; border-radius: 8px;
+            border: 1px solid #2d2d30; box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        }
+        #telemetry {
+            width: 90%; background-color: #161616; padding: 10px;
+            border-radius: 6px; font-family: 'Courier New', monospace;
+            font-size: 0.82rem; border: 1px solid #282828;
+        }
+        .tel-row { display: flex; justify-content: space-between; margin-bottom: 4px; }
+        .val { font-weight: bold; color: #2ecc71; }
+        .val.alert { color: #ff3b30; animation: blink 1s infinite; }
+        @keyframes blink { 50% { opacity: 0.3; } }
+
+        #yt-player-controls {
+            background-color: #161616;
+            display: flex;
+            flex-direction: column;
+            padding: 0 15px 10px 15px;
+            border-top: 1px solid #282828;
+            position: relative;
+        }
+        
+        .progress-bar-container {
+            width: 100%;
+            position: relative;
+            height: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-top: -4px;
+        }
+        
+        #progress-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+            position: absolute;
+            z-index: 5;
+            margin: 0;
+            height: 100%;
+            cursor: pointer;
+        }
+        #progress-slider:focus { outline: none; }
+        
+        .yt-track {
+            position: absolute;
+            left: 0; right: 0;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: height 0.1s;
+            pointer-events: none;
+        }
+        .progress-bar-container:hover .yt-track { height: 6px; }
+        
+        .yt-progress-filled {
+            position: absolute;
+            left: 0;
+            height: 100%;
+            background-color: #f00;
+            width: 0%;
+            pointer-events: none;
+        }
+        
+        .yt-thumb {
+            position: absolute;
+            width: 12px; height: 12px;
+            background-color: #f00;
+            border-radius: 50%;
+            left: 0%;
+            transform: translateX(-50%);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.1s, transform 0.1s;
+            z-index: 6;
+        }
+        .progress-bar-container:hover .yt-thumb { opacity: 1; }
+
+        .control-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 35px;
+        }
+        .left-controls { display: flex; align-items: center; gap: 15px; }
+        .right-controls { display: flex; align-items: center; gap: 15px; }
+        
+        .yt-btn {
+            background: none; border: none; color: #fff;
+            cursor: pointer; padding: 5px; display: flex; align-items: center;
+            justify-content: center; width: 30px; height: 30px;
+            transition: color 0.1s;
+        }
+        .yt-btn:hover { color: #f00; }
+        .yt-btn svg { width: 22px; height: 22px; fill: currentColor; }
+        
+        .yt-time-display { font-size: 0.85rem; color: #ddd; pointer-events: none; }
+        
+        .speed-badge {
+            background-color: rgba(255,255,255,0.1);
+            padding: 3px 8px; border-radius: 3px; font-size: 0.8rem;
+            font-weight: 500; cursor: pointer; transition: background 0.2s;
+        }
+        .speed-badge:hover { background-color: rgba(255,255,255,0.2); }
+        
+        #speed-menu {
+            display: none; position: absolute; bottom: 50px; right: 15px;
+            background-color: #212121; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+            border: 1px solid #333; flex-direction: column; padding: 5px 0; z-index: 100;
+        }
+        .speed-option { padding: 6px 20px; font-size: 0.85rem; cursor: pointer; text-align: left; }
+        .speed-option:hover { background-color: rgba(255,255,255,0.1); }
+        .speed-option.active { color: #f00; font-weight: bold; }
+        
+        #upload-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(15, 15, 15, 0.96);
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(8px);
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+        #upload-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .upload-box {
+            background: rgba(22, 22, 22, 0.85);
+            border: 2px dashed #ff00ff;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
+        }
+        .upload-box.dragover {
+            background: rgba(255, 0, 255, 0.1);
+            border-color: #00ffff;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        }
+        .upload-icon {
+            color: #ff00ff;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .upload-title {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .upload-desc {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+        .upload-btn {
+            background: #ff00ff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 24px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(255, 0, 255, 0.3);
+        }
+        .upload-btn:hover {
+            background: #e000e0;
+            transform: translateY(-1px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="upload-overlay">
+        <div class="upload-box" id="drop-zone">
+            <div class="upload-icon">
+                <svg viewBox="0 0 24 24" width="64" height="64" fill="currentColor" style="color: #ff00ff;"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
+            </div>
+            <div class="upload-title">Replay de Vol VFR</div>
+            <div class="upload-desc">Glissez-déposez un fichier de trace GPX ici<br>ou cliquez sur le bouton ci-dessous pour l'importer</div>
+            <button class="upload-btn" onclick="document.getElementById('gpx-file-input').click()">Sélectionner un fichier GPX</button>
+        </div>
+    </div>
+
+    <div id="header">
+        <h1>Analyse de Trace VFR - Cessna 152</h1>
+        <div style="display:flex;align-items:center;gap:10px;">
+            <span>Heure Trace UTC: <span id="clock" style="font-weight:bold; color:#aaa;">11:55:00</span></span>
+            <span style="font-size:0.7rem;color:#555;">Build 12</span>
+        </div>
+    </div>
+
+    <div id="main-container">
+        <div id="map"></div>
+        <div id="map-overlay-controls">
+            <button id="btn-3d-toggle" title="Basculer vue 3D / 2D">3D</button>
+            <button id="btn-exag-toggle" title="Exagération du relief">Relief : 1.5x</button>
+            <button id="btn-toggle-flown" class="active" title="Afficher/Masquer la trace passée">Trace Passée</button>
+            <button id="btn-toggle-remaining" class="active" title="Afficher/Masquer la trace future">Trace Future</button>
+        </div>
+        <div id="dashboard">
+            <div class="instrument-container">
+                <div class="instrument-title">Coupe Terrain (Fenêtre 5 NM)</div>
+                <canvas id="profileCanvas" width="310" height="130"></canvas>
+            </div>
+            
+            <div class="instrument-container">
+                <div class="instrument-title">Indicateur de Vitesse (Badin)</div>
+                <canvas id="badinCanvas" width="200" height="200"></canvas>
+            </div>
+            <div class="instrument-container">
+                <div class="instrument-title">Conservateur de Cap (Gyro)</div>
+                <canvas id="compassCanvas" width="200" height="200"></canvas>
+            </div>
+            
+            <div id="telemetry">
+                <div class="tel-row"><span>ALT AVION (AMSL) :</span><span class="val" id="tel-alt">0 ft (0 m)</span></div>
+                <div class="tel-row"><span>HAUTEUR / SOL  :</span><span class="val" style="color:#3498db;" id="tel-height">0 ft (0 m)</span></div>
+                <div class="tel-row"><span>ALT SOL (ELEV)  :</span><span class="val" style="color:#d2a679;" id="tel-ground">0 ft (0 m)</span></div>
+                <div class="tel-row"><span>MARGE 500       :</span><span class="val" style="color:#ff9f0a;" id="tel-marge">0 ft</span></div>
+                <div class="tel-row"><span>PALIER VFR      :</span><span class="val" style="color:#ff3b30;">2500 ft (762 m)</span></div>
+                <div class="tel-row"><span>STATUT RELIEF   :</span><span class="val" style="color:#ff9f0a;" id="tel-3d-status">En attente</span></div>
+                <hr style="border-color:#282828; margin: 6px 0;">
+                <div class="tel-row"><span>VITESSE GS      :</span><span class="val" id="tel-speed">0 kt (0 km/h)</span></div>
+                <div class="tel-row"><span>CAP SUIVI       :</span><span class="val" id="tel-hdg">000°</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="yt-player-controls">
+        <div class="progress-bar-container">
+            <input id="progress-slider" type="range" min="0" max="1000" value="0">
+            <div class="yt-track">
+                <div class="yt-progress-filled" id="yt-fill"></div>
+            </div>
+            <div class="yt-thumb" id="yt-knob"></div>
+        </div>
+        
+        <div class="control-row">
+            <div class="left-controls">
+                <button class="yt-btn" id="btn-yt-play" title="Play/Pause">
+                    <svg id="svg-play" viewBox="0 0 24 24" style="display:none;"><path d="M8 5v14l11-7z"/></svg>
+                    <svg id="svg-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                </button>
+                <div class="yt-time-display">
+                    <span id="yt-time-current">00:00</span> / <span id="yt-time-total">53:34</span>
+                </div>
+            </div>
+            
+            <div class="right-controls">
+                <div class="speed-badge" id="btn-speed-menu">Vitesse : 4x</div>
+                <div id="speed-menu">
+                    <div class="speed-option" onclick="setYTSpeed(1, '1x', event)">1x (Temps réel)</div>
+                    <div class="speed-option" onclick="setYTSpeed(2, '2x', event)">2x</div>
+                    <div class="speed-option active" onclick="setYTSpeed(4, '4x', event)">4x</div>
+                    <div class="speed-option" onclick="setYTSpeed(8, '8x', event)">8x</div>
+                    <div class="speed-option" onclick="setYTSpeed(16, '16x', event)">16x</div>
+                </div>
+                <div id="gpx-btn-wrapper" style="position:relative;display:flex;align-items:center;">
+                    <input type="file" id="gpx-file-input" accept=".gpx,.xml" style="display:none;">
+                    <button class="yt-btn" id="btn-load-gpx" title="Charger un fichier GPX">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/><path d="M12 11l-4 4h2.5v3h3v-3H16l-4-4z"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let flightData = [];
+
+        // --- 3D Geometry Generators for Terrain-relative Flight Curtain & plane ---
+        function generateCurtainGeoJSON(points, currentPoint) {
+            const features = [];
+            const w = 0.00015; // Width of the ribbon in degrees (approx 15m)
+            const pts = [...points];
+            if (currentPoint) {
+                pts.push(currentPoint);
+            }
+            const exag = (typeof terrainExaggeration !== 'undefined') ? terrainExaggeration : 1.0;
+            for (let i = 0; i < pts.length - 1; i++) {
+                const p1 = pts[i];
+                const p2 = pts[i+1];
+                const dx = p2.lon - p1.lon;
+                const dy = p2.lat - p1.lat;
+                const len = Math.sqrt(dx*dx + dy*dy);
+                if (len === 0) continue;
+                const nx = -dy / len;
+                const ny = dx / len;
+                const a1 = [p1.lon + w * nx, p1.lat + w * ny];
+                const a2 = [p1.lon - w * nx, p1.lat - w * ny];
+                const b1 = [p2.lon + w * nx, p2.lat + w * ny];
+                const b2 = [p2.lon - w * nx, p2.lat - w * ny];
+                const altMeters = ((p1.altitude_ft + p2.altitude_ft) / 2) * 0.3048;
+                const groundMeters = ((p1.ground_ft + p2.ground_ft) / 2) * 0.3048;
+                const heightAboveGround = Math.max(0, altMeters - groundMeters) * exag;
+                features.push({
+                    type: 'Feature',
+                    properties: {
+                        height: heightAboveGround,
+                        base: 0
+                    },
+                    geometry: {
+                        type: 'Polygon',
+                        coordinates: [[a1, b1, b2, a2, a1]]
+                    }
+                });
+            }
+            return { type: 'FeatureCollection', features: features };
+        }
+
+        function rotateAndTranslate(lon, lat, localX, localY, headingRad) {
+            const rotX = localX * Math.cos(headingRad) + localY * Math.sin(headingRad);
+            const rotY = -localX * Math.sin(headingRad) + localY * Math.cos(headingRad);
+            const latDeg = lat + rotY / 111111;
+            const lonDeg = lon + rotX / (111111 * Math.cos(lat * Math.PI / 180));
+            return [lonDeg, latDeg];
+        }
+
+        function generatePlane3DGeoJSON(lon, lat, altFt, groundFt, headingDeg) {
+            const headingRad = (headingDeg || 0) * Math.PI / 180;
+            
+            let centerElevationMeters = groundFt * 0.3048;
+            let querySuccess = false;
+            if (typeof map !== 'undefined' && map && map.getTerrain) {
+                try {
+                    if (map.getTerrain()) {
+                        const elev = map.queryTerrainElevation([lon, lat]);
+                        if (elev !== null && elev !== undefined) {
+                            centerElevationMeters = elev;
+                            querySuccess = true;
+                        }
+                    }
+                } catch(e) {}
+            }
+            
+            const heightAboveGroundMeters = Math.max(0, altFt - groundFt) * 0.3048;
+            const exag = (typeof terrainExaggeration !== 'undefined') ? terrainExaggeration : 1.0;
+            
+            let absoluteAltMeters;
+            if (querySuccess) {
+                // queryTerrainElevation already returns the exaggerated elevation
+                absoluteAltMeters = centerElevationMeters + (heightAboveGroundMeters * exag);
+            } else {
+                // fallback elevation needs to be exaggerated
+                absoluteAltMeters = (centerElevationMeters + heightAboveGroundMeters) * exag;
+            }
+            
+            const features = [];
+            
+            const scale = 30; // Facteur d'échelle pour rendre l'avion visible (envergure ~300m)
+            const shiftZ = 0.0; // Décalage vertical pour aligner le centre de l'avion avec la trace GPS
+            
+            // Pièces géométriques en 3D d'un Cessna 152
+            const parts = [
+                // Fuselage - blanc
+                { minX: -0.4, maxX: 0.4, minY: -3.0, maxY: 2.0, minZ: -0.5, maxZ: 0.5, color: '#ffffff' },
+                // Capot moteur (nez) - gris foncé
+                { minX: -0.35, maxX: 0.35, minY: 2.0, maxY: 2.8, minZ: -0.4, maxZ: 0.4, color: '#444444' },
+                // Cockpit (verrière) - bleu transparent
+                { minX: -0.38, maxX: 0.38, minY: 0.0, maxY: 1.2, minZ: 0.5, maxZ: 1.0, color: '#33a3ff' },
+                // Ailes hautes - blanc
+                { minX: -5.0, maxX: 5.0, minY: -0.2, maxY: 1.0, minZ: 0.4, maxZ: 0.55, color: '#ffffff' },
+                // Saumon d'aile gauche (aviation navigation rouge) - rouge
+                { minX: -5.1, maxX: -4.7, minY: -0.2, maxY: 1.0, minZ: 0.41, maxZ: 0.56, color: '#ff3b30' },
+                // Saumon d'aile droite (aviation navigation vert) - vert
+                { minX: 4.7, maxX: 5.1, minY: -0.2, maxY: 1.0, minZ: 0.41, maxZ: 0.56, color: '#2ecc71' },
+                // Stabilisateur horizontal arrière - blanc
+                { minX: -1.3, maxX: 1.3, minY: -3.0, maxY: -2.3, minZ: -0.1, maxZ: 0.05, color: '#ffffff' },
+                // Dérive verticale arrière - rose
+                { minX: -0.08, maxX: 0.08, minY: -3.0, maxY: -2.4, minZ: 0.5, maxZ: 1.5, color: '#ff00ff' }
+            ];
+            
+            parts.forEach(part => {
+                const localPoints = [
+                    [part.minX * scale, part.minY * scale],
+                    [part.maxX * scale, part.minY * scale],
+                    [part.maxX * scale, part.maxY * scale],
+                    [part.minX * scale, part.maxY * scale],
+                    [part.minX * scale, part.minY * scale]
+                ];
+                
+                const geoPoints = localPoints.map(pt => rotateAndTranslate(lon, lat, pt[0], pt[1], headingRad));
+                
+                // Calculate center of this specific part
+                const localCenterX = ((part.minX + part.maxX) / 2) * scale;
+                const localCenterY = ((part.minY + part.maxY) / 2) * scale;
+                const [partLon, partLat] = rotateAndTranslate(lon, lat, localCenterX, localCenterY, headingRad);
+                
+                // Query terrain elevation under this part
+                let partElevation = centerElevationMeters;
+                if (querySuccess && typeof map !== 'undefined' && map && map.getTerrain) {
+                    try {
+                        if (map.getTerrain()) {
+                            const elev = map.queryTerrainElevation([partLon, partLat]);
+                            if (elev !== null && elev !== undefined) {
+                                partElevation = elev;
+                            }
+                        }
+                    } catch(e) {}
+                }
+                
+                // Compute desired absolute heights
+                const desiredAbsoluteBase = absoluteAltMeters + (part.minZ + shiftZ) * scale;
+                const desiredAbsoluteHeight = absoluteAltMeters + (part.maxZ + shiftZ) * scale;
+                
+                // Subtract local terrain elevation to cancel MapLibre's relative rendering offset
+                let relativeBase = desiredAbsoluteBase - partElevation;
+                let relativeHeight = desiredAbsoluteHeight - partElevation;
+                
+                // Ensure non-negative values and height is strictly greater than base
+                if (relativeBase < 0) relativeBase = 0;
+                if (relativeHeight < relativeBase + 0.1) relativeHeight = relativeBase + 0.1;
+                
+                features.push({
+                    type: 'Feature',
+                    properties: {
+                        height: relativeHeight,
+                        base: relativeBase,
+                        color: part.color
+                    },
+                    geometry: {
+                        type: 'Polygon',
+                        coordinates: [geoPoints]
+                    }
+                });
+            });
+            
+            return {
+                type: 'FeatureCollection',
+                features: features
+            };
+        }
+
+        function updateMap3DAnd2D(idx, t, currentLat, currentLon, currentHdg, currentAlt, currentGround) {
+            // Position 2D (ombre)
+            const srcPlane = map.getSource('plane');
+            if (srcPlane) {
+                srcPlane.setData({
+                    type: 'Feature',
+                    properties: { heading: currentHdg || 0 },
+                    geometry: { type: 'Point', coordinates: [currentLon, currentLat] }
+                });
+            }
+            // Trajectoire volée au sol
+            const flownCoords = pathGeoCoords.slice(0, Math.max(1, idx + 1));
+            flownCoords.push([currentLon, currentLat]);
+            map.getSource('flown')?.setData({ type: 'Feature', geometry: { type: 'LineString', coordinates: flownCoords } });
+
+            // Trajectoire restante au sol
+            const remainingCoords = [[currentLon, currentLat]];
+            for(let i = idx + 1; i < pathGeoCoords.length; i++) { remainingCoords.push(pathGeoCoords[i]); }
+            map.getSource('remaining')?.setData({ type: 'Feature', geometry: { type: 'LineString', coordinates: remainingCoords } });
+
+            // --- Mise à jour 3D ---
+            const currentPointObj = { lon: currentLon, lat: currentLat, altitude_ft: currentAlt, ground_ft: currentGround };
+            
+            // Rideau volé 3D
+            const flownPoints = flightData.slice(0, Math.max(1, idx + 1));
+            map.getSource('flown-curtain')?.setData(generateCurtainGeoJSON(flownPoints, currentPointObj));
+            
+            // Rideau restant 3D
+            const remainingPoints = flightData.slice(idx + 1);
+            map.getSource('remaining-curtain')?.setData(generateCurtainGeoJSON([currentPointObj, ...remainingPoints]));
+            
+            // Avion 3D (Cessna 152)
+            map.getSource('plane-3d')?.setData(generatePlane3DGeoJSON(currentLon, currentLat, currentAlt, currentGround, currentHdg));
+
+            // Centrer la caméra sur l'avion
+            if (map.getSource('plane')) {
+                map.easeTo({ center: [currentLon, currentLat], duration: 0 });
+            }
+        }
+
+        // Time-based animation state
+        let currentElapsedSeconds = 0;
+        let isPlaying = false;
+        let playbackSpeed = 4;
+        let lastTimestamp = 0;
+        let totalPoints = 0;
+        let terrainExaggeration = 1.5;
+        
+        function formatMinutesSeconds(totalSeconds) {
+            let m = Math.floor(totalSeconds / 60);
+            let s = Math.floor(totalSeconds % 60);
+            return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        }
+        
+        // ====== MapLibre GL JS 3D ======
+        const map = new maplibregl.Map({
+            container: 'map',
+            style: 'https://tiles.openfreemap.org/styles/liberty',
+            center: [7.43, 47.75],
+            zoom: 12,
+            pitch: 60,
+            bearing: 0,
+            attributionControl: true
+        });
+
+        // Terrain 3D (AWS Terrarium)
+        map.on('load', () => {
+            map.addSource('terrain', {
+                type: 'raster-dem',
+                url: 'https://tiles.mapterhorn.com/tilejson.json'
+            });
+
+            map.on('sourcedata', (e) => {
+                if (e.sourceId === 'terrain' && map.getSource('terrain') && map.isSourceLoaded('terrain')) {
+                    document.getElementById('tel-3d-status').innerText = 'Actif';
+                    document.getElementById('tel-3d-status').style.color = '#2ecc71';
+                }
+            });
+
+            map.on('error', (e) => {
+                console.error('Map error:', e);
+                if (e.error && (e.error.message || '').toLowerCase().includes('terrain')) {
+                    document.getElementById('tel-3d-status').innerText = 'Erreur DEM';
+                    document.getElementById('tel-3d-status').style.color = '#ff3b30';
+                }
+            });
+
+            // Dynamically find first label/symbol layer to insert hillshading underneath
+            const styleLayers = map.getStyle().layers;
+            let firstLabelId = undefined;
+            for (let i = 0; i < styleLayers.length; i++) {
+                if (styleLayers[i].type === 'symbol') {
+                    firstLabelId = styleLayers[i].id;
+                    break;
+                }
+            }
+
+            map.addLayer({
+                id: 'hills',
+                type: 'hillshade',
+                source: 'terrain',
+                paint: {
+                    'hillshade-exaggeration': terrainExaggeration > 0 ? 0.6 * (terrainExaggeration / 1.5) : 0,
+                    'hillshade-shadow-color': '#2b2520',
+                    'hillshade-highlight-color': '#ffffff',
+                    'hillshade-illumination-anchor': 'map'
+                }
+            }, firstLabelId);
+
+            map.setTerrain({ source: 'terrain', exaggeration: terrainExaggeration });
+            map.setLight({
+                anchor: 'viewport',
+                color: 'white',
+                intensity: 0.4
+            });
+
+            // Sources de données (initialisées vides)
+            map.addSource('flown', { type: 'geojson', data: { type: 'Feature', geometry: { type: 'LineString', coordinates: [] } } });
+            map.addSource('remaining', { type: 'geojson', data: { type: 'Feature', geometry: { type: 'LineString', coordinates: [] } } });
+            const initialCoords = (flightData && flightData.length > 0) ? [flightData[0].lon, flightData[0].lat] : [7.43, 47.75];
+            map.addSource('plane', { type: 'geojson', data: { type: 'Feature', geometry: { type: 'Point', coordinates: initialCoords } } });
+            
+            // Sources d'extrusion 3D
+            map.addSource('flown-curtain', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+            map.addSource('remaining-curtain', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+            map.addSource('plane-3d', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+
+            // Couches d'extrusion 3D (rideaux de vol)
+            map.addLayer({
+                id: 'flown-curtain-layer',
+                type: 'fill-extrusion',
+                source: 'flown-curtain',
+                paint: {
+                    'fill-extrusion-color': '#ff00ff',
+                    'fill-extrusion-opacity': 0.4,
+                    'fill-extrusion-height': ['get', 'height'],
+                    'fill-extrusion-base': ['get', 'base']
+                }
+            });
+            map.addLayer({
+                id: 'remaining-curtain-layer',
+                type: 'fill-extrusion',
+                source: 'remaining-curtain',
+                paint: {
+                    'fill-extrusion-color': '#ff00ff',
+                    'fill-extrusion-opacity': 0.12,
+                    'fill-extrusion-height': ['get', 'height'],
+                    'fill-extrusion-base': ['get', 'base']
+                }
+            });
+            // Avion 3D (Cessna 152 avec de vraies couleurs par partie)
+            map.addLayer({
+                id: 'plane-3d-layer',
+                type: 'fill-extrusion',
+                source: 'plane-3d',
+                paint: {
+                    'fill-extrusion-color': ['get', 'color'],
+                    'fill-extrusion-opacity': 0.95,
+                    'fill-extrusion-height': ['get', 'height'],
+                    'fill-extrusion-base': ['get', 'base']
+                }
+            });
+
+            // Couche trajectoire volée au sol
+            map.addLayer({ id: 'flown-layer', type: 'line', source: 'flown', paint: { 'line-color': '#ff00ff', 'line-width': 5, 'line-opacity': 0.9 } });
+            // Couche trajectoire restante au sol
+            map.addLayer({ id: 'remaining-layer', type: 'line', source: 'remaining', paint: { 'line-color': '#ff00ff', 'line-width': 2, 'line-opacity': 0.3 } });
+            // Icône avion (cercle directionnel)
+            map.loadImage(
+                'data:image/svg+xml;base64,' + btoa('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><g transform="translate(20,20)"><path d="M0-18 L-8-6 L-2-6 L-10 10 L-4 14 L0 6 L4 14 L10 10 L2-6 L8-6 Z" fill="#ff00ff" stroke="white" stroke-width="1.5"/></g></svg>'),
+                (err, img) => {
+                    if (err) return;
+                    map.addImage('plane-icon', img);
+                    map.addLayer({
+                        id: 'plane-layer',
+                        type: 'symbol',
+                        source: 'plane',
+                        layout: {
+                            'icon-image': 'plane-icon',
+                            'icon-rotate': ['get', 'heading'],
+                            'icon-size': 1.2,
+                            'icon-rotation-alignment': 'map',
+                            'icon-allow-overlap': true
+                        }
+                    });
+                    map.getSource('remaining').setData({
+                        type: 'Feature', geometry: { type: 'LineString', coordinates: pathGeoCoords }
+                    });
+                }
+            );
+
+            // Contrôle navigation et terrain 3D
+            map.addControl(new maplibregl.NavigationControl(), 'top-right');
+            map.addControl(new maplibregl.TerrainControl({
+                source: 'terrain',
+                exaggeration: terrainExaggeration
+            }), 'top-right');
+
+            if (flightData && flightData.length > 0) {
+                loadFlightData(flightData);
+            }
+        });
+
+        // Coordonnées GeoJSON [lon, lat] pour MapLibre
+        let pathGeoCoords = [];
+
+        // --- Animation basée sur les timestamps réels ---
+        // Convertir les timestamps en secondes depuis le début
+        function timeToSeconds(t) {
+            if (!t) return 0;
+            const parts = t.split(':').map(Number);
+            return parts[0]*3600 + parts[1]*60 + parts[2];
+        }
+        let flightTimes = [];
+        let dataStartTime = 0;
+        let dataEndTime = 0;
+        let totalRealSeconds = 0;
+
+        // Trouver l'index correspondant à un temps écoulé donné
+        function findFlightState(elapsedSeconds) {
+            const targetTime = dataStartTime + elapsedSeconds;
+            if (elapsedSeconds <= 0) return { idx: 0, frac: 0, elapsed: elapsedSeconds };
+            if (elapsedSeconds >= totalRealSeconds) return { idx: flightTimes.length - 2, frac: 1, elapsed: totalRealSeconds };
+
+            let lo = 0, hi = flightTimes.length - 1;
+            while (lo < hi - 1) {
+                const mid = (lo + hi) >> 1;
+                if (flightTimes[mid] <= targetTime) lo = mid;
+                else hi = mid;
+            }
+            const dur = flightTimes[lo+1] - flightTimes[lo];
+            const frac = dur > 0 ? (targetTime - flightTimes[lo]) / dur : 0;
+            return { idx: lo, frac: Math.max(0, Math.min(1, frac)), elapsed: elapsedSeconds };
+        }
+
+        // MapLibre utilise pathGeoCoords (lon,lat) défini plus haut
+        let pathCoords = [];
+
+        const badinCtx = document.getElementById('badinCanvas').getContext('2d');
+        const compassCtx = document.getElementById('compassCanvas').getContext('2d');
+        const profileCanvas = document.getElementById('profileCanvas');
+        const profileCtx = profileCanvas.getContext('2d');
+
+        function getSpeedAngle(kt) {
+            // 0 kts = -90° (aiguille vers le haut = 12h)
+            // 360 kts = +270° (tour complet)
+            // Mappage linéaire simple : chaque kt = 1°
+            kt = Math.min(Math.max(kt, 0), 360);
+            return (-90 + kt) * Math.PI / 180;
+        }
+
+        function interpolateHeading(a, b, t) {
+            let diff = (b - a + 180) % 360 - 180;
+            if (diff < -180) diff += 360;
+            return (a + diff * t + 360) % 360;
+        }
+
+        function drawBadinReplica(speed) {
+            const ctx = badinCtx; ctx.clearRect(0, 0, 200, 200); ctx.save(); ctx.translate(100, 100);
+            ctx.beginPath(); ctx.arc(0, 0, 92, 0, 2 * Math.PI); ctx.fillStyle = '#111113'; ctx.fill();
+            ctx.lineWidth = 2; ctx.strokeStyle = '#444'; ctx.stroke();
+            ctx.lineWidth = 5; ctx.strokeStyle = '#ffffff'; ctx.beginPath(); ctx.arc(0, 0, 84, getSpeedAngle(43), getSpeedAngle(85)); ctx.stroke();
+            ctx.strokeStyle = '#2ecc71'; ctx.beginPath(); ctx.arc(0, 0, 78, getSpeedAngle(48), getSpeedAngle(111)); ctx.stroke();
+            ctx.strokeStyle = '#ffcc00'; ctx.beginPath(); ctx.arc(0, 0, 78, getSpeedAngle(111), getSpeedAngle(149)); ctx.stroke();
+            ctx.strokeStyle = '#ff3b30'; ctx.lineWidth = 3; ctx.beginPath();
+            let redAngle = getSpeedAngle(149); ctx.moveTo(Math.cos(redAngle)*72, Math.sin(redAngle)*72); ctx.lineTo(Math.cos(redAngle)*84, Math.sin(redAngle)*84); ctx.stroke();
+            ctx.fillStyle = '#ffffff'; ctx.font = '10px sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+            const speedLabels = [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330, 360];
+            speedLabels.forEach(lbl => {
+                let ang = getSpeedAngle(lbl); ctx.fillText(lbl, Math.cos(ang) * 60, Math.sin(ang) * 60);
+                ctx.strokeStyle = '#fff'; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(Math.cos(ang)*72, Math.sin(ang)*72); ctx.lineTo(Math.cos(ang)*84, Math.sin(ang)*84); ctx.stroke();
+            });
+            ctx.fillStyle = '#ffffff'; ctx.font = 'bold 8px sans-serif'; ctx.fillText("BADIN", 0, -25);
+            ctx.fillStyle = '#aaaaaa'; ctx.font = '8px sans-serif'; ctx.fillText("KTS", 0, 20);
+            ctx.save(); ctx.rotate(getSpeedAngle(speed)); ctx.fillStyle = '#ffffff';
+            ctx.beginPath(); ctx.moveTo(-2.5, 12); ctx.lineTo(-1, -76); ctx.lineTo(1, -76); ctx.lineTo(2.5, 12); ctx.closePath(); ctx.fill(); ctx.restore();
+            ctx.beginPath(); ctx.arc(0, 0, 5, 0, 2*Math.PI); ctx.fillStyle = '#222'; ctx.fill(); ctx.strokeStyle = '#fff'; ctx.stroke(); ctx.restore();
+        }
+
+        function drawCompassReplica(heading) {
+            const ctx = compassCtx; ctx.clearRect(0, 0, 200, 200); ctx.save(); ctx.translate(100, 100);
+            ctx.beginPath(); ctx.arc(0, 0, 92, 0, 2 * Math.PI); ctx.fillStyle = '#111114'; ctx.fill();
+            ctx.lineWidth = 2; ctx.strokeStyle = '#3a3a3c'; ctx.stroke();
+            ctx.save(); ctx.rotate(-heading * Math.PI / 180);
+            for (let deg = 0; deg < 360; deg += 5) {
+                ctx.save(); ctx.rotate(deg * Math.PI / 180); ctx.beginPath(); ctx.moveTo(0, -86);
+                if (deg % 30 === 0 || deg % 10 === 0) { ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 1.5; ctx.lineTo(0, -75); } 
+                else { ctx.strokeStyle = '#aaaaaa'; ctx.lineWidth = 1; ctx.lineTo(0, -80); }
+                ctx.stroke(); ctx.restore();
+            }
+            ctx.fillStyle = '#ffffff'; ctx.font = 'bold 12px sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+            const cardLabels = [
+                { val: "N", a: 0 }, { val: "3", a: 30 }, { val: "6", a: 60 }, { val: "E", a: 90 }, { val: "12", a: 120 }, { val: "15", a: 150 },
+                { val: "S", a: 180 }, { val: "21", a: 210 }, { val: "24", a: 240 }, { val: "W", a: 270 }, { val: "30", a: 300 }, { val: "33", a: 330 }
+            ];
+            cardLabels.forEach(lbl => {
+                let rad = lbl.a * Math.PI / 180; ctx.save(); ctx.translate(Math.sin(rad) * 64, -Math.cos(rad) * 64); ctx.rotate(rad);
+                ctx.fillStyle = (lbl.val === "N") ? '#ff3b30' : '#ffffff';
+                ctx.fillText(lbl.val, 0, 0); ctx.restore();
+            });
+            ctx.restore();
+            ctx.save(); ctx.fillStyle = '#ff9f0a'; ctx.beginPath();
+            ctx.moveTo(0, -18); ctx.lineTo(2, -14); ctx.lineTo(2, 10); ctx.lineTo(-2, 10); ctx.lineTo(-2, -14); ctx.closePath();
+            ctx.moveTo(-20, -3); ctx.lineTo(20, -3); ctx.lineTo(20, 0); ctx.lineTo(-20, 0); ctx.strokeStyle = '#ff9f0a'; ctx.stroke(); ctx.closePath(); ctx.fill(); ctx.restore();
+            ctx.fillStyle = '#ff3b30'; ctx.beginPath(); ctx.moveTo(0, -90); ctx.lineTo(-4, -78); ctx.lineTo(4, -78); ctx.closePath(); ctx.fill(); ctx.restore();
+        }
+
+        function drawTerrainProfile(currentDist, currentAlt, currentGround, verticalSpeedFtMin) {
+            const ctx = profileCtx;
+            const w = profileCanvas.width;
+            const h = profileCanvas.height;
+            ctx.clearRect(0, 0, w, h);
+            
+            ctx.strokeStyle = '#222226'; ctx.lineWidth = 1;
+            for(let x=0; x<w; x+=50) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke(); }
+            for(let y=0; y<h; y+=30) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke(); }
+
+            const planeX = w * 0.5; 
+            const totalWidthMeters = 5 * 1852; 
+            const meterToPx = w / totalWidthMeters; 
+            
+            const maxAltView = Math.max(3000, currentAlt + 700);
+
+            function getCanvasY(altFt) {
+                return h - 15 - (altFt / maxAltView) * (h - 25);
+            }
+
+            ctx.beginPath();
+            let terrainStarted = false;
+            for(let i=0; i<flightData.length; i++) {
+                let pt = flightData[i];
+                let canvasX = planeX + (pt.dist_m - currentDist) * meterToPx;
+                if (canvasX >= -40 && canvasX <= w + 40) {
+                    let canvasY = getCanvasY(pt.ground_ft);
+                    if (!terrainStarted) { ctx.moveTo(canvasX, h); ctx.lineTo(canvasX, canvasY); terrainStarted = true; } 
+                    else { ctx.lineTo(canvasX, canvasY); }
+                }
+            }
+            if (terrainStarted) {
+                ctx.lineTo(w+50, h); ctx.closePath();
+                let groundGrad = ctx.createLinearGradient(0, 0, 0, h);
+                groundGrad.addColorStop(0, '#3d2b1f'); groundGrad.addColorStop(1, '#1e140f');
+                ctx.fillStyle = groundGrad; ctx.fill();
+                ctx.strokeStyle = '#855e42'; ctx.lineWidth = 2; ctx.stroke();
+            }
+
+            ctx.beginPath();
+            let safetyStarted = false;
+            for(let i=0; i<flightData.length; i++) {
+                let pt = flightData[i];
+                let canvasX = planeX + (pt.dist_m - currentDist) * meterToPx;
+                if (canvasX >= 0 && canvasX <= w) {
+                    let canvasY = getCanvasY(pt.ground_ft + 500);
+                    if (!safetyStarted) { ctx.moveTo(canvasX, canvasY); safetyStarted = true; }
+                    else { ctx.lineTo(canvasX, canvasY); }
+                }
+            }
+            ctx.strokeStyle = 'rgba(255, 159, 10, 0.3)'; ctx.lineWidth = 1; ctx.setLineDash([4, 4]); ctx.stroke(); ctx.setLineDash([]);
+
+            ctx.beginPath();
+            let trailStarted = false;
+            for(let i=0; i<flightData.length; i++) {
+                let pt = flightData[i];
+                let canvasX = planeX + (pt.dist_m - currentDist) * meterToPx;
+                if (canvasX <= planeX && canvasX >= 0) {
+                    let canvasY = getCanvasY(pt.altitude_ft);
+                    if (!trailStarted) { ctx.moveTo(canvasX, canvasY); trailStarted = true; } 
+                    else { ctx.lineTo(canvasX, canvasY); }
+                }
+            }
+            if (trailStarted) {
+                ctx.lineTo(planeX, getCanvasY(currentAlt));
+                ctx.strokeStyle = '#ff00ff'; ctx.lineWidth = 2.5; ctx.stroke();
+            }
+
+            const planeY = getCanvasY(currentAlt);
+            ctx.save(); ctx.translate(planeX, planeY);
+
+            let pitchAngle = 0;
+            // Palier : ±100 ft/min de tolérance
+            if (verticalSpeedFtMin > 100) { pitchAngle = -12 * Math.PI / 180; } 
+            else if (verticalSpeedFtMin < -100) { pitchAngle = 12 * Math.PI / 180; }
+            ctx.rotate(pitchAngle);
+
+            ctx.fillStyle = '#ffffff'; ctx.strokeStyle = '#2d2d30'; ctx.lineWidth = 1.5;
+            ctx.beginPath(); ctx.moveTo(-30, -4); ctx.quadraticCurveTo(0, -8, 30, -6); ctx.lineTo(36, 4); ctx.lineTo(28, 10); ctx.lineTo(-24, 4); ctx.closePath(); ctx.fill(); ctx.stroke();
+            ctx.fillStyle = '#1f7ed6'; ctx.beginPath(); ctx.moveTo(-20, 0); ctx.lineTo(28, 2); ctx.lineTo(26, 6); ctx.lineTo(-22, 2); ctx.closePath(); ctx.fill();
+            ctx.fillStyle = '#7fd0ff'; ctx.beginPath(); ctx.moveTo(8, -6); ctx.lineTo(22, -4); ctx.lineTo(16, 4); ctx.lineTo(6, 4); ctx.closePath(); ctx.fill(); ctx.stroke();
+            ctx.fillStyle = '#ffffff'; ctx.strokeStyle = '#2d2d30'; ctx.fillRect(-8, -12, 24, 5); ctx.strokeRect(-8, -12, 24, 5);
+            ctx.strokeStyle = '#666'; ctx.beginPath(); ctx.moveTo(4, -7); ctx.lineTo(6, 4); ctx.stroke();
+            ctx.fillStyle = '#ffffff'; ctx.beginPath(); ctx.moveTo(-26, -4); ctx.lineTo(-34, -18); ctx.lineTo(-26, -18); ctx.lineTo(-22, -4); ctx.closePath(); ctx.fill(); ctx.stroke();
+            // bulle avant supprimée
+            ctx.restore();
+
+            ctx.fillStyle = '#888'; ctx.font = '9px monospace';
+            ctx.fillText("0 NM", planeX - 4, h - 4); 
+            ctx.fillText("+2.5 NM (Devant)", w - 95, h - 4); 
+            ctx.fillText("-2.5 NM (Derrière)", 5, h - 4);
+            
+            ctx.fillStyle = '#2ecc71'; ctx.font = 'bold 18px sans-serif'; 
+            let textY = planeY - 18;
+            if (textY < 22) textY = planeY + 34;
+            ctx.fillText(Math.round(currentAlt) + " FT", planeX - 35, textY);
+        }
+
+        function animationFrame(timestamp) {
+            if (flightData.length === 0) {
+                lastTimestamp = timestamp;
+                requestAnimationFrame(animationFrame);
+                return;
+            }
+            if (!lastTimestamp) lastTimestamp = timestamp;
+            let elapsed = timestamp - lastTimestamp;
+            lastTimestamp = timestamp;
+
+            if (isPlaying && currentElapsedSeconds < totalRealSeconds) {
+                currentElapsedSeconds += (elapsed * playbackSpeed) / 1000;
+                if (currentElapsedSeconds >= totalRealSeconds) {
+                    currentElapsedSeconds = 0; // loop
+                }
+
+                const state = findFlightState(currentElapsedSeconds);
+                const idx = state.idx;
+                const t = state.frac;
+
+                const p1 = flightData[idx];
+                const p2 = flightData[idx + 1];
+
+                const currentLat = p1.lat + (p2.lat - p1.lat) * t;
+                const currentLon = p1.lon + (p2.lon - p1.lon) * t;
+                const currentSpeed = p1.speed_kt + (p2.speed_kt - p1.speed_kt) * t;
+                const currentAlt = p1.altitude_ft + (p2.altitude_ft - p1.altitude_ft) * t;
+                const currentGround = p1.ground_ft + (p2.ground_ft - p1.ground_ft) * t;
+                const currentDist = p1.dist_m + (p2.dist_m - p1.dist_m) * t;
+                const currentHdg = interpolateHeading(p1.heading, p2.heading, t);
+                
+                // Calcul de la vraie vitesse verticale en ft/min basé sur l'écart de temps réel
+                const dtSec = timeToSeconds(p2.time) - timeToSeconds(p1.time);
+                const verticalDelta = p2.altitude_ft - p1.altitude_ft;
+                const verticalSpeedFtMin = dtSec > 0 ? (verticalDelta / dtSec) * 60 : 0;
+
+                // Mise à jour MapLibre (2D et 3D)
+                updateMap3DAnd2D(idx, t, currentLat, currentLon, currentHdg, currentAlt, currentGround);
+
+                drawBadinReplica(currentSpeed);
+                drawCompassReplica(currentHdg);
+                drawTerrainProfile(currentDist, currentAlt, currentGround, verticalSpeedFtMin);
+
+                const currentHeight = Math.max(0, currentAlt - currentGround);
+
+                document.getElementById('clock').innerText = p1.time;
+                document.getElementById('tel-alt').innerText = `${Math.round(currentAlt)} ft (${Math.round(currentAlt*0.3048)} m)`;
+                document.getElementById('tel-height').innerText = `${Math.round(currentHeight)} ft (${Math.round(currentHeight*0.3048)} m)`;
+                document.getElementById('tel-ground').innerText = `${Math.round(currentGround)} ft (${Math.round(currentGround*0.3048)} m)`;
+                document.getElementById('tel-marge').innerText = `${Math.round(currentGround + 500)} ft`;
+                document.getElementById('tel-speed').innerText = `${Math.round(currentSpeed)} kt (${Math.round(currentSpeed*1.852)} km/h)`;
+                document.getElementById('tel-hdg').innerText = `${String(Math.round(currentHdg)).padStart(3, '0')}°`;
+
+                if (currentAlt < (currentGround + 500) && idx > 15 && idx < flightData.length - 15) {
+                    document.getElementById('tel-alt').className = "val alert";
+                    document.getElementById('tel-height').className = "val alert";
+                } else {
+                    document.getElementById('tel-alt').className = "val";
+                    document.getElementById('tel-height').className = "val";
+                }
+
+                const globalProgressPercent = (currentElapsedSeconds / totalRealSeconds) * 100;
+                document.getElementById('progress-slider').value = (currentElapsedSeconds / totalRealSeconds) * 1000;
+                document.getElementById('yt-fill').style.width = `${globalProgressPercent}%`;
+                document.getElementById('yt-knob').style.left = `${globalProgressPercent}%`;
+                
+                document.getElementById('yt-time-current').innerText = formatMinutesSeconds(currentElapsedSeconds);
+            }
+
+            requestAnimationFrame(animationFrame);
+        }
+
+        const ytPlayBtn = document.getElementById('btn-yt-play');
+        const svgPlay = document.getElementById('svg-play');
+        const svgPause = document.getElementById('svg-pause');
+
+        ytPlayBtn.addEventListener('click', togglePlay);
+        
+        function togglePlay() {
+            isPlaying = !isPlaying;
+            if(isPlaying) {
+                svgPlay.style.display = 'none';
+                svgPause.style.display = 'block';
+            } else {
+                svgPlay.style.display = 'block';
+                svgPause.style.display = 'none';
+            }
+        }
+
+        const btnSpeedMenu = document.getElementById('btn-speed-menu');
+        const speedMenu = document.getElementById('speed-menu');
+        
+        btnSpeedMenu.addEventListener('click', () => {
+            speedMenu.style.display = (speedMenu.style.display === 'flex') ? 'none' : 'flex';
+        });
+
+        function setYTSpeed(factor, text, event) {
+            playbackSpeed = factor;
+            btnSpeedMenu.innerText = "Vitesse : " + text;
+            speedMenu.style.display = 'none';
+            const options = document.querySelectorAll('.speed-option');
+            options.forEach(opt => opt.classList.remove('active'));
+            const target = event ? event.target : window.event?.target;
+            if (target) {
+                target.classList.add('active');
+            }
+        }
+
+        document.getElementById('progress-slider').addEventListener('input', function() {
+            const ratio = this.value / 1000;
+            currentElapsedSeconds = ratio * totalRealSeconds;
+            const state = findFlightState(currentElapsedSeconds);
+            const idx = state.idx;
+            const t = state.frac;
+            const p1 = flightData[idx];
+            const p2 = flightData[idx + 1];
+
+            // Mise à jour immédiate de la position
+            const currentLat = p1.lat + (p2.lat - p1.lat) * t;
+            const currentLon = p1.lon + (p2.lon - p1.lon) * t;
+            const currentSpeed = p1.speed_kt + (p2.speed_kt - p1.speed_kt) * t;
+            const currentHdg = interpolateHeading(p1.heading, p2.heading, t);
+            const currentAlt = p1.altitude_ft + (p2.altitude_ft - p1.altitude_ft) * t;
+            const currentGround = p1.ground_ft + (p2.ground_ft - p1.ground_ft) * t;
+            const currentDist = p1.dist_m + (p2.dist_m - p1.dist_m) * t;
+            const verticalDelta = p2.altitude_ft - p1.altitude_ft;
+
+            // Mise à jour MapLibre (2D et 3D)
+            updateMap3DAnd2D(idx, t, currentLat, currentLon, currentHdg, currentAlt, currentGround);
+
+            drawBadinReplica(currentSpeed);
+            drawCompassReplica(currentHdg);
+            const dtSecSlider = timeToSeconds(p2.time) - timeToSeconds(p1.time);
+            const verticalSpeedFtMin = dtSecSlider > 0 ? (verticalDelta / dtSecSlider) * 60 : 0;
+            drawTerrainProfile(currentDist, currentAlt, currentGround, verticalSpeedFtMin);
+
+            document.getElementById('clock').innerText = p1.time;
+            document.getElementById('yt-fill').style.width = `${ratio * 100}%`;
+            document.getElementById('yt-knob').style.left = `${ratio * 100}%`;
+            document.getElementById('yt-time-current').innerText = formatMinutesSeconds(currentElapsedSeconds);
+        });
+
+        // GPX parser and loader
+        function parseGPXFile(file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const text = e.target.result;
+                    const parser = new DOMParser();
+                    const xml = parser.parseFromString(text, 'text/xml');
+                    if (xml.querySelector('parsererror')) { alert('Format GPX invalide.'); return; }
+                    const trkpts = xml.querySelectorAll('trkpt');
+                    if (!trkpts.length) { alert('Aucun point trouve dans le GPX.'); return; }
+
+                    function haversineDist(lat1, lon1, lat2, lon2) {
+                        const R = 6371000;
+                        const dLat = (lat2 - lat1) * Math.PI / 180;
+                        const dLon = (lon2 - lon1) * Math.PI / 180;
+                        const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) * Math.sin(dLon/2)**2;
+                        return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+                    }
+                    function bearing(lat1, lon1, lat2, lon2) {
+                        const dLon = (lon2 - lon1) * Math.PI / 180;
+                        const y = Math.sin(dLon) * Math.cos(lat2*Math.PI/180);
+                        const x = Math.cos(lat1*Math.PI/180) * Math.sin(lat2*Math.PI/180) - Math.sin(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) * Math.cos(dLon);
+                        return (Math.atan2(y,x)*180/Math.PI + 360) % 360;
+                    }
+
+                    const newData = [];
+                    let distCumul = 0;
+                    for (let i = 0; i < trkpts.length; i++) {
+                        const pt = trkpts[i];
+                        const lat = parseFloat(pt.getAttribute('lat'));
+                        const lon = parseFloat(pt.getAttribute('lon'));
+                        const ele = parseFloat(pt.querySelector('ele')?.textContent || '0');
+                        const timeRaw = pt.querySelector('time')?.textContent || '';
+                        let spd_ms = 0, crs = 0, alt = ele, ground = ele;
+                        const descEl = pt.querySelector('desc');
+                        if (descEl) {
+                            try { const d = JSON.parse(descEl.textContent); spd_ms = d.spd||0; crs = d.crs||0; alt = d.alt||ele; ground = d.ele||ele; } catch(e) {}
+                        }
+                        const speed_kt = spd_ms * 1.94384;
+                        const altitude_ft = alt * 3.28084;
+                        const ground_ft = ground * 3.28084;
+                        let heading = crs;
+                        if (heading === 0 && i > 0) heading = bearing(newData[i-1].lat, newData[i-1].lon, lat, lon);
+                        if (i > 0) distCumul += haversineDist(newData[i-1].lat, newData[i-1].lon, lat, lon);
+                        let time = '00:00:00';
+                        if (timeRaw) {
+                            time = timeRaw.includes('T') ? timeRaw.split('T')[1].substring(0, 8) : timeRaw.substring(0, 8);
+                        }
+                        newData.push({ lat, lon, time, speed_kt: Math.round(speed_kt*10)/10, altitude_ft: Math.round(altitude_ft), ground_ft: Math.round(ground_ft), heading: Math.round(heading), dist_m: Math.round(distCumul*10)/10 });
+                    }
+                    loadFlightData(newData);
+                } catch(err) { alert('Erreur GPX : ' + err.message); }
+            };
+            reader.readAsText(file);
+        }
+
+        function loadFlightData(newData) {
+            flightData = newData;
+            flightTimes.length = 0;
+            flightData.forEach(d => flightTimes.push(timeToSeconds(d.time)));
+            dataStartTime = flightTimes[0];
+            dataEndTime = flightTimes[flightTimes.length - 1];
+            totalRealSeconds = dataEndTime - dataStartTime;
+            totalPoints = flightData.length;
+            document.getElementById('yt-time-total').innerText = formatMinutesSeconds(totalRealSeconds);
+            pathCoords.length = 0;
+            pathGeoCoords.length = 0;
+            flightData.forEach(d => { pathCoords.push([d.lat, d.lon]); pathGeoCoords.push([d.lon, d.lat]); });
+            currentElapsedSeconds = 0; isPlaying = false;
+            document.getElementById('svg-play').style.display = '';
+            document.getElementById('svg-pause').style.display = 'none';
+            // Réinitialisation carte
+            if (map.getSource('plane')) {
+                map.getSource('plane')?.setData({
+                    type: 'Feature',
+                    properties: { heading: flightData[0].heading || 0 },
+                    geometry: { type: 'Point', coordinates: [flightData[0].lon, flightData[0].lat] }
+                });
+                map.getSource('flown')?.setData({ type: 'Feature', geometry: { type: 'LineString', coordinates: [] } });
+                map.getSource('remaining')?.setData({ type: 'Feature', geometry: { type: 'LineString', coordinates: pathGeoCoords } });
+                
+                // Initialisation 3D
+                map.getSource('flown-curtain')?.setData({ type: 'FeatureCollection', features: [] });
+                map.getSource('remaining-curtain')?.setData(generateCurtainGeoJSON(flightData));
+                map.getSource('plane-3d')?.setData(generatePlane3DGeoJSON(flightData[0].lon, flightData[0].lat, flightData[0].altitude_ft, flightData[0].ground_ft, flightData[0].heading));
+                
+                map.flyTo({ center: [flightData[0].lon, flightData[0].lat], zoom: 13, duration: 0 });
+            }
+            const p0 = flightData[0];
+            document.getElementById('clock').innerText = p0.time;
+            document.getElementById('yt-time-current').innerText = formatMinutesSeconds(0);
+            document.getElementById('yt-fill').style.width = '0%';
+            document.getElementById('yt-knob').style.left = '0%';
+            document.getElementById('progress-slider').value = 0;
+            document.getElementById('tel-alt').innerText = p0.altitude_ft+' ft ('+Math.round(p0.altitude_ft*0.3048)+' m)';
+            document.getElementById('tel-height').innerText = Math.max(0,p0.altitude_ft-p0.ground_ft)+' ft ('+Math.round(Math.max(0,p0.altitude_ft-p0.ground_ft)*0.3048)+' m)';
+            document.getElementById('tel-ground').innerText = p0.ground_ft+' ft ('+Math.round(p0.ground_ft*0.3048)+' m)';
+            document.getElementById('tel-marge').innerText = (p0.ground_ft+500)+' ft';
+            document.getElementById('tel-speed').innerText = p0.speed_kt+' kt ('+Math.round(p0.speed_kt*1.852)+' km/h)';
+            document.getElementById('tel-hdg').innerText = String(p0.heading).padStart(3,'0')+'°';
+            drawBadinReplica(p0.speed_kt); drawCompassReplica(p0.heading);
+            drawTerrainProfile(p0.dist_m, p0.altitude_ft, p0.ground_ft, 0);
+            document.getElementById('tel-alt').className = 'val';
+            document.getElementById('tel-height').className = 'val';
+            document.getElementById('upload-overlay').classList.add('hidden');
+        }
+
+        // Réinitialiser la trace précédente
+        function clearFlightData() {
+            flightData = [];
+            pathCoords = [];
+            pathGeoCoords = [];
+            flightTimes = [];
+            dataStartTime = 0;
+            dataEndTime = 0;
+            totalRealSeconds = 0;
+            totalPoints = 0;
+            currentElapsedSeconds = 0;
+            isPlaying = false;
+
+            // Réinitialiser le bouton Play
+            document.getElementById('svg-play').style.display = '';
+            document.getElementById('svg-pause').style.display = 'none';
+
+            // Réinitialiser la télémétrie UI
+            document.getElementById('clock').innerText = '00:00:00';
+            document.getElementById('yt-time-current').innerText = '00:00';
+            document.getElementById('yt-time-total').innerText = '00:00';
+            document.getElementById('yt-fill').style.width = '0%';
+            document.getElementById('yt-knob').style.left = '0%';
+            document.getElementById('progress-slider').value = 0;
+            document.getElementById('tel-alt').innerText = '0 ft (0 m)';
+            document.getElementById('tel-height').innerText = '0 ft (0 m)';
+            document.getElementById('tel-ground').innerText = '0 ft (0 m)';
+            document.getElementById('tel-marge').innerText = '0 ft';
+            document.getElementById('tel-speed').innerText = '0 kt (0 km/h)';
+            document.getElementById('tel-hdg').innerText = '000°';
+
+            // Réinitialiser les instruments de bord
+            drawBadinReplica(0);
+            drawCompassReplica(0);
+            profileCtx.clearRect(0, 0, profileCanvas.width, profileCanvas.height);
+
+            // Réinitialiser les sources MapLibre
+            if (map.getSource('plane')) {
+                try {
+                    map.getSource('plane')?.setData({ type: 'FeatureCollection', features: [] });
+                    map.getSource('flown')?.setData({ type: 'Feature', geometry: { type: 'LineString', coordinates: [] } });
+                    map.getSource('remaining')?.setData({ type: 'Feature', geometry: { type: 'LineString', coordinates: [] } });
+                    map.getSource('flown-curtain')?.setData({ type: 'FeatureCollection', features: [] });
+                    map.getSource('remaining-curtain')?.setData({ type: 'FeatureCollection', features: [] });
+                    map.getSource('plane-3d')?.setData({ type: 'FeatureCollection', features: [] });
+                } catch(e) { console.error(e); }
+            }
+        }
+
+        document.getElementById('btn-load-gpx').addEventListener('click', function() {
+            clearFlightData();
+            document.getElementById('upload-overlay').classList.remove('hidden');
+        });
+        document.getElementById('gpx-file-input').addEventListener('change', function() { if(this.files&&this.files[0]) parseGPXFile(this.files[0]); this.value=''; });
+
+        // 3D/2D Toggle
+        document.getElementById('btn-3d-toggle').addEventListener('click', function() {
+            if (map.getPitch() > 0) {
+                map.flyTo({ pitch: 0, duration: 500 });
+                this.textContent = '3D';
+                this.classList.remove('active');
+            } else {
+                map.flyTo({ pitch: 60, duration: 500 });
+                this.textContent = '2D';
+                this.classList.add('active');
+            }
+        });
+
+        // Relief Exaggeration Selector
+        const exagValues = [0, 1.0, 1.5, 2.0, 3.0];
+        let exagIndex = 2; // correspond à 1.5x par défaut
+        document.getElementById('btn-exag-toggle').addEventListener('click', function() {
+            exagIndex = (exagIndex + 1) % exagValues.length;
+            terrainExaggeration = exagValues[exagIndex];
+            this.textContent = `Relief : ${terrainExaggeration}x`;
+            try {
+                map.setTerrain({ source: 'terrain', exaggeration: terrainExaggeration });
+                if (map.getLayer('hills')) {
+                    map.setPaintProperty('hills', 'hillshade-exaggeration', terrainExaggeration > 0 ? 0.6 * (terrainExaggeration / 1.5) : 0);
+                }
+                // Recalculate 3D curtains and plane elevation with new exaggeration
+                if (flightData && flightData.length > 0) {
+                    const state = findFlightState(currentElapsedSeconds);
+                    const idx = state.idx;
+                    const t = state.frac;
+                    const p1 = flightData[idx];
+                    const p2 = flightData[idx + 1];
+                    const currentLat = p1.lat + (p2.lat - p1.lat) * t;
+                    const currentLon = p1.lon + (p2.lon - p1.lon) * t;
+                    const currentAlt = p1.altitude_ft + (p2.altitude_ft - p1.altitude_ft) * t;
+                    const currentGround = p1.ground_ft + (p2.ground_ft - p1.ground_ft) * t;
+                    const currentHdg = interpolateHeading(p1.heading, p2.heading, t);
+                    updateMap3DAnd2D(idx, t, currentLat, currentLon, currentHdg, currentAlt, currentGround);
+                }
+            } catch (e) {
+                console.error(e);
+            }
+        });
+
+        // Visibilité de la trace passée (flown)
+        let showFlown = true;
+        document.getElementById('btn-toggle-flown').addEventListener('click', function() {
+            showFlown = !showFlown;
+            this.classList.toggle('active', showFlown);
+            const visibility = showFlown ? 'visible' : 'none';
+            try {
+                if (map.getLayer('flown-layer')) map.setLayoutProperty('flown-layer', 'visibility', visibility);
+                if (map.getLayer('flown-curtain-layer')) map.setLayoutProperty('flown-curtain-layer', 'visibility', visibility);
+            } catch (e) {
+                console.error(e);
+            }
+        });
+
+        // Visibilité de la trace future (remaining)
+        let showRemaining = true;
+        document.getElementById('btn-toggle-remaining').addEventListener('click', function() {
+            showRemaining = !showRemaining;
+            this.classList.toggle('active', showRemaining);
+            const visibility = showRemaining ? 'visible' : 'none';
+            try {
+                if (map.getLayer('remaining-layer')) map.setLayoutProperty('remaining-layer', 'visibility', visibility);
+                if (map.getLayer('remaining-curtain-layer')) map.setLayoutProperty('remaining-curtain-layer', 'visibility', visibility);
+            } catch (e) {
+                console.error(e);
+            }
+        });
+
+        // Drag and drop event listeners
+        const dropZone = document.getElementById('drop-zone');
+        const uploadOverlay = document.getElementById('upload-overlay');
+
+        window.addEventListener('dragover', function(e) {
+            e.preventDefault();
+        });
+        window.addEventListener('drop', function(e) {
+            e.preventDefault();
+        });
+
+        dropZone.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+
+        dropZone.addEventListener('dragleave', function() {
+            dropZone.classList.remove('dragover');
+        });
+
+        dropZone.addEventListener('drop', function(e) {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files && files[0]) {
+                parseGPXFile(files[0]);
+            }
+        });
+
+        requestAnimationFrame(animationFrame);
+    </script>
+</body>
+</html>
