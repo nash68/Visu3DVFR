@@ -763,10 +763,10 @@
         const profileCtx = profileCanvas.getContext('2d');
 
         function getSpeedAngle(kt) {
-            // Badin standard : 0 kt = -90° (haut), 200 kt = +90° (bas à droite)
+            // Badin standard : 0 kt = 0° (haut), 200 kt = 180° (bas)
             // Sens horaire : vitesse augmente -> angle augmente
             kt = Math.min(Math.max(kt, 0), 200);
-            return (-90 + (kt / 200) * 180) * Math.PI / 180;
+            return (kt / 200) * Math.PI;
         }
 
         function interpolateHeading(a, b, t) {
@@ -779,20 +779,20 @@
             const ctx = badinCtx; ctx.clearRect(0, 0, 200, 200); ctx.save(); ctx.translate(100, 100);
             ctx.beginPath(); ctx.arc(0, 0, 92, 0, 2 * Math.PI); ctx.fillStyle = '#111113'; ctx.fill();
             ctx.lineWidth = 2; ctx.strokeStyle = '#444'; ctx.stroke();
-            ctx.lineWidth = 5; ctx.strokeStyle = '#ffffff'; ctx.beginPath(); ctx.arc(0, 0, 84, getSpeedAngle(40), getSpeedAngle(100)); ctx.stroke();
-            ctx.strokeStyle = '#2ecc71'; ctx.beginPath(); ctx.arc(0, 0, 78, getSpeedAngle(40), getSpeedAngle(140)); ctx.stroke();
-            ctx.strokeStyle = '#ffcc00'; ctx.beginPath(); ctx.arc(0, 0, 78, getSpeedAngle(140), getSpeedAngle(160)); ctx.stroke();
+            ctx.lineWidth = 5; ctx.strokeStyle = '#ffffff'; ctx.beginPath(); ctx.arc(0, 0, 84, getSpeedAngle(40) - Math.PI/2, getSpeedAngle(100) - Math.PI/2); ctx.stroke();
+            ctx.strokeStyle = '#2ecc71'; ctx.beginPath(); ctx.arc(0, 0, 78, getSpeedAngle(40) - Math.PI/2, getSpeedAngle(140) - Math.PI/2); ctx.stroke();
+            ctx.strokeStyle = '#ffcc00'; ctx.beginPath(); ctx.arc(0, 0, 78, getSpeedAngle(140) - Math.PI/2, getSpeedAngle(160) - Math.PI/2); ctx.stroke();
             ctx.strokeStyle = '#ff3b30'; ctx.lineWidth = 3; ctx.beginPath();
-            let redAngle = getSpeedAngle(160); ctx.moveTo(Math.cos(redAngle)*72, Math.sin(redAngle)*72); ctx.lineTo(Math.cos(redAngle)*84, Math.sin(redAngle)*84); ctx.stroke();
+            let redAngle = getSpeedAngle(160) - Math.PI/2; ctx.moveTo(Math.cos(redAngle)*72, Math.sin(redAngle)*72); ctx.lineTo(Math.cos(redAngle)*84, Math.sin(redAngle)*84); ctx.stroke();
             ctx.fillStyle = '#ffffff'; ctx.font = '10px sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
             const speedLabels = [0, 20, 40, 60, 80, 100, 120, 140, 160, 180, 200];
             speedLabels.forEach(lbl => {
-                let ang = getSpeedAngle(lbl); ctx.fillText(lbl, Math.cos(ang) * 60, Math.sin(ang) * 60);
+                let ang = getSpeedAngle(lbl) - Math.PI/2; ctx.fillText(lbl, Math.cos(ang) * 60, Math.sin(ang) * 60);
                 ctx.strokeStyle = '#fff'; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(Math.cos(ang)*72, Math.sin(ang)*72); ctx.lineTo(Math.cos(ang)*84, Math.sin(ang)*84); ctx.stroke();
             });
             ctx.fillStyle = '#ffffff'; ctx.font = 'bold 8px sans-serif'; ctx.fillText("BADIN", 0, -25);
             ctx.fillStyle = '#aaaaaa'; ctx.font = '8px sans-serif'; ctx.fillText("KTS", 0, 20);
-            ctx.save(); ctx.rotate(getSpeedAngle(speed)); ctx.fillStyle = '#ffffff';
+            ctx.save(); ctx.rotate(getSpeedAngle(speed) - Math.PI/2); ctx.fillStyle = '#ffffff';
             ctx.beginPath(); ctx.moveTo(-2.5, 12); ctx.lineTo(-1, -76); ctx.lineTo(1, -76); ctx.lineTo(2.5, 12); ctx.closePath(); ctx.fill(); ctx.restore();
             ctx.beginPath(); ctx.arc(0, 0, 5, 0, 2*Math.PI); ctx.fillStyle = '#222'; ctx.fill(); ctx.strokeStyle = '#fff'; ctx.stroke(); ctx.restore();
         }
