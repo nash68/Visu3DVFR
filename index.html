@@ -66,6 +66,7 @@
         .instrument-container {
             margin-bottom: 14px; text-align: center; width: 100%;
         }
+
         .instrument-title {
             font-size: 0.72rem; font-weight: 500; text-transform: uppercase;
             letter-spacing: 1px; margin-bottom: 4px; color: #aaa;
@@ -273,7 +274,7 @@
         <h1>Analyse de Trace VFR - Cessna 152</h1>
         <div style="display:flex;align-items:center;gap:10px;">
             <span>Heure Trace UTC: <span id="clock" style="font-weight:bold; color:#aaa;">11:55:00</span></span>
-            <span style="font-size:0.7rem;color:#555;" id="build-version">Build 20260903-1137</span>
+            <span style="font-size:0.7rem;color:#555;" id="build-version">Build 20260903-1145</span>
         </div>
     </div>
 
@@ -293,7 +294,7 @@
             
             <div class="instrument-container">
                 <div class="instrument-title">Indicateur de Vitesse (Badin)</div>
-                <canvas id="badinCanvas" width="200" height="200"></canvas>
+                <canvas id="badinV2Canvas" width="200" height="200"></canvas>
             </div>
             <div class="instrument-container">
                 <div class="instrument-title">Conservateur de Cap (Gyro)</div>
@@ -757,17 +758,10 @@
         // MapLibre utilise pathGeoCoords (lon,lat) défini plus haut
         let pathCoords = [];
 
-        const badinCtx = document.getElementById('badinCanvas').getContext('2d');
+const badinV2Ctx = document.getElementById('badinV2Canvas').getContext('2d');
         const compassCtx = document.getElementById('compassCanvas').getContext('2d');
         const profileCanvas = document.getElementById('profileCanvas');
         const profileCtx = profileCanvas.getContext('2d');
-
-        function getSpeedAngle(kt) {
-            // Badin standard : 0 kt = 0° (haut), 200 kt = 180° (bas)
-            // Sens horaire : vitesse augmente -> angle augmente
-            kt = Math.min(Math.max(kt, 0), 200);
-            return (kt / 200) * Math.PI;
-        }
 
         function interpolateHeading(a, b, t) {
             let diff = (b - a + 180) % 360 - 180;
@@ -775,26 +769,107 @@
             return (a + diff * t + 360) % 360;
         }
 
-        function drawBadinReplica(speed) {
-            const ctx = badinCtx; ctx.clearRect(0, 0, 200, 200); ctx.save(); ctx.translate(100, 100);
-            ctx.beginPath(); ctx.arc(0, 0, 92, 0, 2 * Math.PI); ctx.fillStyle = '#111113'; ctx.fill();
-            ctx.lineWidth = 2; ctx.strokeStyle = '#444'; ctx.stroke();
-            ctx.lineWidth = 5; ctx.strokeStyle = '#ffffff'; ctx.beginPath(); ctx.arc(0, 0, 84, getSpeedAngle(40) - Math.PI/2, getSpeedAngle(100) - Math.PI/2); ctx.stroke();
-            ctx.strokeStyle = '#2ecc71'; ctx.beginPath(); ctx.arc(0, 0, 78, getSpeedAngle(40) - Math.PI/2, getSpeedAngle(140) - Math.PI/2); ctx.stroke();
-            ctx.strokeStyle = '#ffcc00'; ctx.beginPath(); ctx.arc(0, 0, 78, getSpeedAngle(140) - Math.PI/2, getSpeedAngle(160) - Math.PI/2); ctx.stroke();
-            ctx.strokeStyle = '#ff3b30'; ctx.lineWidth = 3; ctx.beginPath();
-            let redAngle = getSpeedAngle(160) - Math.PI/2; ctx.moveTo(Math.cos(redAngle)*72, Math.sin(redAngle)*72); ctx.lineTo(Math.cos(redAngle)*84, Math.sin(redAngle)*84); ctx.stroke();
-            ctx.fillStyle = '#ffffff'; ctx.font = '10px sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        // ===== BADIN V2 (from scratch) =====
+        function drawBadinV2(speed) {
+            const ctx = badinV2Ctx;
+            const centerX = 100;
+            const centerY = 100;
+            const radius = 90;
+            
+            // Effacer le canvas
+            ctx.clearRect(0, 0, 200, 200);
+            
+            // Dessiner le fond
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+            ctx.fillStyle = '#111113';
+            ctx.fill();
+            ctx.strokeStyle = '#444';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            
+            // Dessiner les arcs de couleur (standard aviation)
+            // Blanc : 40-100 kt (vitesse de croisière) - arc de 130° à 50° (sens horaire)
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 75, Math.PI * 0.9, Math.PI * 1.1); // De 50° à 130° en sens anti-horaire = 40-100 kt en sens horaire
+            ctx.strokeStyle = '#ffffff';
+            ctx.lineWidth = 5;
+            ctx.stroke();
+            
+            // Vert : 40-140 kt (plage optimale) - arc de 140° à 40°
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 70, Math.PI * 0.8, Math.PI * 1.2); // De 40° à 140° en sens anti-horaire
+            ctx.strokeStyle = '#2ecc71';
+            ctx.lineWidth = 5;
+            ctx.stroke();
+            
+            // Jaune : 140-160 kt (attention) - arc de 160° à 20°
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 70, Math.PI * 0.7, Math.PI * 1.3); // De 20° à 160° en sens anti-horaire
+            ctx.strokeStyle = '#ffcc00';
+            ctx.lineWidth = 5;
+            ctx.stroke();
+            
+            // Rouge : 160-200 kt (danger) - arc de 170° à 10°
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 70, Math.PI * 0.6, Math.PI * 1.4); // De 10° à 170° en sens anti-horaire
+            ctx.strokeStyle = '#ff3b30';
+            ctx.lineWidth = 3;
+            ctx.stroke();
+            
+            // Dessiner les graduations (tous les 20 kt)
+            ctx.fillStyle = '#ffffff';
+            ctx.font = '10px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
             const speedLabels = [0, 20, 40, 60, 80, 100, 120, 140, 160, 180, 200];
             speedLabels.forEach(lbl => {
-                let ang = getSpeedAngle(lbl) - Math.PI/2; ctx.fillText(lbl, Math.cos(ang) * 60, Math.sin(ang) * 60);
-                ctx.strokeStyle = '#fff'; ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(Math.cos(ang)*72, Math.sin(ang)*72); ctx.lineTo(Math.cos(ang)*84, Math.sin(ang)*84); ctx.stroke();
+                // Calculer l'angle : 0 kt = π/2 (haut), 100 kt = 0 (droite), 200 kt = -π/2 (bas)
+                // angle = π/2 - (speed/200)*π
+                const angle = Math.PI / 2 - (lbl / 200) * Math.PI;
+                const x = centerX + Math.cos(angle) * 60;
+                const y = centerY + Math.sin(angle) * 60;
+                ctx.fillText(lbl.toString(), x, y);
+                
+                // Petite ligne de graduation
+                ctx.beginPath();
+                ctx.moveTo(centerX + Math.cos(angle) * 72, centerY + Math.sin(angle) * 72);
+                ctx.lineTo(centerX + Math.cos(angle) * 84, centerY + Math.sin(angle) * 84);
+                ctx.strokeStyle = '#fff';
+                ctx.lineWidth = 1.5;
+                ctx.stroke();
             });
-            ctx.fillStyle = '#ffffff'; ctx.font = 'bold 8px sans-serif'; ctx.fillText("BADIN", 0, -25);
-            ctx.fillStyle = '#aaaaaa'; ctx.font = '8px sans-serif'; ctx.fillText("KTS", 0, 20);
-            ctx.save(); ctx.rotate(getSpeedAngle(speed) - Math.PI/2); ctx.fillStyle = '#ffffff';
-            ctx.beginPath(); ctx.moveTo(-2.5, 12); ctx.lineTo(-1, -76); ctx.lineTo(1, -76); ctx.lineTo(2.5, 12); ctx.closePath(); ctx.fill(); ctx.restore();
-            ctx.beginPath(); ctx.arc(0, 0, 5, 0, 2*Math.PI); ctx.fillStyle = '#222'; ctx.fill(); ctx.strokeStyle = '#fff'; ctx.stroke(); ctx.restore();
+            
+            // Dessiner l'aiguille
+            const needleAngle = Math.PI / 2 - (speed / 200) * Math.PI; // 0 kt = π/2 (haut), 200 kt = -π/2 (bas)
+            ctx.save();
+            ctx.translate(centerX, centerY);
+            ctx.rotate(needleAngle);
+            
+            ctx.fillStyle = '#ffffff';
+            ctx.beginPath();
+            ctx.moveTo(-2.5, 12);
+            ctx.lineTo(-1, -76);
+            ctx.lineTo(1, -76);
+            ctx.lineTo(2.5, 12);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Centre de l'aiguille
+            ctx.beginPath();
+            ctx.arc(0, 0, 5, 0, Math.PI * 2);
+            ctx.fillStyle = '#222';
+            ctx.fill();
+            ctx.strokeStyle = '#fff';
+            ctx.stroke();
+            
+            ctx.restore();
+            
+            // Titre
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 8px sans-serif';
+            ctx.fillText("BADIN V2", centerX, centerY - 85);
         }
 
         function drawCompassReplica(heading) {
@@ -962,7 +1037,7 @@
                 // Mise à jour MapLibre (2D et 3D)
                 updateMap3DAnd2D(idx, t, currentLat, currentLon, currentHdg, currentAlt, currentGround);
 
-                drawBadinReplica(currentSpeed);
+                drawBadinV2(currentSpeed);
                 drawCompassReplica(currentHdg);
                 drawTerrainProfile(currentDist, currentAlt, currentGround, verticalSpeedFtMin);
 
@@ -1053,7 +1128,7 @@
             // Mise à jour MapLibre (2D et 3D)
             updateMap3DAnd2D(idx, t, currentLat, currentLon, currentHdg, currentAlt, currentGround);
 
-            drawBadinReplica(currentSpeed);
+            drawBadinV2(currentSpeed);
             drawCompassReplica(currentHdg);
             const dtSecSlider = timeToSeconds(p2.time) - timeToSeconds(p1.time);
             const verticalSpeedFtMin = dtSecSlider > 0 ? (verticalDelta / dtSecSlider) * 60 : 0;
@@ -1166,7 +1241,7 @@
             document.getElementById('tel-marge').innerText = (p0.ground_ft+500)+' ft';
             document.getElementById('tel-speed').innerText = p0.speed_kt+' kt ('+Math.round(p0.speed_kt*1.852)+' km/h)';
             document.getElementById('tel-hdg').innerText = String(p0.heading).padStart(3,'0')+'°';
-            drawBadinReplica(p0.speed_kt); drawCompassReplica(p0.heading);
+            drawBadinV2(p0.speed_kt); drawCompassReplica(p0.heading);
             drawTerrainProfile(p0.dist_m, p0.altitude_ft, p0.ground_ft, 0);
             document.getElementById('tel-alt').className = 'val';
             document.getElementById('tel-height').className = 'val';
@@ -1205,7 +1280,7 @@
             document.getElementById('tel-hdg').innerText = '000°';
 
             // Réinitialiser les instruments de bord
-            drawBadinReplica(0);
+            drawBadinV2(0);
             drawCompassReplica(0);
             profileCtx.clearRect(0, 0, profileCanvas.width, profileCanvas.height);
 
